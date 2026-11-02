@@ -1,0 +1,170 @@
+ops: Document ops at 100k nodes, no layout (Stage 2)
+  build_100k_via_transactions                    145.745 ms
+  update_one_prop                              p50     0.001  p95     0.002 ms  (n=2000)
+  update_json_two_props                        p50     0.003  p95     0.003 ms  (n=2000)
+  tx_500_ops                                   p50     0.138  p95     0.219 ms  (n=50)
+  undo_500_ops                                 p50     0.112  p95     0.198 ms  (n=50)
+  redo_500_ops                                 p50     0.100  p95     0.115 ms  (n=50)
+  move_card_between_artboards                  p50     0.002  p95     0.019 ms  (n=1000)
+  delete_card_and_undo                         p50     0.012  p95     0.018 ms  (n=500)
+  copy_5_artboards                             p50     0.915  p95     1.392 ms  (n=20)
+files: Save and open (parse + build) at 100k nodes, 50 MB and 92 MB, no layout (Stage 2)
+  100k_save                                      313.421 ms
+  100k_open                                    p50   429.169  p95   434.895 ms  (n=5)
+  100k_read_and_parse                          p50   380.703  p95   389.142 ms  (n=5)
+  100k_build_and_validate                      p50    46.037  p95    48.766 ms  (n=5)
+  50mb_save                                      202.583 ms
+  50mb_open                                    p50   278.228  p95   311.277 ms  (n=5)  [target 2000 ms: ok]
+  50mb_read_and_parse                          p50   248.974  p95   282.242 ms  (n=5)
+  50mb_build_and_validate                      p50    29.034  p95    34.605 ms  (n=5)
+  large_save                                     361.172 ms
+  large_open                                   p50   496.208  p95   539.428 ms  (n=5)
+  large_read_and_parse                         p50   442.856  p95   482.443 ms  (n=5)
+  large_build_and_validate                     p50    53.352  p95    56.983 ms  (n=5)
+open: Open a laid-out 50 MB document end to end: read, parse, build, shape all text, lay out
+  first_full_layout_of_unlaid_64k               1129.291 ms
+  open_end_to_end                              p50   742.201  p95   770.475 ms  (n=5)  [target 2000 ms: ok]
+  read_and_parse                               p50   280.538  p95   285.887 ms  (n=5)
+  build_and_validate                           p50    31.637  p95    34.459 ms  (n=5)
+  shape_all_text_parallel_and_layout           p50   421.854  p95   456.879 ms  (n=5)
+layout: Full layout of a 10k-node auto-layout tree (mirror build + Taffy + text measure)
+  full_layout_10k_cold_text                    p50   175.586  p95   190.918 ms  (n=10)  [target 50 ms: MISS]
+  full_layout_10k_warm_text                    p50    32.420  p95    43.837 ms  (n=30)  [gate 15 ms: MISS]  [target 50 ms: ok]
+  of_which_mirror_build                        p50     9.958  p95    12.374 ms  (n=30)
+  of_which_compute_and_write_back              p50    19.350  p95    23.026 ms  (n=30)
+edit: Edits end to end (transaction + layout + write-back) in a 100k-node document with a 10k-node auto-layout tree
+  first_full_layout_of_unlaid_110k              1984.381 ms
+  keystroke_in_10k_tree                        p50     0.195  p95     0.415 ms  (n=300)  [gate 2 ms: ok]
+  non_layout_prop_update                       p50     0.001  p95     0.001 ms  (n=1000)
+  resize_leaf_in_10k_tree                      p50     0.247  p95     0.454 ms  (n=100)  [gate 2 ms: ok]
+  resize_root_of_10k_tree                      p50     8.520  p95    13.158 ms  (n=20)  [gate 15 ms: ok]  [target 50 ms: ok]
+  undo_root_resize                             p50     7.133  p95     7.952 ms  (n=10)  [gate 15 ms: ok]  [target 50 ms: ok]
+  redo_root_resize                             p50     7.130  p95     7.458 ms  (n=10)  [gate 15 ms: ok]  [target 50 ms: ok]
+  insert_card_in_10k_tree                      p50    30.458  p95    35.738 ms  (n=30)  [target 50 ms: ok]
+  delete_card_in_10k_tree                      p50    28.986  p95    31.321 ms  (n=30)  [target 50 ms: ok]
+  constraint_reflow_200_children               p50     0.036  p95     0.063 ms  (n=100)  [gate 2 ms: ok]
+text: Shape 10k labels cold: sequential vs parallel
+  shape_10k_labels_sequential                  p50   127.092  p95   131.062 ms  (n=5)
+  shape_10k_labels_parallel                    p50    46.254  p95    46.743 ms  (n=5)
+  shape_10k_labels_all_cached                  p50     0.264  p95     0.346 ms  (n=5)
+pan: GPU frames over a 100k-node page at 1920×1080: pan at 100/15/5 %, zoom sweep, first frame
+  scene_new_100k                                  44.990 ms
+  first_frame_100pct_cold                         31.247 ms
+  pan_100pct_warm                              p50     4.500  p95     6.148 ms  (n=120)  [gate 8 ms: ok]  [target 16 ms: ok]
+  pan_100pct_of_which_scene                    p50     0.024  p95     0.037 ms  (n=120)
+  pan_100pct_of_which_gpu_wait                 p50     1.300  p95     2.208 ms  (n=120)
+  pan_15pct_warm                               p50     3.098  p95     3.812 ms  (n=120)  [gate 8 ms: ok]  [target 16 ms: ok]
+  pan_15pct_of_which_scene                     p50     0.029  p95     0.037 ms  (n=120)
+  pan_15pct_of_which_gpu_wait                  p50     1.406  p95     1.963 ms  (n=120)
+  pan_5pct_warm                                p50     5.043  p95     5.648 ms  (n=120)  [gate 8 ms: ok]  [target 16 ms: ok]
+  pan_5pct_of_which_scene                      p50     0.039  p95     0.050 ms  (n=120)
+  pan_5pct_of_which_gpu_wait                   p50     1.810  p95     2.367 ms  (n=120)
+  zoom_sweep_first_pass                        p50     3.865  p95     6.372 ms  (n=120)  [gate 8 ms: ok]  [target 16 ms: ok]
+  zoom_sweep_warm                              p50     3.903  p95     6.165 ms  (n=120)  [gate 8 ms: ok]  [target 16 ms: ok]
+  first_frame_50mb_fit                           123.727 ms
+  first_frame_50mb_100pct                         66.276 ms
+editframe: Edit → pixels on the GPU: keystroke in the 10k auto-layout tree, dragging an artboard and an icon
+  keystroke_to_frame                           p50     3.885  p95     4.599 ms  (n=200)  [gate 8 ms: ok]  [target 16 ms: ok]
+  keystroke_of_which_tx_and_layout             p50     0.522  p95     0.750 ms  (n=200)
+  keystroke_of_which_scene_apply               p50     1.009  p95     1.510 ms  (n=200)
+  keystroke_of_which_frame_and_gpu             p50     2.217  p95     2.816 ms  (n=200)
+  drag_artboard_per_frame                      p50     8.837  p95    11.603 ms  (n=120)  [gate 8 ms: MISS]  [target 16 ms: ok]
+  drag_artboard_of_which_tx_and_layout         p50     0.046  p95     0.063 ms  (n=120)
+  drag_artboard_of_which_scene_apply           p50     0.198  p95     0.271 ms  (n=120)
+  drag_artboard_of_which_gpu_wait              p50     2.383  p95     4.998 ms  (n=120)
+  drag_icon_in_card_per_frame                  p50     3.917  p95     5.678 ms  (n=120)  [gate 8 ms: ok]  [target 16 ms: ok]
+  drag_icon_in_card_of_which_tx_and_layout     p50     0.068  p95     0.105 ms  (n=120)
+  drag_icon_in_card_of_which_scene_apply       p50     0.010  p95     0.016 ms  (n=120)
+  drag_icon_in_card_of_which_gpu_wait          p50     1.812  p95     3.433 ms  (n=120)
+effects: GPU frames with offscreen effects: 50 layer blurs + 50 star shadows; 10 background blurs
+  frame_50_blurs_50_shadows_of_which_cpu_submit p50     1.371  p95     1.866 ms  (n=60)
+  frame_50_blurs_50_shadows_of_which_gpu_wait  p50     2.841  p95     3.104 ms  (n=60)
+  frame_50_blurs_50_shadows                    p50     4.246  p95     4.631 ms  (n=60)  [gate 8 ms: ok]  [target 16 ms: ok]
+    renders 2 passes 12 offscreen 0.28 ms effects 0.18 ms scene 0.02 ms
+  frame_10_background_blurs_of_which_cpu_submit p50     4.136  p95     5.473 ms  (n=60)
+  frame_10_background_blurs_of_which_gpu_wait  p50     1.106  p95     1.620 ms  (n=60)
+  frame_10_background_blurs                    p50     5.381  p95     5.875 ms  (n=60)  [target 16 ms: ok]
+    renders 11 passes 60 offscreen 3.35 ms effects 1.22 ms scene 0.02 ms
+export: CPU export (vello_cpu, all cores) of a 100k-node page at 4K: detail at 100 % and the whole page
+  export_4k_detail_render                      p50    76.975  p95   102.902 ms  (n=5)
+  export_4k_detail_png_encode                  p50    29.265  p95    30.127 ms  (n=5)
+  export_4k_overview_render                    p50   115.116  p95   160.082 ms  (n=5)
+  export_4k_overview_png_encode                p50    40.300  p95    42.028 ms  (n=5)
+index: Spatial index over 100k nodes: bulk load, viewport query, incremental update
+  bulk_load_100k                               p50    54.058  p95    64.943 ms  (n=5)
+  query_viewport_100pct                        p50     0.002  p95     0.003 ms  (n=1000)  [gate 0.2 ms: ok]
+  query_point                                  p50     0.000  p95     0.001 ms  (n=1000)  [gate 0.2 ms: ok]  [target 1 ms: ok]
+  update_leaf                                  p50     0.001  p95     0.001 ms  (n=500)
+  update_card_subtree                          p50     0.009  p95     0.010 ms  (n=500)
+micro: Fragment building (one artboard, near band) and the CPU reference blur
+  rebuild_artboard_fragment_and_frame          p50     0.604  p95     0.781 ms  (n=50)
+  cpu_blur_256px_sigma4                        p50     2.909  p95     3.118 ms  (n=10)
+  cpu_blur_512px_sigma8                        p50    17.778  p95    20.183 ms  (n=10)
+  cpu_blur_512px_sigma24                       p50     4.539  p95     5.911 ms  (n=10)
+  cpu_blur_1024px_sigma32                      p50    23.151  p95    24.751 ms  (n=10)
+editor: Canvas app CPU work at 100k nodes on one page: hit-test, marquee, snapping, move frames, layers tree, autosave journal
+  hit_test_click                               p50     0.002  p95     0.005 ms  (n=2000)  [gate 0.2 ms: ok]  [target 1 ms: ok]
+  hit_test_deep                                p50     0.002  p95     0.004 ms  (n=2000)  [gate 0.2 ms: ok]  [target 1 ms: ok]
+  marquee_whole_page                           p50     0.094  p95     0.108 ms  (n=50)
+  marquee_in_screen                            p50     0.021  p95     0.027 ms  (n=200)
+  snap_collect_100pct                          p50     0.012  p95     0.019 ms  (n=200)  [gate 1 ms: ok]
+  snap_per_frame                               p50     0.001  p95     0.001 ms  (n=2000)  [gate 1 ms: ok]
+  distance_measures                            p50     0.000  p95     0.000 ms  (n=2000)
+  move_frame_screen                            p50     0.130  p95     0.206 ms  (n=120)  [gate 4 ms: ok]
+  move_drop_screen                                 0.001 ms
+  autosave_batch_after_drag                        0.062 ms  [gate 8 ms: ok]
+  autosave_batch_delete_undo_screen                0.022 ms  [gate 8 ms: ok]
+  layers_rebuild_all_expanded                  p50     7.702  p95    11.625 ms  (n=10)
+  layers_rebuild_collapsed                     p50     0.010  p95     0.061 ms  (n=10)
+  snapshot_to_data_100k                        p50    47.239  p95    51.867 ms  (n=10)
+  snapshot_to_data_50mb                        p50    30.333  p95    31.867 ms  (n=10)
+  snapshot_serialise_50mb                      p50   110.467  p95   112.481 ms  (n=3)
+wrote results/vello-patch/bench-render.json
+
+scenario             metric (p95 ms)                                baseline        now   change
+editframe            drag_artboard_of_which_gpu_wait                   6.631      4.998   -24.6%
+editframe            drag_artboard_of_which_scene_apply                0.405      0.271   -33.0%
+editframe            drag_artboard_of_which_tx_and_layout              0.052      0.063   +22.1%
+editframe            drag_artboard_per_frame                          14.382     11.603   -19.3%
+editframe            drag_icon_in_card_of_which_gpu_wait               2.888      3.433   +18.9%  REGRESSION
+editframe            drag_icon_in_card_of_which_scene_apply            0.020      0.016   -18.4%
+editframe            drag_icon_in_card_of_which_tx_and_layout          0.097      0.105    +7.7%
+editframe            drag_icon_in_card_per_frame                       5.985      5.678    -5.1%
+editframe            keystroke_of_which_frame_and_gpu                  5.760      2.816   -51.1%
+editframe            keystroke_of_which_scene_apply                    1.359      1.510   +11.1%  REGRESSION
+editframe            keystroke_of_which_tx_and_layout                  0.713      0.750    +5.2%
+editframe            keystroke_to_frame                                7.312      4.599   -37.1%
+effects              frame_10_background_blurs                         6.257      5.875    -6.1%
+effects              frame_10_background_blurs_of_which_cpu_submit      5.721      5.473    -4.3%
+effects              frame_10_background_blurs_of_which_gpu_wait       0.718      1.620  +125.5%  REGRESSION
+effects              frame_50_blurs_50_shadows                         4.469      4.631    +3.6%
+effects              frame_50_blurs_50_shadows_of_which_cpu_submit      1.765      1.866    +5.7%
+effects              frame_50_blurs_50_shadows_of_which_gpu_wait       3.104      3.104    -0.0%
+export               export_4k_detail_png_encode                      27.219     30.127   +10.7%  REGRESSION
+export               export_4k_detail_render                          93.646    102.902    +9.9%
+export               export_4k_overview_png_encode                    35.447     42.028   +18.6%  REGRESSION
+export               export_4k_overview_render                       142.461    160.082   +12.4%  REGRESSION
+pan                  first_frame_100pct_cold                          31.162     31.247    +0.3%
+pan                  first_frame_50mb_100pct                          65.114     66.276    +1.8%
+pan                  first_frame_50mb_fit                            119.482    123.727    +3.6%
+pan                  pan_100pct_of_which_gpu_wait                      1.960      2.208   +12.7%  REGRESSION
+pan                  pan_100pct_of_which_scene                         0.045      0.037   -18.1%
+pan                  pan_100pct_warm                                   6.666      6.148    -7.8%
+pan                  pan_15pct_of_which_gpu_wait                       2.570      1.963   -23.6%
+pan                  pan_15pct_of_which_scene                          0.051      0.037   -26.8%
+pan                  pan_15pct_warm                                    6.122      3.812   -37.7%
+pan                  pan_5pct_of_which_gpu_wait                        3.235      2.367   -26.8%
+pan                  pan_5pct_of_which_scene                           0.051      0.050    -2.4%
+pan                  pan_5pct_warm                                     8.851      5.648   -36.2%
+pan                  scene_new_100k                                   42.253     44.990    +6.5%
+pan                  zoom_sweep_first_pass                             9.531      6.372   -33.1%
+pan                  zoom_sweep_warm                                   9.303      6.165   -33.7%
+
+7 regression(s):
+  editframe/drag_icon_in_card_of_which_gpu_wait: p95 2.888 -> 3.433 ms (+18.9%)
+  editframe/keystroke_of_which_scene_apply: p95 1.359 -> 1.510 ms (+11.1%)
+  effects/frame_10_background_blurs_of_which_gpu_wait: p95 0.718 -> 1.620 ms (+125.5%)
+  export/export_4k_detail_png_encode: p95 27.219 -> 30.127 ms (+10.7%)
+  export/export_4k_overview_png_encode: p95 35.447 -> 42.028 ms (+18.6%)
+  export/export_4k_overview_render: p95 142.461 -> 160.082 ms (+12.4%)
+  pan/pan_100pct_of_which_gpu_wait: p95 1.960 -> 2.208 ms (+12.7%)

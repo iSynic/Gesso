@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="100">
+  <text x="12" y="40" font-family="Inter" font-size="28" font-weight="700" fill="#111827">Hello SVG</text>
+  <text x="12" y="80" font-family="Inter" font-size="18" fill="#2563eb">Outlined on import</text>
+</svg>

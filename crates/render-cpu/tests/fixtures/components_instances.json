@@ -1,0 +1,136 @@
+{
+  "size": [
+    320,
+    160
+  ],
+  "nodes": [
+    {
+      "type": "component",
+      "id": "0Cm00000000000000000C1",
+      "x": 10,
+      "y": 10,
+      "width": 120,
+      "height": 40,
+      "radius": 8,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#2060d0"
+        }
+      ],
+      "children": [
+        {
+          "type": "ellipse",
+          "x": 8,
+          "y": 8,
+          "width": 24,
+          "height": 24,
+          "fills": [
+            {
+              "type": "solid",
+              "color": "#ffffff"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "x": 40,
+          "y": 10,
+          "spans": [
+            {
+              "text": "Button"
+            }
+          ],
+          "autoResize": "widthAndHeight",
+          "style": {
+            "fontFamily": "Inter",
+            "fontSize": 16,
+            "fontWeight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "decoration": "none",
+            "color": "#ffffff"
+          }
+        }
+      ]
+    },
+    {
+      "type": "instance",
+      "component": "0Cm00000000000000000C1",
+      "x": 10,
+      "y": 70,
+      "width": 120,
+      "height": 40
+    },
+    {
+      "type": "instance",
+      "component": "0Cm00000000000000000C1",
+      "x": 150,
+      "y": 70,
+      "width": 80,
+      "height": 40,
+      "rotation": 8,
+      "overrides": [
+        {
+          "target": [],
+          "prop": "fills",
+          "value": [
+            {
+              "type": "solid",
+              "color": "#20a060"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "instance",
+      "component": "0Cm00000000000000000C1",
+      "x": 150,
+      "y": 10,
+      "width": 150,
+      "height": 40,
+      "opacity": 0.6,
+      "overrides": [
+        {
+          "target": [],
+          "prop": "fills",
+          "value": [
+            {
+              "type": "solid",
+              "color": "#c04040"
+            }
+          ]
+        },
+        {
+          "target": [],
+          "prop": "radius",
+          "value": 20
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "x": 10,
+      "y": 120,
+      "width": 300,
+      "height": 34,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#eeeeee"
+        }
+      ],
+      "children": [
+        {
+          "type": "instance",
+          "component": "0Cm00000000000000000C1",
+          "x": 4,
+          "y": -3,
+          "width": 120,
+          "height": 40
+        }
+      ]
+    }
+  ]
+}

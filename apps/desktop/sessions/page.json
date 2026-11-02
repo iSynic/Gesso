@@ -1,0 +1,11 @@
+{
+  "document": "../../../target/bench-docs/100k.canvas",
+  "window": [1920, 1080],
+  "steps": [
+    {"page": "Page 1"},
+    {"fit": true},
+    {"wait": 10},
+    {"wait": 60, "measure": "fit_idle"},
+    {"pan": {"by": [400, 0], "frames": 60}, "measure": "fit_pan"}
+  ]
+}

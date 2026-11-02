@@ -1,0 +1,11 @@
+[package]
+name = "script"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+common = { version = "0.1.0", path = "../common" }
+rquickjs = "0.14"
+serde_json = "1.0.154"

@@ -1,0 +1,50 @@
+# INACTIVE: no remote exists yet. Manual trigger only, so nothing runs until it is dispatched.
+# Builds the spike workspace on macOS/Linux, records build time and binary sizes, and runs the
+# CPU/headless spikes (text, layout, script, vello_cpu export) that don't need a GPU or display.
+name: spikes
+
+on:
+  workflow_dispatch:
+
+jobs:
+  spikes:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: spikes
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Linux system deps (winit/egui/webkit)
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libxkbcommon-dev libwayland-dev libx11-dev libxi-dev \
+            libgtk-3-dev libwebkit2gtk-4.1-dev libsoup-3.0-dev libfontconfig1-dev fonts-noto-cjk fonts-noto-color-emoji
+      - name: License check
+        run: |
+          cargo install cargo-deny --locked
+          cargo deny check licenses
+      - name: Build (timed)
+        run: |
+          start=$(date +%s)
+          cargo build --profile dist -p common -p render-vello -p text -p layout -p script -p shell-native
+          echo "build_seconds=$(( $(date +%s) - start ))" | tee -a results-ci.txt
+          ls -l target/dist | tee -a results-ci.txt
+      - name: Headless spikes
+        run: |
+          mkdir -p ci-results
+          cargo run --profile dist -p text -- --out ci-results/text.json
+          cargo run --profile dist -p layout -- --out ci-results/layout.json
+          cargo run --profile dist -p script -- --out ci-results/script.json
+          cargo run --profile dist -p render-vello -- --cpu --out ci-results/vello_cpu_4k.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: spikes-${{ matrix.os }}
+          path: |
+            spikes/ci-results
+            spikes/results-ci.txt

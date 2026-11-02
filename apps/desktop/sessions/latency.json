@@ -1,0 +1,31 @@
+{
+  "document": "../../../target/bench-docs/100k.canvas",
+  "window": [1920, 1080],
+  "steps": [
+    {"page": "Page 1"},
+    {"reveal": "Screen 1", "at": 1.0},
+    {"select": "Screen 1"},
+    {"wait": 10},
+    {"drag": {"node": "Screen 1", "by": [300, 150], "frames": 120}, "measure": "move_100"},
+    {"command": "undo"},
+    {"drag": {"handle": "se", "by": [-300, 120], "frames": 120}, "measure": "resize_100"},
+    {"command": "undo"},
+    {"select": "Card 0"},
+    {"panel": {"path": "width", "values": [300,302,304,306,308,310,312,314,316,318,320,322,324,326,328,330,332,334,336,338]}, "measure": "panel_number"},
+    {"fill": ["#ff0000","#ee1100","#dd2200","#cc3300","#bb4400","#aa5500","#996600","#887700","#778800","#669900","#55aa00","#44bb00","#33cc00","#22dd00","#11ee00","#00ff00","#00ee11","#00dd22","#00cc33","#00bb44"], "measure": "panel_colour"},
+    {"undoall": true},
+    {"fit": true},
+    {"wait": 5},
+    {"zoomsweep": {"from": 0.03, "to": 2.0, "frames": 120}, "measure": "zoom_sweep"},
+    {"layers": "expand"},
+    {"wait": 30, "measure": "layers_19k_expanded"},
+        {"page": "Layout stress"},
+    {"select": "Card"},
+    {"reveal": "Card", "at": 1.0},
+    {"wait": 5},
+    {"drag": {"node": "Card", "by": [500, 0], "frames": 120}, "measure": "reorder_10k_tree"},
+    {"command": "undo"},
+    {"drag": {"handle": "e", "by": [80, 0], "frames": 60}, "measure": "resize_in_10k_tree"},
+    {"undoall": true}
+  ]
+}

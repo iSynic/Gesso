@@ -1,0 +1,8 @@
+# Seeds for failure cases proptest has generated in the past. It is
+# automatically read and these particular cases re-run before any
+# novel cases are generated.
+#
+# It is recommended to check this file in to source control so that
+# everyone who runs the test benefits from these saved cases.
+cc 72ad1e9e840b2a17f9a709678bdd8f6ca8097418e126bb461ea62d94fef42f47 # shrinks to children = [(0, 0, 0, 0, 0, 0, 0, 0)], overrides = [], size = (0, 0), clip = false
+cc eec05654440f91528888535882f6ba094c4f56a1ea88372eb0b3f74658d92b36 # shrinks to children = [(0, 0, 0, 0, 0, 0, 0, 0)], overrides = [(202, 0, 0), (136, 0, 0)], size = (0, 0)

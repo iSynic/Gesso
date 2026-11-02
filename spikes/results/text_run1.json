@@ -1,0 +1,54 @@
+{
+  "cosmic_text": {
+    "cold_ms": 32.0628,
+    "edit_per_key_ms": 4.9576,
+    "labels_10k_ms": 113.39670000000001,
+    "mixed_runs": [
+      "Segoe UI (rtl=false)",
+      "Microsoft YaHei UI (rtl=false)",
+      "Segoe UI (rtl=false)",
+      "Yu Gothic (rtl=false)",
+      "Segoe UI (rtl=false)",
+      "Malgun Gothic (rtl=false)",
+      "Segoe UI (rtl=false)",
+      "Segoe UI Emoji (rtl=false)",
+      "Segoe UI (rtl=false)"
+    ],
+    "paragraphs_100_ms": 60.7403,
+    "rich_100_ms": 74.99409999999999
+  },
+  "host": {
+    "cpu": "Intel64 Family 6 Model 167 Stepping 1, GenuineIntel",
+    "git": "",
+    "gpu": "",
+    "gpu_backend": "cpu",
+    "logical_cpus": 12,
+    "os": "windows x86_64",
+    "profile": "release"
+  },
+  "parley": {
+    "cold_ms": 3.1705,
+    "edit_per_key_ms": 1.9346,
+    "labels_10k_ms": 66.93060000000001,
+    "mixed_runs": [
+      "Segoe UI (rtl=false, glyphs=8)",
+      "Segoe UI (rtl=true, glyphs=13)",
+      "Segoe UI (rtl=false, glyphs=1)",
+      "Yu Gothic UI (rtl=false, glyphs=4)",
+      "Segoe UI (rtl=false, glyphs=1)",
+      "Yu Gothic UI (rtl=false, glyphs=7)",
+      "Segoe UI (rtl=false, glyphs=1)",
+      "Malgun Gothic (rtl=false, glyphs=4)",
+      "Segoe UI (rtl=false, glyphs=1)",
+      "Segoe UI Emoji (rtl=false, glyphs=1)",
+      "Segoe UI (rtl=false, glyphs=1)",
+      "Segoe UI (rtl=false, glyphs=4)"
+    ],
+    "paragraphs_100_ms": 19.470000000000002,
+    "rich_100_ms": 21.769299999999998
+  },
+  "versions": {
+    "cosmic-text": "0.19.0",
+    "parley": "0.12.0"
+  }
+}

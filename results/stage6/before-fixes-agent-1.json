@@ -1,0 +1,74 @@
+{
+  "host": {
+    "cpu": "11th Gen Intel(R) Core(TM) i5-11600KF @ 3.90GHz",
+    "git": "",
+    "gpu": {
+      "backend": "Vulkan",
+      "driver": "NVIDIA",
+      "driver_info": "610.88",
+      "name": "NVIDIA GeForce RTX 3080"
+    },
+    "logical_cpus": 12,
+    "os": "windows x86_64",
+    "profile": "release"
+  },
+  "scenarios": {
+    "agent": {
+      "info": {
+        "find_query_matches": 12434,
+        "page_nodes": 99992,
+        "screenshot_nodes": 193
+      },
+      "metrics": {
+        "execute_insert_500": {
+          "gate_ms": 10.0,
+          "max": 33.490899999999996,
+          "n": 30,
+          "p50": 22.607499999999998,
+          "p95": 32.8186
+        },
+        "find_empty_space": {
+          "gate_ms": 5.0,
+          "max": 0.8220000000000001,
+          "n": 50,
+          "p50": 0.4111,
+          "p95": 0.6156999999999999
+        },
+        "find_query_100k": {
+          "gate_ms": 5.0,
+          "max": 22.4107,
+          "n": 50,
+          "p50": 16.630499999999998,
+          "p95": 21.421499999999998
+        },
+        "get_state": {
+          "gate_ms": 1.0,
+          "max": 4.452,
+          "n": 200,
+          "p50": 2.3476999999999997,
+          "p95": 3.4401
+        },
+        "ipc_round_trip": {
+          "gate_ms": 2.0,
+          "max": 0.0648,
+          "n": 500,
+          "p50": 0.0192,
+          "p95": 0.0323
+        },
+        "screenshot_1080p_cpu": {
+          "max": 40.5269,
+          "n": 10,
+          "p50": 25.032700000000002,
+          "p95": 40.5269
+        },
+        "script_context": {
+          "gate_ms": 1.0,
+          "max": 3.8818,
+          "n": 200,
+          "p50": 0.2577,
+          "p95": 0.3909
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "size": [
+    320,
+    140
+  ],
+  "nodes": [
+    {
+      "type": "path",
+      "x": 10,
+      "y": 10,
+      "width": 120,
+      "height": 120,
+      "paths": [
+        {
+          "d": "M10 60 C10 10 110 10 110 60 C110 110 10 110 10 60 Z M35 60 L85 60 L60 25 Z"
+        }
+      ],
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#3060d0"
+        }
+      ]
+    },
+    {
+      "type": "path",
+      "x": 140,
+      "y": 10,
+      "width": 120,
+      "height": 120,
+      "paths": [
+        {
+          "d": "M60 5 L95 115 L5 45 L115 45 L25 115 Z",
+          "fillRule": "evenOdd"
+        }
+      ],
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#d06030"
+        }
+      ]
+    },
+    {
+      "type": "path",
+      "x": 260,
+      "y": 10,
+      "width": 50,
+      "height": 120,
+      "paths": [
+        {
+          "d": "M5 5 Q45 60 5 115"
+        }
+      ],
+      "strokes": [
+        {
+          "paint": {
+            "type": "solid",
+            "color": "#202020"
+          },
+          "weight": 3,
+          "cap": "round"
+        }
+      ]
+    }
+  ]
+}

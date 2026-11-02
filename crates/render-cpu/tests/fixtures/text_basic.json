@@ -1,0 +1,211 @@
+{
+  "size": [
+    320,
+    200
+  ],
+  "nodes": [
+    {
+      "type": "text",
+      "x": 10,
+      "y": 8,
+      "spans": [
+        {
+          "text": "Inter 12 regular"
+        }
+      ],
+      "autoResize": "widthAndHeight",
+      "style": {
+        "fontFamily": "Inter",
+        "fontSize": 12,
+        "fontWeight": 400,
+        "italic": false,
+        "letterSpacing": 0,
+        "decoration": "none",
+        "color": "#000000"
+      }
+    },
+    {
+      "type": "text",
+      "x": 10,
+      "y": 28,
+      "spans": [
+        {
+          "text": "Inter 16 medium"
+        }
+      ],
+      "autoResize": "widthAndHeight",
+      "style": {
+        "fontFamily": "Inter",
+        "fontSize": 16,
+        "fontWeight": 500,
+        "italic": false,
+        "letterSpacing": 0,
+        "decoration": "none",
+        "color": "#000000"
+      }
+    },
+    {
+      "type": "text",
+      "x": 10,
+      "y": 52,
+      "spans": [
+        {
+          "text": "Inter 24 bold"
+        }
+      ],
+      "autoResize": "widthAndHeight",
+      "style": {
+        "fontFamily": "Inter",
+        "fontSize": 24,
+        "fontWeight": 700,
+        "italic": false,
+        "letterSpacing": 0,
+        "decoration": "none",
+        "color": "#000000"
+      }
+    },
+    {
+      "type": "text",
+      "x": 10,
+      "y": 85,
+      "spans": [
+        {
+          "text": "Inter 20 italic"
+        }
+      ],
+      "autoResize": "widthAndHeight",
+      "style": {
+        "fontFamily": "Inter",
+        "fontSize": 20,
+        "fontWeight": 400,
+        "italic": true,
+        "letterSpacing": 0,
+        "decoration": "none",
+        "color": "#000000"
+      }
+    },
+    {
+      "type": "text",
+      "x": 10,
+      "y": 115,
+      "spans": [
+        {
+          "text": "Letter spacing 3px"
+        }
+      ],
+      "autoResize": "widthAndHeight",
+      "style": {
+        "fontFamily": "Inter",
+        "fontSize": 14,
+        "fontWeight": 400,
+        "italic": false,
+        "letterSpacing": 3,
+        "decoration": "none",
+        "color": "#000000"
+      }
+    },
+    {
+      "type": "text",
+      "x": 10,
+      "y": 140,
+      "spans": [
+        {
+          "text": "Coloured #c03070"
+        }
+      ],
+      "autoResize": "widthAndHeight",
+      "style": {
+        "fontFamily": "Inter",
+        "fontSize": 18,
+        "fontWeight": 400,
+        "italic": false,
+        "letterSpacing": 0,
+        "decoration": "none",
+        "color": "#c03070"
+      }
+    },
+    {
+      "type": "text",
+      "x": 10,
+      "y": 168,
+      "spans": [
+        {
+          "text": "Gradient fill text"
+        }
+      ],
+      "autoResize": "widthAndHeight",
+      "style": {
+        "fontFamily": "Inter",
+        "fontSize": 22,
+        "fontWeight": 800,
+        "italic": false,
+        "letterSpacing": 0,
+        "decoration": "none",
+        "color": "#000000"
+      },
+      "fills": [
+        {
+          "type": "linearGradient",
+          "start": [
+            0,
+            0
+          ],
+          "end": [
+            1,
+            0
+          ],
+          "stops": [
+            {
+              "offset": 0,
+              "color": "#ff4000"
+            },
+            {
+              "offset": 1,
+              "color": "#6000ff"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 195,
+      "y": 10,
+      "spans": [
+        {
+          "text": "Black 900"
+        }
+      ],
+      "autoResize": "widthAndHeight",
+      "style": {
+        "fontFamily": "Inter",
+        "fontSize": 24,
+        "fontWeight": 900,
+        "italic": false,
+        "letterSpacing": 0,
+        "decoration": "none",
+        "color": "#000000"
+      }
+    },
+    {
+      "type": "text",
+      "x": 195,
+      "y": 50,
+      "spans": [
+        {
+          "text": "Thin 100"
+        }
+      ],
+      "autoResize": "widthAndHeight",
+      "style": {
+        "fontFamily": "Inter",
+        "fontSize": 24,
+        "fontWeight": 100,
+        "italic": false,
+        "letterSpacing": 0,
+        "decoration": "none",
+        "color": "#000000"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "document": "../../../target/bench-docs/50mb.canvas",
+  "window": [1920, 1080],
+  "steps": [
+    {"wait": 3, "measure": "first_frames_fit_none"},
+    {"page": "Page 1"},
+    {"fit": true},
+    {"wait": 30, "measure": "idle_fit"},
+    {"reveal": "Screen 1", "at": 1.0},
+    {"select": "Screen 1"},
+    {"wait": 5},
+    {"drag": {"node": "Screen 1", "by": [300, 150], "frames": 120}, "measure": "move_100_50mb"},
+    {"undoall": true},
+    {"screenshot": "../../../target/shots/open50mb.png"}
+  ]
+}

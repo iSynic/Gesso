@@ -1,0 +1,93 @@
+{
+  "size": [
+    320,
+    120
+  ],
+  "nodes": [
+    {
+      "type": "rectangle",
+      "x": 20,
+      "y": 20,
+      "width": 80,
+      "height": 80,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#f0f0f0"
+        }
+      ],
+      "radius": 12,
+      "effects": [
+        {
+          "type": "innerShadow",
+          "color": "#00000080",
+          "offset": [
+            0,
+            4
+          ],
+          "blur": 8
+        }
+      ]
+    },
+    {
+      "type": "ellipse",
+      "x": 120,
+      "y": 20,
+      "width": 80,
+      "height": 80,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#ffe0b0"
+        }
+      ],
+      "effects": [
+        {
+          "type": "innerShadow",
+          "color": "#c0400099",
+          "offset": [
+            -4,
+            -4
+          ],
+          "blur": 12,
+          "spread": 2
+        }
+      ]
+    },
+    {
+      "type": "polygon",
+      "sides": 6,
+      "x": 220,
+      "y": 20,
+      "width": 80,
+      "height": 80,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#d0f0ff"
+        }
+      ],
+      "effects": [
+        {
+          "type": "innerShadow",
+          "color": "#003080aa",
+          "offset": [
+            3,
+            3
+          ],
+          "blur": 4
+        },
+        {
+          "type": "dropShadow",
+          "color": "#00000055",
+          "offset": [
+            0,
+            4
+          ],
+          "blur": 8
+        }
+      ]
+    }
+  ],
+  "background": "#ffffff"
+}

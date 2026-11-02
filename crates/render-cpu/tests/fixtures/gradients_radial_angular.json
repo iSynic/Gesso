@@ -1,0 +1,103 @@
+{
+  "size": [
+    320,
+    120
+  ],
+  "nodes": [
+    {
+      "type": "rectangle",
+      "x": 10,
+      "y": 10,
+      "width": 90,
+      "height": 100,
+      "fills": [
+        {
+          "type": "radialGradient",
+          "center": [
+            0.5,
+            0.5
+          ],
+          "radius": [
+            0.5,
+            0.5
+          ],
+          "stops": [
+            {
+              "offset": 0,
+              "color": "#ffffff"
+            },
+            {
+              "offset": 1,
+              "color": "#0050a0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ellipse",
+      "x": 115,
+      "y": 10,
+      "width": 90,
+      "height": 100,
+      "fills": [
+        {
+          "type": "radialGradient",
+          "center": [
+            0.3,
+            0.3
+          ],
+          "radius": [
+            0.8,
+            0.5
+          ],
+          "stops": [
+            {
+              "offset": 0,
+              "color": "#ffee88"
+            },
+            {
+              "offset": 1,
+              "color": "#cc2200"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ellipse",
+      "x": 220,
+      "y": 10,
+      "width": 90,
+      "height": 100,
+      "fills": [
+        {
+          "type": "angularGradient",
+          "center": [
+            0.5,
+            0.5
+          ],
+          "angle": 0,
+          "stops": [
+            {
+              "offset": 0,
+              "color": "#ff0000"
+            },
+            {
+              "offset": 0.33,
+              "color": "#00ff00"
+            },
+            {
+              "offset": 0.66,
+              "color": "#0000ff"
+            },
+            {
+              "offset": 1,
+              "color": "#ff0000"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+[workspace]
+resolver = "3"
+members = ["crates/*", "apps/*", "xtask"]
+exclude = ["spikes", "fuzz", "third_party"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+publish = false
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+unwrap_used = "deny"
+expect_used = "deny"
+panic = "deny"
+
+# Vello 0.11's encoding crate with a larger gradient-ramp cache; see third_party/README.md.
+[patch.crates-io]
+vello = { path = "third_party/vello" }
+vello_encoding = { path = "third_party/vello_encoding" }
+
+[profile.release]
+debug = "line-tables-only"
+
+[profile.bench]
+debug = "line-tables-only"

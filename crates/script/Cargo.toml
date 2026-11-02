@@ -1,0 +1,34 @@
+[package]
+name = "script"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+doc = { path = "../doc" }
+index = { path = "../index" }
+render = { path = "../render" }
+render-cpu = { path = "../render-cpu" }
+export = { path = "../export" }
+editor = { path = "../editor" }
+kurbo = "0.13.1"
+rquickjs = "0.14.0"
+rustc-hash = "2.1.3"
+schemars = "1.2.3"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+thiserror = "2.0.21"
+
+[dev-dependencies]
+doc = { path = "../doc", features = ["testing"] }
+text = { path = "../text" }
+format = { path = "../format" }
+render = { path = "../render" }
+proptest = "1.12.0"
+
+[lints]
+workspace = true
+
+[lib]
+bench = false

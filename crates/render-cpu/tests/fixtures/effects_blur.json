@@ -1,0 +1,143 @@
+{
+  "size": [
+    320,
+    160
+  ],
+  "nodes": [
+    {
+      "type": "rectangle",
+      "x": 10,
+      "y": 10,
+      "width": 60,
+      "height": 60,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#e04040"
+        }
+      ],
+      "effects": [
+        {
+          "type": "layerBlur",
+          "radius": 4
+        }
+      ]
+    },
+    {
+      "type": "rectangle",
+      "x": 90,
+      "y": 10,
+      "width": 60,
+      "height": 60,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#40a0e0"
+        }
+      ],
+      "radius": 12,
+      "effects": [
+        {
+          "type": "layerBlur",
+          "radius": 12
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 170,
+      "y": 20,
+      "spans": [
+        {
+          "text": "Blurred"
+        }
+      ],
+      "autoResize": "widthAndHeight",
+      "style": {
+        "fontFamily": "Inter",
+        "fontSize": 28,
+        "fontWeight": 700,
+        "italic": false,
+        "letterSpacing": 0,
+        "decoration": "none",
+        "color": "#000000"
+      },
+      "effects": [
+        {
+          "type": "layerBlur",
+          "radius": 3
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "x": 20,
+      "y": 90,
+      "width": 120,
+      "height": 60,
+      "effects": [
+        {
+          "type": "layerBlur",
+          "radius": 6
+        }
+      ],
+      "children": [
+        {
+          "type": "rectangle",
+          "x": 0,
+          "y": 0,
+          "width": 60,
+          "height": 60,
+          "fills": [
+            {
+              "type": "solid",
+              "color": "#40c060"
+            }
+          ]
+        },
+        {
+          "type": "ellipse",
+          "x": 50,
+          "y": 0,
+          "width": 60,
+          "height": 60,
+          "fills": [
+            {
+              "type": "solid",
+              "color": "#c060c0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rectangle",
+      "x": 170,
+      "y": 80,
+      "width": 120,
+      "height": 70,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#ffd040"
+        }
+      ],
+      "radius": 8,
+      "effects": [
+        {
+          "type": "dropShadow",
+          "color": "#00000080",
+          "offset": [
+            0,
+            6
+          ],
+          "blur": 10
+        },
+        {
+          "type": "layerBlur",
+          "radius": 8
+        }
+      ]
+    }
+  ]
+}

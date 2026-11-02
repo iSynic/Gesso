@@ -1,0 +1,81 @@
+# INACTIVE: no remote exists yet. Manual trigger only.
+# Product workspace: tests (with more proptest cases), clippy, crate layering, licenses, a short
+# fuzz run, and a benchmark gate that compares a pull request against its base on the same runner.
+# Rendering: the golden images run on vello_cpu everywhere. render-vello compiles and unit-tests
+# without a GPU; its GPU parity test and the GPU bench scenarios (pan, editframe, effects) need a
+# real adapter, so they run locally (`GPU_TESTS=1`), not on hosted runners.
+name: ci
+
+on:
+  workflow_dispatch:
+  # When a remote exists, add `pull_request:` here; the bench gate only runs on pull requests.
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy
+      - run: cargo clippy --workspace --all-targets -- -D warnings
+      - run: cargo test --workspace
+      - run: cargo xtask layers
+      - run: cargo test -p doc --release --test proptest_ops
+        env:
+          PROPTEST_CASES: "5000"
+      - run: cargo test -p layout --release --test proptest_layout
+        env:
+          PROPTEST_CASES: "5000"
+      - run: cargo test -p index --release
+        env:
+          PROPTEST_CASES: "5000"
+      - run: cargo test -p render-cpu --release --test scene
+        env:
+          PROPTEST_CASES: "5000"
+      # Editor gestures-then-undo and layers-model property tests. The canvas app builds and
+      # tests everywhere; its scripted-session test needs a window and GPU (`GPU_TESTS=1`), so
+      # it skips on hosted runners.
+      - run: cargo test -p editor --release
+        env:
+          PROPTEST_CASES: "5000"
+      - name: Licenses
+        if: runner.os == 'Linux'
+        run: |
+          cargo install cargo-deny --locked
+          cargo deny check licenses
+
+  fuzz:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@nightly
+      - run: cargo install cargo-fuzz --locked
+      - run: cargo +nightly fuzz run open_json -- -max_total_time=120
+      - run: cargo +nightly fuzz run apply_ops -- -max_total_time=120
+
+  # Timings from a hosted runner can't be compared with numbers from another machine, so the
+  # baseline is the base branch measured on the same runner, right before the pull request.
+  # Shared runners are noisy: the threshold is wider than the local default of 10%.
+  bench-gate:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.base_ref }}
+      - uses: dtolnay/rust-toolchain@stable
+      - run: cargo run -p bench --release -- run --scenario layout,edit,text,index,micro,export,editor --out base.json
+      - uses: actions/checkout@v4
+        with:
+          clean: false
+      - run: cargo run -p bench --release -- run --scenario layout,edit,text,index,micro,export,editor --out head.json --baseline base.json --threshold 20 --floor 0.1
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bench
+          path: "*.json"

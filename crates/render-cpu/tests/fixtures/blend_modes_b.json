@@ -1,0 +1,266 @@
+{
+  "size": [
+    320,
+    160
+  ],
+  "nodes": [
+    {
+      "type": "rectangle",
+      "x": 0,
+      "y": 0,
+      "width": 320,
+      "height": 160,
+      "fills": [
+        {
+          "type": "linearGradient",
+          "start": [
+            0,
+            0
+          ],
+          "end": [
+            1,
+            0
+          ],
+          "stops": [
+            {
+              "offset": 0,
+              "color": "#2040ff"
+            },
+            {
+              "offset": 0.5,
+              "color": "#ffe020"
+            },
+            {
+              "offset": 1,
+              "color": "#ff2060"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ellipse",
+      "x": 10,
+      "y": 10,
+      "width": 66,
+      "height": 66,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#40c080"
+        }
+      ],
+      "blend": "softLight"
+    },
+    {
+      "type": "rectangle",
+      "x": 43,
+      "y": 43,
+      "width": 33,
+      "height": 33,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#c04080",
+          "blend": "softLight"
+        }
+      ]
+    },
+    {
+      "type": "ellipse",
+      "x": 88,
+      "y": 10,
+      "width": 66,
+      "height": 66,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#40c080"
+        }
+      ],
+      "blend": "hardLight"
+    },
+    {
+      "type": "rectangle",
+      "x": 121,
+      "y": 43,
+      "width": 33,
+      "height": 33,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#c04080",
+          "blend": "hardLight"
+        }
+      ]
+    },
+    {
+      "type": "ellipse",
+      "x": 166,
+      "y": 10,
+      "width": 66,
+      "height": 66,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#40c080"
+        }
+      ],
+      "blend": "difference"
+    },
+    {
+      "type": "rectangle",
+      "x": 199,
+      "y": 43,
+      "width": 33,
+      "height": 33,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#c04080",
+          "blend": "difference"
+        }
+      ]
+    },
+    {
+      "type": "ellipse",
+      "x": 244,
+      "y": 10,
+      "width": 66,
+      "height": 66,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#40c080"
+        }
+      ],
+      "blend": "exclusion"
+    },
+    {
+      "type": "rectangle",
+      "x": 277,
+      "y": 43,
+      "width": 33,
+      "height": 33,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#c04080",
+          "blend": "exclusion"
+        }
+      ]
+    },
+    {
+      "type": "ellipse",
+      "x": 10,
+      "y": 85,
+      "width": 66,
+      "height": 66,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#40c080"
+        }
+      ],
+      "blend": "hue"
+    },
+    {
+      "type": "rectangle",
+      "x": 43,
+      "y": 118,
+      "width": 33,
+      "height": 33,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#c04080",
+          "blend": "hue"
+        }
+      ]
+    },
+    {
+      "type": "ellipse",
+      "x": 88,
+      "y": 85,
+      "width": 66,
+      "height": 66,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#40c080"
+        }
+      ],
+      "blend": "saturation"
+    },
+    {
+      "type": "rectangle",
+      "x": 121,
+      "y": 118,
+      "width": 33,
+      "height": 33,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#c04080",
+          "blend": "saturation"
+        }
+      ]
+    },
+    {
+      "type": "ellipse",
+      "x": 166,
+      "y": 85,
+      "width": 66,
+      "height": 66,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#40c080"
+        }
+      ],
+      "blend": "color"
+    },
+    {
+      "type": "rectangle",
+      "x": 199,
+      "y": 118,
+      "width": 33,
+      "height": 33,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#c04080",
+          "blend": "color"
+        }
+      ]
+    },
+    {
+      "type": "ellipse",
+      "x": 244,
+      "y": 85,
+      "width": 66,
+      "height": 66,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#40c080"
+        }
+      ],
+      "blend": "luminosity"
+    },
+    {
+      "type": "rectangle",
+      "x": 277,
+      "y": 118,
+      "width": 33,
+      "height": 33,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#c04080",
+          "blend": "luminosity"
+        }
+      ]
+    }
+  ]
+}

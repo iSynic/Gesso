@@ -1,0 +1,143 @@
+{
+  "size": [
+    320,
+    160
+  ],
+  "nodes": [
+    {
+      "type": "rectangle",
+      "x": 10,
+      "y": 10,
+      "width": 70,
+      "height": 70,
+      "fills": [
+        {
+          "type": "image",
+          "asset": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "fit": "fill"
+        }
+      ],
+      "strokes": [
+        {
+          "paint": {
+            "type": "solid",
+            "color": "#000000"
+          },
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "type": "rectangle",
+      "x": 90,
+      "y": 10,
+      "width": 70,
+      "height": 70,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#ffe0e0"
+        },
+        {
+          "type": "image",
+          "asset": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "fit": "fit"
+        }
+      ],
+      "strokes": [
+        {
+          "paint": {
+            "type": "solid",
+            "color": "#000000"
+          },
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "type": "rectangle",
+      "x": 170,
+      "y": 10,
+      "width": 70,
+      "height": 70,
+      "fills": [
+        {
+          "type": "image",
+          "asset": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "fit": "crop"
+        }
+      ],
+      "strokes": [
+        {
+          "paint": {
+            "type": "solid",
+            "color": "#000000"
+          },
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "type": "rectangle",
+      "x": 250,
+      "y": 10,
+      "width": 60,
+      "height": 70,
+      "fills": [
+        {
+          "type": "image",
+          "asset": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "fit": "tile"
+        }
+      ],
+      "strokes": [
+        {
+          "paint": {
+            "type": "solid",
+            "color": "#000000"
+          },
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "asset": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "x": 10,
+      "y": 90,
+      "width": 128,
+      "height": 60,
+      "radius": 14
+    },
+    {
+      "type": "ellipse",
+      "x": 150,
+      "y": 90,
+      "width": 60,
+      "height": 60,
+      "fills": [
+        {
+          "type": "image",
+          "asset": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "fit": "fill",
+          "opacity": 0.6
+        }
+      ]
+    },
+    {
+      "type": "rectangle",
+      "x": 220,
+      "y": 90,
+      "width": 90,
+      "height": 60,
+      "fills": [
+        {
+          "type": "image",
+          "asset": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "fit": "fill"
+        }
+      ],
+      "rotation": 15
+    }
+  ]
+}

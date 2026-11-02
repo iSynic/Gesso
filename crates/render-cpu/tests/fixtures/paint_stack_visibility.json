@@ -1,0 +1,115 @@
+{
+  "size": [
+    320,
+    120
+  ],
+  "nodes": [
+    {
+      "type": "rectangle",
+      "x": 10,
+      "y": 10,
+      "width": 90,
+      "height": 100,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#ff0000"
+        },
+        {
+          "type": "solid",
+          "color": "#0000ff",
+          "opacity": 0.5
+        },
+        {
+          "type": "solid",
+          "color": "#00ff00",
+          "visible": false
+        }
+      ]
+    },
+    {
+      "type": "rectangle",
+      "x": 115,
+      "y": 10,
+      "width": 90,
+      "height": 100,
+      "fills": [
+        {
+          "type": "image",
+          "asset": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "fit": "fill"
+        },
+        {
+          "type": "solid",
+          "color": "#ff8000",
+          "blend": "multiply"
+        },
+        {
+          "type": "linearGradient",
+          "start": [
+            0,
+            0
+          ],
+          "end": [
+            0,
+            1
+          ],
+          "stops": [
+            {
+              "offset": 0,
+              "color": "#ffffff00"
+            },
+            {
+              "offset": 1,
+              "color": "#ffffffff"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rectangle",
+      "x": 220,
+      "y": 10,
+      "width": 90,
+      "height": 100,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#202020"
+        }
+      ],
+      "visible": false
+    },
+    {
+      "type": "rectangle",
+      "x": 220,
+      "y": 10,
+      "width": 90,
+      "height": 100,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#c0c0c0"
+        }
+      ],
+      "strokes": [
+        {
+          "paint": {
+            "type": "solid",
+            "color": "#ff0000",
+            "visible": false
+          },
+          "weight": 4
+        },
+        {
+          "paint": {
+            "type": "solid",
+            "color": "#0000ff"
+          },
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "host": {
+    "cpu": "11th Gen Intel(R) Core(TM) i5-11600KF @ 3.90GHz",
+    "git": "",
+    "gpu": {
+      "backend": "Vulkan",
+      "driver": "NVIDIA",
+      "driver_info": "610.88",
+      "name": "NVIDIA GeForce RTX 3080"
+    },
+    "logical_cpus": 12,
+    "os": "windows x86_64",
+    "profile": "release"
+  },
+  "scenarios": {
+    "editframe": {
+      "info": {
+        "drag_artboard_execute_ms": 0.37429999999999997,
+        "drag_artboard_vello_glyphs": 24624,
+        "drag_artboard_vello_paths": 2836,
+        "drag_artboard_vello_submit_ms": 7.1961,
+        "drag_icon_in_card_execute_ms": 0.06830000000000001,
+        "drag_icon_in_card_vello_glyphs": 8174,
+        "drag_icon_in_card_vello_paths": 946,
+        "drag_icon_in_card_vello_submit_ms": 2.4112999999999998,
+        "keystroke_fragments_rebuilt_last": 1,
+        "stress_fragments": 102
+      },
+      "metrics": {
+        "drag_artboard_of_which_gpu_wait": {
+          "max": 4.8661,
+          "n": 120,
+          "p50": 1.9458,
+          "p95": 4.3018
+        },
+        "drag_artboard_of_which_scene_apply": {
+          "max": 0.3139,
+          "n": 120,
+          "p50": 0.201,
+          "p95": 0.2584
+        },
+        "drag_artboard_of_which_tx_and_layout": {
+          "max": 0.08940000000000001,
+          "n": 120,
+          "p50": 0.045599999999999995,
+          "p95": 0.0621
+        },
+        "drag_artboard_per_frame": {
+          "gate_ms": 8.0,
+          "max": 13.4403,
+          "n": 120,
+          "p50": 9.3813,
+          "p95": 12.1837,
+          "target_ms": 16.0
+        },
+        "drag_icon_in_card_of_which_gpu_wait": {
+          "max": 5.339,
+          "n": 120,
+          "p50": 1.9737,
+          "p95": 3.3569
+        },
+        "drag_icon_in_card_of_which_scene_apply": {
+          "max": 0.019700000000000002,
+          "n": 120,
+          "p50": 0.011300000000000001,
+          "p95": 0.0171
+        },
+        "drag_icon_in_card_of_which_tx_and_layout": {
+          "max": 0.1711,
+          "n": 120,
+          "p50": 0.0699,
+          "p95": 0.1086
+        },
+        "drag_icon_in_card_per_frame": {
+          "gate_ms": 8.0,
+          "max": 8.1647,
+          "n": 120,
+          "p50": 5.3778999999999995,
+          "p95": 6.492999999999999,
+          "target_ms": 16.0
+        },
+        "keystroke_of_which_frame_and_gpu": {
+          "max": 3.7488,
+          "n": 200,
+          "p50": 2.4238,
+          "p95": 3.0641000000000003
+        },
+        "keystroke_of_which_scene_apply": {
+          "max": 14.025599999999999,
+          "n": 200,
+          "p50": 0.9453,
+          "p95": 1.4071
+        },
+        "keystroke_of_which_tx_and_layout": {
+          "max": 1.5013999999999998,
+          "n": 200,
+          "p50": 0.5173000000000001,
+          "p95": 0.8187
+        },
+        "keystroke_to_frame": {
+          "gate_ms": 8.0,
+          "max": 18.3275,
+          "n": 200,
+          "p50": 4.1386,
+          "p95": 4.8363,
+          "target_ms": 16.0
+        }
+      }
+    }
+  }
+}

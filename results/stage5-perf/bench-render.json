@@ -1,0 +1,322 @@
+{
+  "host": {
+    "cpu": "11th Gen Intel(R) Core(TM) i5-11600KF @ 3.90GHz",
+    "git": "",
+    "gpu": {
+      "backend": "Vulkan",
+      "driver": "NVIDIA",
+      "driver_info": "610.88",
+      "name": "NVIDIA GeForce RTX 3080"
+    },
+    "logical_cpus": 12,
+    "os": "windows x86_64",
+    "profile": "release"
+  },
+  "scenarios": {
+    "editframe": {
+      "info": {
+        "drag_artboard_execute_ms": 0.3467,
+        "drag_artboard_vello_glyphs": 24624,
+        "drag_artboard_vello_paths": 2836,
+        "drag_artboard_vello_submit_ms": 6.9307,
+        "drag_icon_in_card_execute_ms": 0.0701,
+        "drag_icon_in_card_vello_glyphs": 8174,
+        "drag_icon_in_card_vello_paths": 946,
+        "drag_icon_in_card_vello_submit_ms": 2.4932000000000003,
+        "keystroke_fragments_rebuilt_last": 1,
+        "stress_fragments": 102
+      },
+      "metrics": {
+        "drag_artboard_of_which_gpu_wait": {
+          "max": 7.75,
+          "n": 120,
+          "p50": 4.3851,
+          "p95": 6.631200000000001
+        },
+        "drag_artboard_of_which_scene_apply": {
+          "max": 0.5183,
+          "n": 120,
+          "p50": 0.1868,
+          "p95": 0.4046
+        },
+        "drag_artboard_of_which_tx_and_layout": {
+          "max": 0.0964,
+          "n": 120,
+          "p50": 0.0441,
+          "p95": 0.0516
+        },
+        "drag_artboard_per_frame": {
+          "gate_ms": 8.0,
+          "max": 15.946599999999998,
+          "n": 120,
+          "p50": 12.3042,
+          "p95": 14.3817,
+          "target_ms": 16.0
+        },
+        "drag_icon_in_card_of_which_gpu_wait": {
+          "max": 4.9169,
+          "n": 120,
+          "p50": 1.2410999999999999,
+          "p95": 2.8879
+        },
+        "drag_icon_in_card_of_which_scene_apply": {
+          "max": 0.0322,
+          "n": 120,
+          "p50": 0.0111,
+          "p95": 0.0196
+        },
+        "drag_icon_in_card_of_which_tx_and_layout": {
+          "max": 0.1953,
+          "n": 120,
+          "p50": 0.07229999999999999,
+          "p95": 0.0971
+        },
+        "drag_icon_in_card_per_frame": {
+          "gate_ms": 8.0,
+          "max": 8.2022,
+          "n": 120,
+          "p50": 4.2189000000000005,
+          "p95": 5.9847,
+          "target_ms": 16.0
+        },
+        "keystroke_of_which_frame_and_gpu": {
+          "max": 7.0727,
+          "n": 200,
+          "p50": 4.543,
+          "p95": 5.7598
+        },
+        "keystroke_of_which_scene_apply": {
+          "max": 13.118400000000001,
+          "n": 200,
+          "p50": 0.9366,
+          "p95": 1.3595
+        },
+        "keystroke_of_which_tx_and_layout": {
+          "max": 1.7675,
+          "n": 200,
+          "p50": 0.4986,
+          "p95": 0.7129000000000001
+        },
+        "keystroke_to_frame": {
+          "gate_ms": 8.0,
+          "max": 18.5397,
+          "n": 200,
+          "p50": 6.0046,
+          "p95": 7.3123,
+          "target_ms": 16.0
+        }
+      }
+    },
+    "effects": {
+      "info": {
+        "10_background_blurs_compute_passes": 60,
+        "10_background_blurs_cpu_effect_submit_ms": 1.0062,
+        "10_background_blurs_cpu_offscreen_submit_ms": 3.1001999999999996,
+        "10_background_blurs_vello_renders": 11,
+        "50_blurs_50_shadows_compute_passes": 12,
+        "50_blurs_50_shadows_cpu_effect_submit_ms": 0.182,
+        "50_blurs_50_shadows_cpu_offscreen_submit_ms": 0.2668,
+        "50_blurs_50_shadows_vello_renders": 2
+      },
+      "metrics": {
+        "frame_10_background_blurs": {
+          "max": 7.0150999999999994,
+          "n": 60,
+          "p50": 5.7885,
+          "p95": 6.2568,
+          "target_ms": 16.0
+        },
+        "frame_10_background_blurs_of_which_cpu_submit": {
+          "max": 6.6345,
+          "n": 60,
+          "p50": 5.2731,
+          "p95": 5.721
+        },
+        "frame_10_background_blurs_of_which_gpu_wait": {
+          "max": 0.7545,
+          "n": 60,
+          "p50": 0.4692,
+          "p95": 0.7184
+        },
+        "frame_50_blurs_50_shadows": {
+          "gate_ms": 8.0,
+          "max": 4.987,
+          "n": 60,
+          "p50": 4.111400000000001,
+          "p95": 4.469,
+          "target_ms": 16.0
+        },
+        "frame_50_blurs_50_shadows_of_which_cpu_submit": {
+          "max": 2.0728,
+          "n": 60,
+          "p50": 1.3808,
+          "p95": 1.7654
+        },
+        "frame_50_blurs_50_shadows_of_which_gpu_wait": {
+          "max": 3.3274,
+          "n": 60,
+          "p50": 2.6741,
+          "p95": 3.1042
+        }
+      }
+    },
+    "export": {
+      "info": {},
+      "metrics": {
+        "export_4k_detail_png_encode": {
+          "max": 27.2189,
+          "n": 5,
+          "p50": 26.6035,
+          "p95": 27.2189
+        },
+        "export_4k_detail_render": {
+          "max": 93.6464,
+          "n": 5,
+          "p50": 70.15639999999999,
+          "p95": 93.6464
+        },
+        "export_4k_overview_png_encode": {
+          "max": 35.447199999999995,
+          "n": 5,
+          "p50": 35.3951,
+          "p95": 35.447199999999995
+        },
+        "export_4k_overview_render": {
+          "max": 142.461,
+          "n": 5,
+          "p50": 100.2387,
+          "p95": 142.461
+        }
+      }
+    },
+    "pan": {
+      "info": {
+        "first_frame_100pct_scene_ms": 14.6163,
+        "first_frame_50mb_100pct_scene_frame_ms": 15.2052,
+        "first_frame_50mb_100pct_scene_new_ms": 37.2823,
+        "first_frame_50mb_fit_scene_frame_ms": 41.5537,
+        "first_frame_50mb_fit_scene_new_ms": 37.4154,
+        "fragments": 100,
+        "page_bounds": "15840×11824",
+        "page_nodes": 19301,
+        "pan_100pct_execute_ms": 0.09720000000000001,
+        "pan_100pct_runs_reused": 4,
+        "pan_100pct_vello_paths": 1261,
+        "pan_100pct_vello_submit_ms": 3.8639,
+        "pan_100pct_visible_fragments": 4,
+        "pan_15pct_execute_ms": 0.49,
+        "pan_15pct_runs_reused": 48,
+        "pan_15pct_vello_paths": 18577,
+        "pan_15pct_vello_submit_ms": 2.251,
+        "pan_15pct_visible_fragments": 48,
+        "pan_5pct_execute_ms": 1.0279,
+        "pan_5pct_runs_reused": 100,
+        "pan_5pct_vello_paths": 38701,
+        "pan_5pct_vello_submit_ms": 4.135800000000001,
+        "pan_5pct_visible_fragments": 100
+      },
+      "metrics": {
+        "first_frame_100pct_cold": {
+          "max": 31.1616,
+          "n": 1,
+          "p50": 31.1616,
+          "p95": 31.1616
+        },
+        "first_frame_50mb_100pct": {
+          "max": 65.11439999999999,
+          "n": 1,
+          "p50": 65.11439999999999,
+          "p95": 65.11439999999999
+        },
+        "first_frame_50mb_fit": {
+          "max": 119.48240000000001,
+          "n": 1,
+          "p50": 119.48240000000001,
+          "p95": 119.48240000000001
+        },
+        "pan_100pct_of_which_gpu_wait": {
+          "max": 2.054,
+          "n": 120,
+          "p50": 1.1123999999999998,
+          "p95": 1.9602
+        },
+        "pan_100pct_of_which_scene": {
+          "max": 0.9794999999999999,
+          "n": 120,
+          "p50": 0.022699999999999998,
+          "p95": 0.044700000000000004
+        },
+        "pan_100pct_warm": {
+          "gate_ms": 8.0,
+          "max": 7.5502,
+          "n": 120,
+          "p50": 5.127300000000001,
+          "p95": 6.6657,
+          "target_ms": 16.0
+        },
+        "pan_15pct_of_which_gpu_wait": {
+          "max": 2.6802,
+          "n": 120,
+          "p50": 2.3597,
+          "p95": 2.5703
+        },
+        "pan_15pct_of_which_scene": {
+          "max": 0.0609,
+          "n": 120,
+          "p50": 0.0323,
+          "p95": 0.0511
+        },
+        "pan_15pct_warm": {
+          "gate_ms": 8.0,
+          "max": 7.0711,
+          "n": 120,
+          "p50": 5.5241999999999996,
+          "p95": 6.1217,
+          "target_ms": 16.0
+        },
+        "pan_5pct_of_which_gpu_wait": {
+          "max": 3.3761,
+          "n": 120,
+          "p50": 2.7282,
+          "p95": 3.235
+        },
+        "pan_5pct_of_which_scene": {
+          "max": 0.06820000000000001,
+          "n": 120,
+          "p50": 0.0429,
+          "p95": 0.050800000000000005
+        },
+        "pan_5pct_warm": {
+          "gate_ms": 8.0,
+          "max": 9.4094,
+          "n": 120,
+          "p50": 7.8928,
+          "p95": 8.8511,
+          "target_ms": 16.0
+        },
+        "scene_new_100k": {
+          "max": 42.253,
+          "n": 1,
+          "p50": 42.253,
+          "p95": 42.253
+        },
+        "zoom_sweep_first_pass": {
+          "gate_ms": 8.0,
+          "max": 56.4294,
+          "n": 120,
+          "p50": 6.2206,
+          "p95": 9.5313,
+          "target_ms": 16.0
+        },
+        "zoom_sweep_warm": {
+          "gate_ms": 8.0,
+          "max": 10.1382,
+          "n": 120,
+          "p50": 6.4352,
+          "p95": 9.3035,
+          "target_ms": 16.0
+        }
+      }
+    }
+  }
+}

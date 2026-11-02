@@ -1,0 +1,71 @@
+{
+  "size": [
+    320,
+    120
+  ],
+  "nodes": [
+    {
+      "type": "ellipse",
+      "x": 10,
+      "y": 10,
+      "width": 90,
+      "height": 90,
+      "arc": {
+        "start": 0,
+        "sweep": 270
+      },
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#e04040"
+        }
+      ]
+    },
+    {
+      "type": "ellipse",
+      "x": 110,
+      "y": 10,
+      "width": 90,
+      "height": 90,
+      "arc": {
+        "start": 0,
+        "sweep": 360,
+        "innerRatio": 0.6
+      },
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#4080e0"
+        }
+      ]
+    },
+    {
+      "type": "ellipse",
+      "x": 210,
+      "y": 10,
+      "width": 100,
+      "height": 90,
+      "arc": {
+        "start": -90,
+        "sweep": 200,
+        "innerRatio": 0.5
+      },
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#40a060"
+        }
+      ],
+      "strokes": [
+        {
+          "paint": {
+            "type": "solid",
+            "color": "#000000"
+          },
+          "weight": 1,
+          "align": "center"
+        }
+      ]
+    }
+  ]
+}

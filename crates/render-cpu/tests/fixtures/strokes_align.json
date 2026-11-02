@@ -1,0 +1,224 @@
+{
+  "size": [
+    320,
+    300
+  ],
+  "nodes": [
+    {
+      "type": "rectangle",
+      "x": 20,
+      "y": 20,
+      "width": 70,
+      "height": 60,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#cfe3ff"
+        }
+      ],
+      "strokes": [
+        {
+          "paint": {
+            "type": "solid",
+            "color": "#1a50c0"
+          },
+          "weight": 8,
+          "align": "inside"
+        }
+      ],
+      "radius": 10
+    },
+    {
+      "type": "rectangle",
+      "x": 120,
+      "y": 20,
+      "width": 70,
+      "height": 60,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#cfe3ff"
+        }
+      ],
+      "strokes": [
+        {
+          "paint": {
+            "type": "solid",
+            "color": "#1a50c0"
+          },
+          "weight": 8,
+          "align": "center"
+        }
+      ],
+      "radius": 10
+    },
+    {
+      "type": "rectangle",
+      "x": 220,
+      "y": 20,
+      "width": 70,
+      "height": 60,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#cfe3ff"
+        }
+      ],
+      "strokes": [
+        {
+          "paint": {
+            "type": "solid",
+            "color": "#1a50c0"
+          },
+          "weight": 8,
+          "align": "outside"
+        }
+      ],
+      "radius": 10
+    },
+    {
+      "type": "ellipse",
+      "x": 20,
+      "y": 115,
+      "width": 70,
+      "height": 60,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#cfe3ff"
+        }
+      ],
+      "strokes": [
+        {
+          "paint": {
+            "type": "solid",
+            "color": "#1a50c0"
+          },
+          "weight": 8,
+          "align": "inside"
+        }
+      ]
+    },
+    {
+      "type": "ellipse",
+      "x": 120,
+      "y": 115,
+      "width": 70,
+      "height": 60,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#cfe3ff"
+        }
+      ],
+      "strokes": [
+        {
+          "paint": {
+            "type": "solid",
+            "color": "#1a50c0"
+          },
+          "weight": 8,
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "type": "ellipse",
+      "x": 220,
+      "y": 115,
+      "width": 70,
+      "height": 60,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#cfe3ff"
+        }
+      ],
+      "strokes": [
+        {
+          "paint": {
+            "type": "solid",
+            "color": "#1a50c0"
+          },
+          "weight": 8,
+          "align": "outside"
+        }
+      ]
+    },
+    {
+      "type": "polygon",
+      "x": 20,
+      "y": 210,
+      "width": 70,
+      "height": 60,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#cfe3ff"
+        }
+      ],
+      "strokes": [
+        {
+          "paint": {
+            "type": "solid",
+            "color": "#1a50c0"
+          },
+          "weight": 8,
+          "align": "inside"
+        }
+      ],
+      "sides": 5,
+      "starInnerRatio": 0.5
+    },
+    {
+      "type": "polygon",
+      "x": 120,
+      "y": 210,
+      "width": 70,
+      "height": 60,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#cfe3ff"
+        }
+      ],
+      "strokes": [
+        {
+          "paint": {
+            "type": "solid",
+            "color": "#1a50c0"
+          },
+          "weight": 8,
+          "align": "center"
+        }
+      ],
+      "sides": 5,
+      "starInnerRatio": 0.5
+    },
+    {
+      "type": "polygon",
+      "x": 220,
+      "y": 210,
+      "width": 70,
+      "height": 60,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#cfe3ff"
+        }
+      ],
+      "strokes": [
+        {
+          "paint": {
+            "type": "solid",
+            "color": "#1a50c0"
+          },
+          "weight": 8,
+          "align": "outside"
+        }
+      ],
+      "sides": 5,
+      "starInnerRatio": 0.5
+    }
+  ]
+}

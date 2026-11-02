@@ -1,0 +1,102 @@
+{
+  "size": [
+    160,
+    100
+  ],
+  "nodes": [
+    {
+      "type": "rectangle",
+      "x": 10,
+      "y": 10,
+      "width": 60,
+      "height": 40,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#e04040"
+        }
+      ],
+      "radius": 8,
+      "strokes": [
+        {
+          "paint": {
+            "type": "solid",
+            "color": "#000000"
+          },
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "type": "ellipse",
+      "x": 80,
+      "y": 10,
+      "width": 70,
+      "height": 40,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#4080e0"
+        }
+      ],
+      "effects": [
+        {
+          "type": "dropShadow",
+          "color": "#00000080",
+          "offset": [
+            0,
+            3
+          ],
+          "blur": 6
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 10,
+      "y": 60,
+      "spans": [
+        {
+          "text": "Crisp at 2x"
+        }
+      ],
+      "autoResize": "widthAndHeight",
+      "style": {
+        "fontFamily": "Inter",
+        "fontSize": 16,
+        "fontWeight": 400,
+        "italic": false,
+        "letterSpacing": 0,
+        "decoration": "none",
+        "color": "#000000"
+      }
+    },
+    {
+      "type": "polygon",
+      "sides": 5,
+      "starInnerRatio": 0.5,
+      "x": 110,
+      "y": 55,
+      "width": 40,
+      "height": 40,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#e0c020"
+        }
+      ],
+      "effects": [
+        {
+          "type": "innerShadow",
+          "color": "#00000080",
+          "offset": [
+            0,
+            2
+          ],
+          "blur": 4
+        }
+      ]
+    }
+  ],
+  "scale": 2
+}

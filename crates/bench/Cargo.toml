@@ -1,0 +1,28 @@
+[package]
+name = "bench"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+description = "Benchmark harness: scenarios to JSON, baseline comparison, CI gate"
+
+[dependencies]
+doc = { path = "../doc", features = ["testing"] }
+format = { path = "../format" }
+layout = { path = "../layout" }
+text = { path = "../text" }
+index = { path = "../index" }
+render = { path = "../render" }
+render-cpu = { path = "../render-cpu" }
+render-vello = { path = "../render-vello" }
+editor = { path = "../editor" }
+script = { path = "../script" }
+agent = { path = "../agent" }
+export = { path = "../export" }
+image = { version = "0.25", default-features = false, features = ["png", "jpeg"] }
+kurbo = "0.13.1"
+memory-stats = "1.2.0"
+serde_json = "1.0.154"
+
+[lints]
+workspace = true

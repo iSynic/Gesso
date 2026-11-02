@@ -1,0 +1,93 @@
+{
+  "size": [
+    320,
+    140
+  ],
+  "nodes": [
+    {
+      "type": "text",
+      "x": 10,
+      "y": 10,
+      "spans": [
+        {
+          "text": "Mixed "
+        },
+        {
+          "text": "bold ",
+          "fontWeight": 700
+        },
+        {
+          "text": "red ",
+          "color": "#d02020"
+        },
+        {
+          "text": "big",
+          "fontSize": 26
+        },
+        {
+          "text": " italic",
+          "italic": true
+        }
+      ],
+      "autoResize": "widthAndHeight",
+      "style": {
+        "fontFamily": "Inter",
+        "fontSize": 16,
+        "fontWeight": 400,
+        "italic": false,
+        "letterSpacing": 0,
+        "decoration": "none",
+        "color": "#000000"
+      }
+    },
+    {
+      "type": "text",
+      "x": 10,
+      "y": 50,
+      "spans": [
+        {
+          "text": "Underlined",
+          "decoration": "underline"
+        },
+        {
+          "text": " and "
+        },
+        {
+          "text": "struck through",
+          "decoration": "strikethrough",
+          "color": "#2060c0"
+        }
+      ],
+      "autoResize": "widthAndHeight",
+      "style": {
+        "fontFamily": "Inter",
+        "fontSize": 18,
+        "fontWeight": 400,
+        "italic": false,
+        "letterSpacing": 0,
+        "decoration": "none",
+        "color": "#000000"
+      }
+    },
+    {
+      "type": "text",
+      "x": 10,
+      "y": 90,
+      "spans": [
+        {
+          "text": "Whole text underlined"
+        }
+      ],
+      "autoResize": "widthAndHeight",
+      "style": {
+        "fontFamily": "Inter",
+        "fontSize": 16,
+        "fontWeight": 400,
+        "italic": false,
+        "letterSpacing": 0,
+        "decoration": "underline",
+        "color": "#208040"
+      }
+    }
+  ]
+}

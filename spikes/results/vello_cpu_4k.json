@@ -1,0 +1,44 @@
+{
+  "host": {
+    "cpu": "Intel64 Family 6 Model 167 Stepping 1, GenuineIntel",
+    "git": "",
+    "gpu": "",
+    "gpu_backend": "cpu",
+    "logical_cpus": 12,
+    "os": "windows x86_64",
+    "profile": "release"
+  },
+  "renderer": "vello_cpu",
+  "results": [
+    {
+      "ms": {
+        "max": 33.975699999999996,
+        "mean": 30.88822,
+        "n": 5,
+        "p50": 30.1456,
+        "p95": 33.975699999999996,
+        "p99": 33.975699999999996
+      },
+      "view": "detail_100pct",
+      "visible": 306
+    },
+    {
+      "ms": {
+        "max": 206.4099,
+        "mean": 186.18574,
+        "n": 5,
+        "p50": 181.8252,
+        "p95": 206.4099,
+        "p99": 206.4099
+      },
+      "view": "overview_15pct",
+      "visible": 12951
+    }
+  ],
+  "size": [
+    3840,
+    2160
+  ],
+  "threads": "auto",
+  "version": "0.3.0"
+}

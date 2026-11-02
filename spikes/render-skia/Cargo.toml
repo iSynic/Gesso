@@ -1,0 +1,17 @@
+[package]
+name = "render-skia"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+common = { path = "../common" }
+glutin = "0.32"
+glutin-winit = "0.5"
+image = { version = "0.25", default-features = false, features = ["png"] }
+raw-window-handle = "0.6"
+serde_json = "1"
+skia-safe = { version = "0.156", features = ["gl"] }
+winit = "0.30"
+gl = "0.14"

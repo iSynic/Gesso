@@ -1,0 +1,11 @@
+{
+  "document": "../../../target/bench-docs/100k.canvas",
+  "window": [1920, 1080],
+  "steps": [
+    {"page": "Page 1"},
+    {"fit": true},
+    {"wait": 5},
+    {"zoomsweep": {"from": 0.03, "to": 2.0, "frames": 120}, "measure": "zoom_sweep_cold"},
+    {"zoomsweep": {"from": 0.03, "to": 2.0, "frames": 120}, "measure": "zoom_sweep_warm"}
+  ]
+}

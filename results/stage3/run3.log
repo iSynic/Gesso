@@ -1,0 +1,50 @@
+ops: Document ops at 100k nodes, no layout (Stage 2)
+  build_100k_via_transactions                    146.792 ms
+  update_one_prop                              p50     0.001  p95     0.002 ms  (n=2000)
+  update_json_two_props                        p50     0.003  p95     0.003 ms  (n=2000)
+  tx_500_ops                                   p50     0.120  p95     0.175 ms  (n=50)
+  undo_500_ops                                 p50     0.118  p95     0.167 ms  (n=50)
+  redo_500_ops                                 p50     0.120  p95     0.188 ms  (n=50)
+  move_card_between_artboards                  p50     0.002  p95     0.010 ms  (n=1000)
+  delete_card_and_undo                         p50     0.011  p95     0.012 ms  (n=500)
+  copy_5_artboards                             p50     0.940  p95     1.627 ms  (n=20)
+files: Save and open (parse + build) at 100k nodes, 50 MB and 92 MB, no layout (Stage 2)
+  100k_save                                      433.721 ms
+  100k_open                                    p50   419.722  p95   454.478 ms  (n=5)
+  100k_read_and_parse                          p50   376.428  p95   407.295 ms  (n=5)
+  100k_build_and_validate                      p50    45.419  p95    50.527 ms  (n=5)
+  50mb_save                                      213.118 ms
+  50mb_open                                    p50   272.755  p95   294.232 ms  (n=5)  [target 2000 ms: ok]
+  50mb_read_and_parse                          p50   243.520  p95   263.815 ms  (n=5)
+  50mb_build_and_validate                      p50    29.235  p95    30.416 ms  (n=5)
+  large_save                                     715.205 ms
+  large_open                                   p50   491.266  p95   497.762 ms  (n=5)
+  large_read_and_parse                         p50   431.909  p95   442.460 ms  (n=5)
+  large_build_and_validate                     p50    55.300  p95    64.126 ms  (n=5)
+open: Open a laid-out 50 MB document end to end: read, parse, build, shape all text, lay out
+  first_full_layout_of_unlaid_64k               1180.169 ms
+  open_end_to_end                              p50   657.331  p95   677.912 ms  (n=5)  [target 2000 ms: ok]
+  read_and_parse                               p50   262.051  p95   263.915 ms  (n=5)
+  build_and_validate                           p50    27.218  p95    29.126 ms  (n=5)
+  shape_all_text_parallel_and_layout           p50   372.553  p95   387.959 ms  (n=5)
+layout: Full layout of a 10k-node auto-layout tree (mirror build + Taffy + text measure)
+  full_layout_10k_cold_text                    p50   167.796  p95   178.318 ms  (n=10)  [target 50 ms: MISS]
+  full_layout_10k_warm_text                    p50    27.365  p95    29.679 ms  (n=30)  [gate 15 ms: MISS]  [target 50 ms: ok]
+  of_which_mirror_build                        p50    14.468  p95    19.066 ms  (n=30)
+  of_which_compute_and_write_back              p50    24.046  p95    34.986 ms  (n=30)
+edit: Edits end to end (transaction + layout + write-back) in a 100k-node document with a 10k-node auto-layout tree
+  first_full_layout_of_unlaid_110k              3168.099 ms
+  keystroke_in_10k_tree                        p50     0.188  p95     0.430 ms  (n=300)  [gate 2 ms: ok]
+  non_layout_prop_update                       p50     0.000  p95     0.001 ms  (n=1000)
+  resize_leaf_in_10k_tree                      p50     0.219  p95     0.310 ms  (n=100)  [gate 2 ms: ok]
+  resize_root_of_10k_tree                      p50     6.933  p95     7.871 ms  (n=20)  [gate 15 ms: ok]  [target 50 ms: ok]
+  undo_root_resize                             p50     6.415  p95     7.299 ms  (n=10)  [gate 15 ms: ok]  [target 50 ms: ok]
+  redo_root_resize                             p50     6.558  p95     7.162 ms  (n=10)  [gate 15 ms: ok]  [target 50 ms: ok]
+  insert_card_in_10k_tree                      p50    28.876  p95    39.230 ms  (n=30)  [target 50 ms: ok]
+  delete_card_in_10k_tree                      p50    28.425  p95    34.259 ms  (n=30)  [target 50 ms: ok]
+  constraint_reflow_200_children               p50     0.037  p95     0.047 ms  (n=100)  [gate 2 ms: ok]
+text: Shape 10k labels cold: sequential vs parallel
+  shape_10k_labels_sequential                  p50   213.135  p95   410.143 ms  (n=5)
+  shape_10k_labels_parallel                    p50   170.753  p95   266.609 ms  (n=5)
+  shape_10k_labels_all_cached                  p50     0.692  p95     0.856 ms  (n=5)
+wrote results/stage3/run3.json

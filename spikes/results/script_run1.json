@@ -1,0 +1,44 @@
+{
+  "cpu_limit": {
+    "budget_ms": 100,
+    "error": "interrupted | stack:     at <eval> (eval_script:1:1) / ",
+    "stopped_after_ms": 100.0587
+  },
+  "error_with_line": "cannot read property 'prop' of null | stack:     at <eval> (eval_script:3:1) / ",
+  "ffi_noop_us": 0.096031,
+  "first_context_ms": 0.2787,
+  "host": {
+    "cpu": "Intel64 Family 6 Model 167 Stepping 1, GenuineIntel",
+    "git": "",
+    "gpu": "",
+    "gpu_backend": "cpu",
+    "logical_cpus": 12,
+    "os": "windows x86_64",
+    "profile": "release"
+  },
+  "insert_json_us": 4.4528300000000005,
+  "memory_limit": {
+    "error": "out of memory | stack:     at <eval> (eval_script:1:49) / ",
+    "limit_mb": 64,
+    "ms": 86.2022
+  },
+  "nodes": 496,
+  "program_500_nodes": {
+    "max": 3.3268999999999997,
+    "mean": 2.74072,
+    "n": 20,
+    "p50": 2.6935000000000002,
+    "p95": 3.0694,
+    "p99": 3.3268999999999997
+  },
+  "rquickjs": "0.14.0",
+  "runtime_new_ms": 0.092,
+  "warm_context": {
+    "max": 0.20049999999999998,
+    "mean": 0.10965,
+    "n": 20,
+    "p50": 0.1082,
+    "p95": 0.1678,
+    "p99": 0.20049999999999998
+  }
+}

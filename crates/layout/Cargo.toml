@@ -1,0 +1,29 @@
+[package]
+name = "layout"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+rayon = "1.12.0"
+doc = { path = "../doc" }
+text = { path = "../text" }
+taffy = "0.15.1"
+rustc-hash = "2.1.3"
+
+[lints]
+workspace = true
+
+[dev-dependencies]
+criterion = "0.8.2"
+doc = { path = "../doc", features = ["testing"] }
+proptest = "1.12.0"
+serde_json = "1.0.154"
+
+[[bench]]
+name = "layout"
+harness = false
+
+[lib]
+bench = false

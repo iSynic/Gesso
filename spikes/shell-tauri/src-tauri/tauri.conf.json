@@ -1,0 +1,13 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "shell-tauri",
+  "version": "0.1.0",
+  "identifier": "dev.spikes.shell-tauri",
+  "build": { "frontendDist": "../dist" },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [{ "title": "shell-tauri (Tauri 2 + WASM/WebGPU vello + HTML panel)", "width": 1600, "height": 900, "resizable": false }],
+    "security": { "csp": null }
+  },
+  "bundle": { "active": false, "icon": ["icons/icon.png", "icons/icon.ico"] }
+}

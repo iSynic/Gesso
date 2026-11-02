@@ -1,0 +1,7851 @@
+{
+  "commit": "da1cf8d",
+  "doc_build_normalize_ms": 905.5605,
+  "frame_stride": 1,
+  "frames": [
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 66.21090000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 66.21159999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 12.1633,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 12.1644,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.3622,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.3626,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.6661,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.6666,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.7725,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.773,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.6984,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 10.6989,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.320500000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.321100000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.1745,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 10.175099999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 13.4014,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 13.4019,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 11.8491,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 11.8495,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.4123,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 10.4131,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.500300000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 10.5008,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 11.297099999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 11.2978,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.102500000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 10.1031,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.3398,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.3402,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.2722,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 10.273,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.597000000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.5978,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.0916,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 10.0921,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.4881,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.488800000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 11.7049,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 11.7053,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 12.7935,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 12.7938,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 15.901800000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 15.9024,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 12.2781,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 12.2785,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 11.6487,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 11.6493,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 11.1912,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 11.1916,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 11.7853,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 11.7859,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.7431,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 10.7434,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 11.5228,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 11.523200000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 11.3893,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 11.389700000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 13.0826,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 13.0829,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 11.58,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 11.5804,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.1455,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 10.1459,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.4306,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 10.4309,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.9482,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.948599999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 11.617600000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 11.618,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.6793,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.6796,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.9065,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.9069,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.5143,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.5147,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.1654,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.166,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.9351,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.935400000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.4405,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.4407,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 12.4495,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 12.4499,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.2725,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 10.2729,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 11.0813,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 11.0816,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.1055,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 10.1059,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 12.2083,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 12.2086,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 12.2148,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 12.215399999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 12.4804,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 12.4808,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 11.329699999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 11.3301,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 11.112300000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 11.113100000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.843,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.843599999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.9303,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 10.931,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 11.9702,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 11.9706,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 11.836400000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 11.8369,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 11.0655,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 11.0659,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 15.791599999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 15.7922,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 12.1129,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 12.113199999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 12.0732,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 12.0737,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 13.1177,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 13.1181,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 11.3947,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 11.395000000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 14.170200000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 14.1705,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 11.272,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 11.272300000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.2945,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 10.295300000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.1636,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 10.164100000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.1042,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.1052,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.4927,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.493500000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.3393,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 10.34,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.272,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.2724,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.599699999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.6002,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.6576,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.658,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.8639,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.864199999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.672,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.672199999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.5901,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.590300000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.1388,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.1392,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.1404,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.1407,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.58,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 5.5803,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.899299999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 4.8997,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.2195,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.2201,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.096299999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.0968,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.2288,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.229,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.136800000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.1372,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.1372,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 10.1374,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.5728,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.573,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.978,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.978200000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.1581,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.1586,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.7653,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.7658,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.0854,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.085799999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.8934999999999995,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.8939,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.850700000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.851,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.5162,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.5164,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.3681,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.368400000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.0155,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.0159,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.4388,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.4392,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.1928,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.1936,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.2085,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.2088,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.5949,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.5952,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.207,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 10.2074,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.459499999999998,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.459900000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.0901,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.0905,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.1582,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.1585,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.3931,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.3934,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.739500000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.7398,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.8908,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.8912,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.2266,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.2271,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.8728,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.873199999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.9245,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.9248,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.4529000000000005,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.4532,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.5495,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.5497000000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.0358,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.0362,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.4098,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.410300000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.1933,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.1935,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.1207,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.121099999999998,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.4961,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.496499999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.4315,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.432,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.8018,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.8021,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.1602,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.1612,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.3331,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.3335,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.257900000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 10.2582,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.4737,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.4741,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.8842,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.884399999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.358300000000002,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.3587,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.300500000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.3008,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.3859,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.3863,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.809,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.8092,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.364,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.3644,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.1073,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.1076999999999995,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.2122,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.2126,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.674799999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.6755,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.1898,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.190300000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.7497,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.75,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.4954,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 5.4957,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.5566,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 5.5569,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.149800000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.1502,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.7204,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 5.7208,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.5766,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.577,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.5186,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.518999999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.6235,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 5.6238,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.4497,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.4501,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.6288,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.629300000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.2218,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.2223,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.3431,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 5.3434,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.5404,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.5407,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.6076,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.6084000000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.5735,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 5.5738,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 3.3768000000000002,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 3.3771999999999998,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 1.961,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 1.9613,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 2.3468,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 2.3471,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 1.8184,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 1.8188,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 1.4633,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 1.4636,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.2281,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 4.228400000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.3495,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.349900000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.7593000000000005,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.7597,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.6423000000000005,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.6426,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.7626,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.763,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.4434000000000005,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.4437,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.1472999999999995,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.1475,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.2811,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.2814000000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.7083,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.7085,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.504099999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.5043999999999995,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.861800000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.8622,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.9129000000000005,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.9133,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.6147,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.6149,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.583699999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.5845,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.3699,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.3701,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.5854,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.585600000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.9228000000000005,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.923299999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.0492,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.0497,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.9758,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.9763,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.2483,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.2486,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.5109,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.5116,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.6525,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.6528,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.7909,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.7912,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.5712,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 10.571499999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.9828,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 10.9833,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.9743,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 10.9747,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.0934,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 10.0939,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.3539,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.3542,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.5318,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.532399999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.5064,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.5069,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.9003,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.900500000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.9953,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.9956000000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.033900000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 10.0344,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.5017,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.501999999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.8556,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 10.8561,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 11.4844,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 11.4848,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.6352,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 10.635399999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.2151,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.2154,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.9486,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.949,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.882,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.882399999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.2926,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.2928,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 13.1012,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 13.1014,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 11.587200000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 11.5878,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 12.807799999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 12.8083,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 11.4138,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 11.4142,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 11.367199999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 11.3676,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.8716,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 10.872,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.7117,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.7125,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.7818,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.7821,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.2952,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.2959,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.2555,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.255899999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.6786,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.6789,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.0485,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.0487,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.2521,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.2524,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.5911,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.5914,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.1291,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.129399999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.6108,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.6114,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.1771,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.1773,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.3301,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.3304,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.374099999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.3745,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.256600000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.2569,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.810499999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.8109,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.591200000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.5914,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.521199999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.5214,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.919699999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.9199,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.3338,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.3340000000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.825699999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 4.8259,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 3.2372,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 3.2373,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 3.6709,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 3.6712,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 2.9302,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 2.9305,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.5087,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 4.5089,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.6901,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 5.6905,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.6831,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 5.6835,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.368,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.3685,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.0953,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.0957,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.3237,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.324,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.899700000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.9001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.1932,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.1935,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.9866,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.9869,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.0381,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.0384,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.153,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.1533,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.7439,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.744199999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.569400000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.5698,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.0181,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.018600000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.2279,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.2283,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.5975,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.5978,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.415299999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.4155,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.08,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.0802,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.789,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.7893,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.8217,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 5.8222,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.8978,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 5.8980999999999995,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.6105,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.6108,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.833699999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 5.8345,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.1257,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.1261,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.1593,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.1595,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.2153,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.2157,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.6746,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.6749,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.6709,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.671200000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.8173,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.8176,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.1526000000000005,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.1529,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.0886,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.088900000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.2360999999999995,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.2364999999999995,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.4341,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 5.4344,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.5846,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.585,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.427099999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 5.4276,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.292800000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 5.2931,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.682600000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.683,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.9986,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.9989,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.5203,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.5205,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.4003000000000005,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.4006,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.5842,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 5.5845,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.273899999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 5.2743,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.8274,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 5.8277,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.7493,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 5.7496,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.3622000000000005,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 5.3624,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.2166,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 5.2170000000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.8431999999999995,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 5.8437,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.8516,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.8519000000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.525400000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.525599999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.1464,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.1466,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.6075,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.6081,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.1186,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.119,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.7593000000000005,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.7596,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.4724,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.4727,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.5395,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.540000000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.1648,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.165099999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.8287,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.829099999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.3607,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.3611,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.197799999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.1981,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.813400000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.8137,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.7861,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.7863,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.3026,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.302900000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.7587,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.7591,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.364,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.3642,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.082,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.0824,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.4392,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.4395,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.6952,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.6954,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.259300000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.2597,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.547,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.547199999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.238600000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 5.2389,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.431100000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 6.4313,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.4952000000000005,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 5.4961,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.7588,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 5.7593000000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.3684,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.3686,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.6302,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 7.6307,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.280800000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.2815,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.748199999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 8.7486,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.4845,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.4848,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.1549,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 10.1553,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 13.466000000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 13.4664,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.1889,
+      "gpu_ms": 0.0,
+      "phase": "PanZoom1",
+      "total_ms": 9.1892,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 108.5346,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 108.53490000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 101.36330000000001,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 101.3637,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 108.0532,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 108.05380000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 103.4693,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 103.47000000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 107.9512,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 107.9517,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 105.0766,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 105.0769,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 102.0208,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 102.02120000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 105.1079,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 105.1081,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 101.38170000000001,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 101.3819,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 98.7339,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 98.7344,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 100.6108,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 100.6111,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 89.6236,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 89.624,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 103.7124,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 103.713,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 97.5198,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 97.5201,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 92.08330000000001,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 92.08370000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 87.964,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 87.9642,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 87.9837,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 87.9839,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 85.198,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 85.1982,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 81.91900000000001,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 81.9198,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 83.36,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 83.3606,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 82.8694,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 82.8698,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 87.6433,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 87.6436,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 79.9426,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 79.943,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 81.1218,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 81.1221,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 83.7215,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 83.7217,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 76.1558,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 76.15610000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 81.8203,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 81.8206,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 79.5572,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 79.55760000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 70.46900000000001,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 70.4693,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 73.7836,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 73.7838,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 75.71940000000001,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 75.7198,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 76.8014,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 76.8017,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 77.4388,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 77.4391,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 77.0593,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 77.0596,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 72.0902,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 72.0907,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 77.7182,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 77.7184,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 67.14699999999999,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 67.14729999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 70.8704,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 70.8709,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 72.38250000000001,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 72.3829,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 66.36200000000001,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 66.3623,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 64.5607,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 64.56099999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 72.35510000000001,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 72.3555,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 65.86500000000001,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 65.8653,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 64.0458,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 64.046,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 68.3594,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 68.35969999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 67.1567,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 67.157,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 64.1267,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 64.12710000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 57.8979,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 57.898199999999996,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 63.932900000000004,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 63.93319999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 60.7572,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 60.757400000000004,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 59.6937,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 59.693999999999996,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 53.7378,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 53.7383,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 61.3931,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 61.3934,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 61.8989,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 61.8995,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 60.6872,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 60.687900000000006,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 58.9359,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 58.9362,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 64.5183,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 64.51859999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 56.6704,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 56.6706,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 51.2832,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 51.2838,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 56.063,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 56.0636,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 56.9268,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 56.9271,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 50.0973,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 50.0976,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 45.1759,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 45.176300000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 50.9454,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 50.9456,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 46.9337,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 46.9343,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 45.5815,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 45.5821,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 41.673,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 41.6732,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 49.7947,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 49.794900000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 46.1304,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 46.1306,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 43.3533,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 43.353500000000004,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 58.849199999999996,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 58.8496,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 44.7016,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 44.702,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 44.297200000000004,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 44.2974,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 44.384,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 44.3843,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 40.6796,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 40.6804,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 39.361,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 39.3612,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 43.0441,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 43.0448,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 36.250699999999995,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 36.2509,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 41.4874,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 41.487700000000004,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 40.7963,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 40.796800000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.909200000000006,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.9099,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 45.523,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 45.5232,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 47.0849,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 47.0853,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 43.9563,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 43.956799999999994,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 42.745900000000006,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 42.746399999999994,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 42.4142,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 42.4146,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 56.382099999999994,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 56.3824,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 46.995799999999996,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 46.9962,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 59.0353,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 59.035700000000006,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 67.996,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 67.9964,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 51.740300000000005,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 51.740700000000004,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 51.6812,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 51.6826,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 56.9948,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 56.9955,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 69.9597,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 69.9599,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 47.517900000000004,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 47.5186,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 40.8994,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 40.8996,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 42.284099999999995,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 42.2844,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 43.5747,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 43.575,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 42.2786,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 42.2788,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 41.7571,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 41.7574,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 36.6684,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 36.6687,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.725699999999996,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.725899999999996,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 42.3462,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 42.3465,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 36.6917,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 36.692099999999996,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 42.8792,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 42.8799,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 64.04700000000001,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 64.0473,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 52.398,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 52.398199999999996,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 47.823100000000004,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 47.8234,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 57.3634,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 57.3638,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 48.2561,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 48.2565,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 52.2143,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 52.2149,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 48.617599999999996,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 48.618,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 46.6385,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 46.639,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 41.1543,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 41.155499999999996,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 48.9362,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 48.9364,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 39.694,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 39.6942,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 47.0251,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 47.025400000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 40.408,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 40.4084,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 39.6669,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 39.6672,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 41.423700000000004,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 41.423899999999996,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 42.724900000000005,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 42.7252,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 44.068200000000004,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 44.06849999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 53.7611,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 53.7613,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 49.7295,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 49.7297,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 41.202200000000005,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 41.2024,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 37.9609,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 37.9612,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 45.3153,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 45.3157,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 48.9409,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 48.9413,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 39.434400000000004,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 39.434799999999996,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.388000000000005,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.3881,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.170300000000005,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.1706,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 36.1442,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 36.1444,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 42.878600000000006,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 42.8792,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 45.2478,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 45.2483,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 44.653999999999996,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 44.6543,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 42.8159,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 42.816399999999994,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 37.6356,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 37.6359,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 34.7364,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 34.7367,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 33.0614,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 33.0616,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.6984,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.6986,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.8717,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.8722,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 34.4319,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 34.4321,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 31.705,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 31.7052,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 38.1289,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 38.1291,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.920100000000005,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.9204,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 34.3667,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 34.3669,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 32.6311,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 32.6314,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 34.742799999999995,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 34.7432,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 34.252199999999995,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 34.2524,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 33.9535,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 33.9538,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 31.401900000000005,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 31.4023,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 31.411799999999996,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 31.4123,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 32.8568,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 32.8571,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 31.6423,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 31.6426,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 33.471000000000004,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 33.4713,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 32.821200000000005,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 32.8214,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 32.0421,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 32.042500000000004,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 33.1423,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 33.1426,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 31.36,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 31.360300000000002,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 33.884699999999995,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 33.8851,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 36.1231,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 36.1233,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 34.7796,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 34.7798,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 36.4934,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 36.493900000000004,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.4271,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.427800000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 38.4607,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 38.461099999999995,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 32.799,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 32.7994,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 34.8221,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 34.8223,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 32.2327,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 32.2331,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 34.0444,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 34.0446,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 32.9603,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 32.960499999999996,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 31.498900000000003,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 31.4992,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 32.974000000000004,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 32.9742,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 36.613600000000005,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 36.6139,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.5964,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.5966,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.2644,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.2648,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 42.9104,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 42.910700000000006,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 36.6081,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 36.6087,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.9468,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.947199999999995,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 34.1005,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 34.1009,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 32.141999999999996,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 32.1423,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.236700000000006,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.2373,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 37.414500000000004,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 37.4154,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 29.9723,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 29.9725,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 34.0293,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 34.029900000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 31.1732,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 31.1735,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.8658,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.866299999999995,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 31.255,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 31.255900000000004,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 33.395599999999995,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 33.3959,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 30.5869,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 30.5871,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.5104,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.5107,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.6364,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.6367,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.3723,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.3726,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 39.133300000000006,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 39.1338,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 41.2948,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 41.2953,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.8966,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.897,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 33.8698,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 33.8701,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.576,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.5762,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 37.615700000000004,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 37.616,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 41.1066,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 41.1069,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 36.492799999999995,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 36.4931,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.9477,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.9479,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 45.476,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 45.4762,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 37.313399999999994,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 37.3138,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 37.8415,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 37.842099999999995,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 39.4624,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 39.46319999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 44.0012,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 44.0015,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 41.599700000000006,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 41.6,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 40.3641,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 40.3646,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 42.8475,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 42.8478,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 44.8289,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 44.8295,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 37.6813,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 37.6818,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 44.7215,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 44.7221,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 40.486000000000004,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 40.486399999999996,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 38.623900000000006,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 38.6243,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.644299999999994,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.6446,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 33.0687,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 33.0691,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 33.1284,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 33.128699999999995,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.1268,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.1271,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 36.4296,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 36.4299,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.4575,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.4581,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 37.159699999999994,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 37.1601,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 41.087199999999996,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 41.0875,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 44.265499999999996,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 44.2658,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 37.525999999999996,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 37.5262,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 30.0934,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 30.093700000000002,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 28.6366,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 28.6369,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 30.0471,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 30.0473,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 38.0807,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 38.0815,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 36.6497,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 36.65,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 33.5021,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 33.5024,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.03789999999999,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.038199999999996,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 31.889300000000002,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 31.889599999999998,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 32.450199999999995,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 32.4507,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 31.627799999999997,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 31.6281,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.287,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.2874,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 30.311600000000002,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 30.311799999999998,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 33.306000000000004,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 33.3063,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 42.2755,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 42.275800000000004,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 34.0773,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 34.0774,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 39.904599999999995,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 39.905,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 31.825499999999998,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 31.8258,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 33.314299999999996,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 33.314499999999995,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 33.5857,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 33.5859,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 26.2627,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 26.263,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 31.640700000000002,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 31.6412,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 31.2723,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 31.272599999999997,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 31.7112,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 31.711499999999997,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 31.308799999999998,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 31.308999999999997,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 28.2037,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 28.204,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 29.6076,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 29.6079,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.0529,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.053399999999996,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 36.754599999999996,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 36.754799999999996,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.7297,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.730199999999996,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 37.344500000000004,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 37.345000000000006,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 43.8666,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 43.867000000000004,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 38.1189,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 38.1193,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 40.4182,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 40.4185,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.6054,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.6056,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 36.4379,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 36.4383,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 37.503099999999996,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 37.5034,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 31.354899999999997,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 31.3552,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 31.1799,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 31.18,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.468199999999996,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.468399999999995,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 30.995,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 30.9953,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.757200000000005,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.7575,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 39.035599999999995,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 39.0359,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 41.0177,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 41.0182,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 42.5086,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 42.509100000000004,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 41.2275,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 41.2279,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 40.1171,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 40.1173,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 41.8563,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 41.8567,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 39.003,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 39.003299999999996,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 38.5931,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 38.593500000000006,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 38.4058,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 38.406099999999995,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 36.1607,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 36.161,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 34.9394,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 34.939699999999995,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 37.2665,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 37.2669,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 42.926899999999996,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 42.9272,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 36.8148,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 36.8152,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 35.8298,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 35.8303,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 36.8902,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 36.8906,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 42.1052,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 42.105700000000006,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 42.198100000000004,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 42.198600000000006,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 40.1668,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 40.167500000000004,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 40.3742,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 40.3745,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 42.1598,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 42.160000000000004,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 36.6357,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 36.636,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 40.1559,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 40.1565,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 40.9502,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 40.9509,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 43.085,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 43.0854,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 44.1196,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 44.119899999999994,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 52.1485,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 52.149,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 49.8586,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 49.8592,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 55.121900000000004,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 55.1233,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 53.7964,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 53.7969,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 53.0453,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 53.0459,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 58.2358,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 58.2363,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 52.91330000000001,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 52.9142,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 60.7654,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 60.7664,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 48.9423,
+      "gpu_ms": 0.0,
+      "phase": "Zoom",
+      "total_ms": 48.9427,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 69.0983,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 69.0989,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.8126,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.8134,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.737,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.737500000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.9042,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 8.9048,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.6335,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.6338,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.085100000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.0854,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.8784,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.878699999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.267,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 8.2676,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.1353,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.135800000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.7006000000000006,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.7009,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.7335,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.7344,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.507899999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.5083,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.443,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.4433,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.6572000000000005,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.6575999999999995,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.8573,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.858099999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 1.7910000000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 1.7913000000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.8922,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.892600000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.3036,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.303999999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.627400000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.6277,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.313,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.3133,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.4772,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.4776,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.5959,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.5964,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.0355,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.035900000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.7098,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.7101,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.1822,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.1827000000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.3237,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.324,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.2214,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.2218,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.769,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.7697,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.0269,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.0273,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.3245000000000005,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.3248999999999995,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.556700000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 8.5572,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.6157,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.616099999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.0749,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.0754,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.6511000000000005,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.6515,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.7433,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.7437000000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.0475,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.048,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.7265,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.7268,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.4889,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.4896,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.6378,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.6384,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 1.9997,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 2.0000999999999998,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.396,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.396599999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.3439000000000005,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.3445,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.8478,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.848,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.1553,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 8.1558,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.7198,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 8.7202,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.1196,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.1198,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.8718,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.8722,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.6775,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 10.677900000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.0283999999999995,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.0289,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.6423000000000005,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.6428,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.3109,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.3114,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.6126,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.6131,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.3662,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.3664000000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.8251,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.8255,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.6152,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.6158,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.0955,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 8.0962,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.627,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.6274999999999995,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.5236,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.5239,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.207799999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 8.2081,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.0363,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.0367,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.0541,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.0545,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.1135,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.1139,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.5231,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.523499999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.8218000000000005,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.8223,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.6337,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.634,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.632899999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.6333,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.4064,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.406700000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.4462,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 9.4467,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.4301,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 9.4306,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.0742,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.0745000000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.757199999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.757499999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.1183,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 9.118599999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.921,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.9215,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.9009,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.9018999999999995,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.479,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.4794,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.2022,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 8.2026,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.633100000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.6335999999999995,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.913200000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.9135,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.211600000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.2120999999999995,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.971799999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.972200000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.8477,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.8483,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.6688,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.6696,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.1562,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 8.1569,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.6145,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.6153,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.9745,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.9750000000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.1418,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.1421,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.2439,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.2443,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 3.6909,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 3.6912999999999996,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.4656,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.466,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.7035,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.7039,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.1879,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.188199999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.4914,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 8.4916,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.721900000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.7223,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.3695,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.3698,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.2359,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.2363,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.5284,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.5287,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.590999999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.5915,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.3772,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.3775,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.6729,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.6732,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.4512,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.451499999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.5567,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.5571,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.6888,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.6892000000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.273,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 9.2736,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.3984000000000005,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.3988,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.8164,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.8166,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.205,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 8.205499999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.285500000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.286,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.7587,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.759099999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.24,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.240500000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.7368999999999994,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.7372,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.389200000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.3898,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.504700000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.5051,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.901400000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.9017,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.8381,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.8385,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.2113000000000005,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.2116999999999996,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 10.2195,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 10.22,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.837700000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.8382,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.3343,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.334700000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.355599999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 8.356300000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.3619,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.362299999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.100299999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 8.1007,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.0536,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.054,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.8535,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 8.854000000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.6438,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.644299999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.9845999999999995,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.9849,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.2118,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.2124,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.1898,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.1902,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.5014,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.5017,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.9350000000000005,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.9353,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.112699999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.1131,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.485,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.4853000000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.7663,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.7666,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.6875,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.6879,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.0158,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.0162,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 2.4768,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 2.4772000000000003,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.5577,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.558,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.2864,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.2868,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.0819,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.0822,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.7229,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.7234,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.3452,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 8.3456,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.1952,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.1956,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.2269,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.2274,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.3356,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 9.336,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.5648,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 8.5652,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.3945,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.3951,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.8206999999999995,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.821,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.935,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.9354000000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.3141,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.3145,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.413399999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.4139,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.9228,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.9232,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.423,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.4233,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.946,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.9462,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.413399999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.4139,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.8081000000000005,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.8084,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.8917,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.892100000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.2963000000000005,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.2966999999999995,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.7725,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.7729,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.0831,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.0834,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 1.7654999999999998,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 1.7659,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.8839,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.8843000000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.1552999999999995,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.1557,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.4062,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.406700000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.5931,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 9.5936,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.4135,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.4138,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.1387,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.1392,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.798,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.7984,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.1428,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 9.1436,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.2553,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 8.2559,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.0934,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.093699999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.6841,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.684500000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.6044,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.6048,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.080699999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.0811,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.2816,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.282,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.194,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.1944,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.835800000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.8362,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.5717,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.572299999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.7954,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.7961,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.514899999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 9.5152,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.0263,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.0275,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.216100000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.2167,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.9959,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.9962,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.7042,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.7045,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.0595,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.0598,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.3004999999999995,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.3008,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.9698,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.9700999999999995,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.7379,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.738499999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.232,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 8.2325,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.282599999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 8.283199999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.3676,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.3681,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.5735,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.5738,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.8222,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.8227,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.0849,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.0855,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.4233,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.4238,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.059,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.0595,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.553,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 9.5535,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.3521,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.353,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.0067,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.007000000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.9248,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.9253,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.4886,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.4889,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.4014,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.4018,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.7745,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.774900000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.2158,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.2163,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.837999999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.8385,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.8014,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.8021,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.0659,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.0663,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.5106,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.5108,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.5213,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.5217,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.6503,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.650600000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.0896,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.089899999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.076899999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.0771,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.3462,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.3464,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.9323,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.9331000000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.1129,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.1132,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.4460999999999995,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.4464,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.8931000000000004,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.893800000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.7268,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.7273000000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.4535,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.4538,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.51,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.510400000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.5521,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.5523,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.4779,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.4783,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.404,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.4043,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.5774,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 8.5778,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.517799999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.5183,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.3487,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.3491,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.087499999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 8.0879,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 9.4916,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 9.4919,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.1738,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.1742,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.250699999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.2515,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.577,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.5773,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 3.5254000000000003,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 3.5260000000000002,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.1466,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.1472,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.6368,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.6372,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.0269,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.0272,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.3349,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.3352,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.3263,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 8.3266,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.8344,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.8347,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.218999999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.2192,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.8203,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.8206,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.434699999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.4351,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.3903,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.3908000000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.0023,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.0026,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.572,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.5722000000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.8999,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.900200000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.1883,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.1887,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.0429,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.0436,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.806699999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.8072,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.1227,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.1234,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 3.8996999999999997,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 3.9,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.1843,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.1848,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.7436,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.7439,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.527200000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.5277,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.074999999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.0754,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.3901,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.3906,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 1.5192999999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 1.5196999999999998,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.9245,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.9248,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.6923,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.6926,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.446999999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.4474,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.2843,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.2846,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.7495,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.749899999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.1706,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.171,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 3.4857,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 3.4862,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.1886,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.188899999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.7095,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.7099,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.1112,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.1116,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.054600000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.0552,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.165699999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.1662,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.3093,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.3101,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.1966,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.197,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.7751,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.7755,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.959,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.9596,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.2326999999999995,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.2331,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 3.5229,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 3.5233,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.758100000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.7586,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.5702,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.571000000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.0669,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.067699999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.3102,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.3109,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.8284,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.8287,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 2.6239000000000003,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 2.6243,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.3148,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.315300000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.676900000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.6776,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 4.9122,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 4.9125000000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.9546,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.9549,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.6825,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.6831,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.098,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.098400000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.7108,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.7113,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.4158,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.4161,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.6913,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.6918999999999995,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 8.1763,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 8.176900000000002,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.2617,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.262099999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.0813999999999995,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.081600000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.091799999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.0920000000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.4628000000000005,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.4632,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.936699999999999,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.9373000000000005,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.0054,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.005800000000001,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 6.5344,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 6.5351,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.2474,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.2483,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.0722,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.0726,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 7.245900000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 7.2463,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.896400000000001,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.8967,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 5.4031,
+      "gpu_ms": 0.0,
+      "phase": "PanOverview",
+      "total_ms": 5.4034,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 44.621500000000005,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 44.6905,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 22.1504,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 22.2177,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 20.1465,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 20.1871,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 15.3014,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 15.3617,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 18.7598,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 18.799300000000002,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 18.277,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 18.314400000000003,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 21.001700000000003,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 21.0629,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 17.226499999999998,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 17.2693,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 19.8392,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 19.88,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 22.5723,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 22.6112,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 16.924000000000003,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 16.9802,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 20.5123,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 20.5566,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 17.2304,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 17.2847,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 15.838999999999999,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 16.0855,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 21.6931,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 21.735999999999997,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 21.0643,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 21.1198,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 22.151699999999998,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 22.1978,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 17.4927,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 17.5503,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 18.9317,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 18.9773,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 18.615,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 18.648,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 16.9723,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 17.0012,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 18.482200000000002,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 18.5138,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 20.5498,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 20.5913,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 17.7369,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 17.7733,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 25.874100000000002,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 25.9135,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 23.0431,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 23.0985,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 24.5272,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 24.6527,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 27.1157,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 27.1812,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 26.807199999999998,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 26.912399999999998,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 27.5016,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 27.551,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 37.3321,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 37.393299999999996,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 29.2801,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 29.338900000000002,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 23.4409,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 23.4935,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 25.223,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 25.2821,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 21.7622,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 21.7978,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 37.3888,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 37.4595,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 15.6973,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 15.7448,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 23.0503,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 23.0906,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 23.8695,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 23.922800000000002,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 20.6925,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 20.732899999999997,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 22.7204,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 22.7877,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 23.5398,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 23.5871,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 27.115199999999998,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 27.1636,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 32.0811,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 32.2522,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 23.0074,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 23.0546,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 27.133399999999998,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 27.1996,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 22.855400000000003,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 22.9054,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 23.7073,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 23.7484,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 22.8009,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 22.856499999999997,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 20.1368,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 20.188100000000002,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 19.1248,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 19.1568,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 20.7475,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 20.7796,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 21.000700000000002,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 21.0561,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 18.307,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 18.365099999999998,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 15.9855,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 16.023699999999998,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 15.641499999999999,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 15.678799999999999,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 15.1105,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 15.1485,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 17.1971,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 17.2379,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 14.0946,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 14.1304,
+      "visible": 0
+    },
+    {
+      "cull_ms": 0.0,
+      "encode_ms": 17.709,
+      "gpu_ms": 0.0,
+      "phase": "Edit",
+      "total_ms": 17.742,
+      "visible": 0
+    }
+  ],
+  "hit_test_us_each": 231.4637,
+  "host": {
+    "cpu": "Intel64 Family 6 Model 167 Stepping 1, GenuineIntel",
+    "git": "da1cf8d",
+    "gpu": "cpu",
+    "gpu_backend": "tiny-skia",
+    "logical_cpus": 12,
+    "os": "windows x86_64",
+    "profile": "release"
+  },
+  "phases": [
+    {
+      "cull": {
+        "max": 0.0,
+        "mean": 0.0,
+        "n": 300,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0
+      },
+      "encode": {
+        "max": 66.21090000000001,
+        "mean": 8.609333666666672,
+        "n": 300,
+        "p50": 8.3237,
+        "p95": 12.2083,
+        "p99": 14.170200000000001
+      },
+      "gpu": {
+        "max": 0.0,
+        "mean": 0.0,
+        "n": 300,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0
+      },
+      "phase": "PanZoom1",
+      "total": {
+        "max": 66.21159999999999,
+        "mean": 8.609727666666668,
+        "n": 300,
+        "p50": 8.324,
+        "p95": 12.2086,
+        "p99": 14.1705
+      },
+      "visible_mean": 0.0
+    },
+    {
+      "cull": {
+        "max": 0.0,
+        "mean": 0.0,
+        "n": 300,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0
+      },
+      "encode": {
+        "max": 108.5346,
+        "mean": 47.570814333333345,
+        "n": 300,
+        "p50": 41.087199999999996,
+        "p95": 87.9837,
+        "p99": 105.1079
+      },
+      "gpu": {
+        "max": 0.0,
+        "mean": 0.0,
+        "n": 300,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0
+      },
+      "phase": "Zoom",
+      "total": {
+        "max": 108.53490000000001,
+        "mean": 47.57119033333332,
+        "n": 300,
+        "p50": 41.0875,
+        "p95": 87.9839,
+        "p99": 105.1081
+      },
+      "visible_mean": 0.0
+    },
+    {
+      "cull": {
+        "max": 0.0,
+        "mean": 0.0,
+        "n": 300,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0
+      },
+      "encode": {
+        "max": 69.0983,
+        "mean": 6.468542666666664,
+        "n": 300,
+        "p50": 6.2158,
+        "p95": 8.7198,
+        "p99": 9.5931
+      },
+      "gpu": {
+        "max": 0.0,
+        "mean": 0.0,
+        "n": 300,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0
+      },
+      "phase": "PanOverview",
+      "total": {
+        "max": 69.0989,
+        "mean": 6.468979666666668,
+        "n": 300,
+        "p50": 6.2163,
+        "p95": 8.7202,
+        "p99": 9.5936
+      },
+      "visible_mean": 0.0
+    },
+    {
+      "cull": {
+        "max": 0.0,
+        "mean": 0.0,
+        "n": 60,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0
+      },
+      "encode": {
+        "max": 44.621500000000005,
+        "mean": 21.94522,
+        "n": 60,
+        "p50": 21.001700000000003,
+        "p95": 32.0811,
+        "p99": 37.3888
+      },
+      "gpu": {
+        "max": 0.0,
+        "mean": 0.0,
+        "n": 60,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0
+      },
+      "phase": "Edit",
+      "total": {
+        "max": 44.6905,
+        "mean": 22.000625,
+        "n": 60,
+        "p50": 21.0629,
+        "p95": 32.2522,
+        "p99": 37.4595
+      },
+      "visible_mean": 0.0
+    }
+  ],
+  "renderer": "figcraft tiny-skia (canvas path: Retained + LOD)",
+  "rss_after_build_mb": 318.17578125,
+  "save_ms": 0.0,
+  "saved_bytes": 0,
+  "viewport": [
+    1920,
+    1080
+  ]
+}

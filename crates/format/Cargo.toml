@@ -1,0 +1,34 @@
+[package]
+name = "format"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+doc = { version = "0.1.0", path = "../doc" }
+imagesize = "0.15.0"
+schemars = "1.2.3"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+sha2 = "0.11.1"
+thiserror = "2.0.21"
+
+[lints]
+workspace = true
+
+[dev-dependencies]
+doc = { path = "../doc", features = ["testing"] }
+criterion = "0.8.2"
+jsonschema = { version = "0.60.2", default-features = false }
+proptest = "1.12.0"
+tempfile = "3.27.0"
+layout = { path = "../layout" }
+text = { path = "../text" }
+
+[[bench]]
+name = "json"
+harness = false
+
+[lib]
+bench = false

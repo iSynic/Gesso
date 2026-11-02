@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>shell-tauri</title>
+<style>
+  :root { --panel: #f8fafc; --border: #e2e8f0; --text: #0f172a; --muted: #64748b; }
+  html, body { margin: 0; height: 100%; overflow: hidden; font: 13px "Segoe UI", system-ui, sans-serif; color: var(--text); background: #e5e7eb; }
+  #app { display: flex; height: 100%; }
+  #wrap { flex: 1; position: relative; }
+  canvas { display: block; width: 100%; height: 100%; }
+  aside { width: 260px; box-sizing: border-box; padding: 12px; background: var(--panel); border-left: 1px solid var(--border); }
+  h2 { font-size: 15px; margin: 0 0 8px; }
+  label { display: grid; grid-template-columns: 40px 1fr; align-items: center; margin: 6px 0; }
+  input[type=number] { width: 100%; box-sizing: border-box; padding: 3px 6px; }
+  #status { color: var(--muted); margin-top: 12px; white-space: pre-wrap; }
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="wrap"><canvas id="c"></canvas></div>
+  <aside>
+    <h2>Properties</h2>
+    <div id="none">Click a node on the canvas.</div>
+    <form id="props" hidden>
+      <div id="nid"></div>
+      <label for="x">X <input id="x" type="number" step="1"></label>
+      <label for="y">Y <input id="y" type="number" step="1"></label>
+      <label for="w">W <input id="w" type="number" step="1"></label>
+      <label for="h">H <input id="h" type="number" step="1"></label>
+      <label for="fill">Fill <input id="fill" type="color"></label>
+    </form>
+    <div id="status">loading…</div>
+  </aside>
+</div>
+<script type="module" src="main.js"></script>
+</body>
+</html>

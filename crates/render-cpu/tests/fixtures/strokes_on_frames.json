@@ -1,0 +1,91 @@
+{
+  "size": [
+    320,
+    140
+  ],
+  "nodes": [
+    {
+      "type": "frame",
+      "x": 10,
+      "y": 10,
+      "width": 140,
+      "height": 120,
+      "radius": 12,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#f8f8ff"
+        }
+      ],
+      "strokes": [
+        {
+          "paint": {
+            "type": "solid",
+            "color": "#4040c0"
+          },
+          "weight": 6,
+          "align": "outside"
+        }
+      ],
+      "children": [
+        {
+          "type": "rectangle",
+          "x": -10,
+          "y": 40,
+          "width": 160,
+          "height": 30,
+          "fills": [
+            {
+              "type": "solid",
+              "color": "#ffcc00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "x": 170,
+      "y": 10,
+      "width": 140,
+      "height": 120,
+      "clip": false,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#fff8f8"
+        }
+      ],
+      "strokes": [
+        {
+          "paint": {
+            "type": "solid",
+            "color": "#c04040"
+          },
+          "weight": 4,
+          "align": "inside",
+          "dash": [
+            8,
+            4
+          ]
+        }
+      ],
+      "children": [
+        {
+          "type": "rectangle",
+          "x": -10,
+          "y": 40,
+          "width": 160,
+          "height": 30,
+          "fills": [
+            {
+              "type": "solid",
+              "color": "#40cc00"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "background": "#ffffff"
+}

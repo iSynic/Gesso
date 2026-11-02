@@ -1,0 +1,2163 @@
+{
+  "$defs": {
+    "Arc": {
+      "properties": {
+        "innerRatio": {
+          "default": 0.0,
+          "description": "Inner radius as a fraction of the outer (donut), 0..1.",
+          "format": "double",
+          "type": "number"
+        },
+        "start": {
+          "description": "Start angle, degrees.",
+          "format": "double",
+          "type": "number"
+        },
+        "sweep": {
+          "description": "Sweep, degrees.",
+          "format": "double",
+          "type": "number"
+        }
+      },
+      "required": [
+        "start",
+        "sweep"
+      ],
+      "type": "object"
+    },
+    "AssetId": {
+      "description": "SHA-256 of the asset bytes",
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "AssetMeta": {
+      "properties": {
+        "height": {
+          "format": "uint32",
+          "minimum": 0,
+          "type": "integer"
+        },
+        "mime": {
+          "description": "MIME type, e.g. `image/png`.",
+          "type": "string"
+        },
+        "width": {
+          "format": "uint32",
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "mime"
+      ],
+      "type": "object"
+    },
+    "AutoLayout": {
+      "properties": {
+        "columns": {
+          "items": {
+            "$ref": "#/$defs/Track"
+          },
+          "type": "array"
+        },
+        "crossAlign": {
+          "$ref": "#/$defs/CrossAlign"
+        },
+        "crossGap": {
+          "description": "Gap between wrapped lines or grid rows.",
+          "format": "double",
+          "type": "number"
+        },
+        "direction": {
+          "$ref": "#/$defs/LayoutDirection"
+        },
+        "gap": {
+          "format": "double",
+          "type": "number"
+        },
+        "mainAlign": {
+          "$ref": "#/$defs/MainAlign"
+        },
+        "padding": {
+          "items": {
+            "format": "double",
+            "type": "number"
+          },
+          "maxItems": 4,
+          "minItems": 4,
+          "type": "array"
+        },
+        "rows": {
+          "items": {
+            "$ref": "#/$defs/Track"
+          },
+          "type": "array"
+        },
+        "wrap": {
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "BlendMode": {
+      "enum": [
+        "normal",
+        "darken",
+        "multiply",
+        "colorBurn",
+        "lighten",
+        "screen",
+        "colorDodge",
+        "overlay",
+        "softLight",
+        "hardLight",
+        "difference",
+        "exclusion",
+        "hue",
+        "saturation",
+        "color",
+        "luminosity"
+      ],
+      "type": "string"
+    },
+    "Collection": {
+      "properties": {
+        "defaultMode": {
+          "$ref": "#/$defs/Id"
+        },
+        "id": {
+          "$ref": "#/$defs/Id"
+        },
+        "modes": {
+          "items": {
+            "$ref": "#/$defs/Mode"
+          },
+          "type": "array"
+        },
+        "name": {
+          "type": "string"
+        },
+        "variables": {
+          "items": {
+            "$ref": "#/$defs/Variable"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "modes",
+        "defaultMode"
+      ],
+      "type": "object"
+    },
+    "Color": {
+      "description": "sRGB colour #rrggbb or #rrggbbaa",
+      "pattern": "^#([0-9A-Fa-f]{6}|[0-9A-Fa-f]{8})$",
+      "type": "string"
+    },
+    "ConstraintH": {
+      "enum": [
+        "left",
+        "right",
+        "leftRight",
+        "center",
+        "scale"
+      ],
+      "type": "string"
+    },
+    "ConstraintV": {
+      "enum": [
+        "top",
+        "bottom",
+        "topBottom",
+        "center",
+        "scale"
+      ],
+      "type": "string"
+    },
+    "Constraints": {
+      "properties": {
+        "h": {
+          "$ref": "#/$defs/ConstraintH"
+        },
+        "v": {
+          "$ref": "#/$defs/ConstraintV"
+        }
+      },
+      "type": "object"
+    },
+    "CrossAlign": {
+      "enum": [
+        "start",
+        "center",
+        "end",
+        "stretch",
+        "baseline"
+      ],
+      "type": "string"
+    },
+    "Effect": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/Shadow",
+          "properties": {
+            "type": {
+              "const": "dropShadow",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/Shadow",
+          "properties": {
+            "type": {
+              "const": "innerShadow",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "radius": {
+              "format": "double",
+              "type": "number"
+            },
+            "type": {
+              "const": "layerBlur",
+              "type": "string"
+            },
+            "visible": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "type",
+            "radius"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "radius": {
+              "format": "double",
+              "type": "number"
+            },
+            "type": {
+              "const": "backgroundBlur",
+              "type": "string"
+            },
+            "visible": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "type",
+            "radius"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "FillRule": {
+      "enum": [
+        "nonZero",
+        "evenOdd"
+      ],
+      "type": "string"
+    },
+    "GradientStop": {
+      "properties": {
+        "color": {
+          "$ref": "#/$defs/Color"
+        },
+        "offset": {
+          "description": "0..=1 along the gradient.",
+          "format": "double",
+          "type": "number"
+        }
+      },
+      "required": [
+        "offset",
+        "color"
+      ],
+      "type": "object"
+    },
+    "Id": {
+      "description": "128-bit random id in base62 (22 characters; values above 2^128-1, i.e. above 7n42DGM5Tflk9n8mt7Fhc7, are rejected)",
+      "pattern": "^[0-7][0-9A-Za-z]{21}$",
+      "type": "string"
+    },
+    "ImageFit": {
+      "enum": [
+        "fill",
+        "fit",
+        "crop",
+        "tile"
+      ],
+      "type": "string"
+    },
+    "LayoutChild": {
+      "description": "How a node behaves as a child of an auto-layout frame.",
+      "properties": {
+        "absolute": {
+          "description": "Ignore auto-layout and position by x/y.",
+          "type": "boolean"
+        },
+        "alignSelf": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/CrossAlign"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "gridCell": {
+          "description": "Grid placement `[column, row]`, 0-based; `None` = auto-placed.",
+          "items": {
+            "format": "uint32",
+            "minimum": 0,
+            "type": "integer"
+          },
+          "maxItems": 2,
+          "minItems": 2,
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "grow": {
+          "format": "double",
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "LayoutDirection": {
+      "enum": [
+        "horizontal",
+        "vertical",
+        "grid"
+      ],
+      "type": "string"
+    },
+    "MainAlign": {
+      "enum": [
+        "start",
+        "center",
+        "end",
+        "spaceBetween"
+      ],
+      "type": "string"
+    },
+    "Mode": {
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/Id"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ],
+      "type": "object"
+    },
+    "NodeKind": {
+      "description": "The node's type and its type-specific data. The JSON tag is `type`.",
+      "oneOf": [
+        {
+          "description": "A top-level infinite canvas.",
+          "properties": {
+            "background": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Color"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "type": {
+              "const": "page",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "autoLayout": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/AutoLayout"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "clip": {
+              "description": "Clip children to the frame bounds.",
+              "type": "boolean"
+            },
+            "type": {
+              "const": "frame",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "type": {
+              "const": "group",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "type": {
+              "const": "rectangle",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "arc": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Arc"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "type": {
+              "const": "ellipse",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "sides": {
+              "format": "uint32",
+              "minimum": 0,
+              "type": "integer"
+            },
+            "starInnerRatio": {
+              "description": "Inner radius ratio for stars (0..1); `None` = regular polygon.",
+              "format": "double",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "type": {
+              "const": "polygon",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "sides"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "type": {
+              "const": "line",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "paths": {
+              "items": {
+                "$ref": "#/$defs/PathData"
+              },
+              "type": "array"
+            },
+            "type": {
+              "const": "path",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "paths"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "align": {
+              "$ref": "#/$defs/TextAlign"
+            },
+            "autoResize": {
+              "$ref": "#/$defs/TextAutoResize"
+            },
+            "spans": {
+              "items": {
+                "$ref": "#/$defs/TextSpan"
+              },
+              "type": "array"
+            },
+            "style": {
+              "$ref": "#/$defs/TextStyle",
+              "default": {
+                "color": "#000000",
+                "fontFamily": "Inter",
+                "fontSize": 14.0
+              }
+            },
+            "type": {
+              "const": "text",
+              "type": "string"
+            },
+            "verticalAlign": {
+              "$ref": "#/$defs/VerticalAlign"
+            }
+          },
+          "required": [
+            "type",
+            "spans"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "asset": {
+              "$ref": "#/$defs/AssetId"
+            },
+            "fit": {
+              "$ref": "#/$defs/ImageFit"
+            },
+            "type": {
+              "const": "image",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "asset"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "A main component; its children are the component's content.",
+          "properties": {
+            "autoLayout": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/AutoLayout"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "description": {
+              "type": "string"
+            },
+            "type": {
+              "const": "component",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "An instance of a component, with per-property overrides. Its content comes from the\ncomponent, so it has no children of its own.",
+          "properties": {
+            "component": {
+              "$ref": "#/$defs/Id"
+            },
+            "overrides": {
+              "items": {
+                "$ref": "#/$defs/Override"
+              },
+              "type": "array"
+            },
+            "type": {
+              "const": "instance",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "component"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "A sticky note for comments on the canvas.",
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "type": {
+              "const": "note",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "text"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "NodeTree": {
+      "description": "An owned node with its subtree, in z-order (first child is drawn first).",
+      "oneOf": [
+        {
+          "description": "A top-level infinite canvas.",
+          "properties": {
+            "background": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Color"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "type": {
+              "const": "page",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "autoLayout": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/AutoLayout"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "clip": {
+              "description": "Clip children to the frame bounds.",
+              "type": "boolean"
+            },
+            "type": {
+              "const": "frame",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "type": {
+              "const": "group",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "type": {
+              "const": "rectangle",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "arc": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Arc"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "type": {
+              "const": "ellipse",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "sides": {
+              "format": "uint32",
+              "minimum": 0,
+              "type": "integer"
+            },
+            "starInnerRatio": {
+              "description": "Inner radius ratio for stars (0..1); `None` = regular polygon.",
+              "format": "double",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "type": {
+              "const": "polygon",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "sides"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "type": {
+              "const": "line",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "paths": {
+              "items": {
+                "$ref": "#/$defs/PathData"
+              },
+              "type": "array"
+            },
+            "type": {
+              "const": "path",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "paths"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "align": {
+              "$ref": "#/$defs/TextAlign"
+            },
+            "autoResize": {
+              "$ref": "#/$defs/TextAutoResize"
+            },
+            "spans": {
+              "items": {
+                "$ref": "#/$defs/TextSpan"
+              },
+              "type": "array"
+            },
+            "style": {
+              "$ref": "#/$defs/TextStyle",
+              "default": {
+                "color": "#000000",
+                "fontFamily": "Inter",
+                "fontSize": 14.0
+              }
+            },
+            "type": {
+              "const": "text",
+              "type": "string"
+            },
+            "verticalAlign": {
+              "$ref": "#/$defs/VerticalAlign"
+            }
+          },
+          "required": [
+            "type",
+            "spans"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "asset": {
+              "$ref": "#/$defs/AssetId"
+            },
+            "fit": {
+              "$ref": "#/$defs/ImageFit"
+            },
+            "type": {
+              "const": "image",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "asset"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "A main component; its children are the component's content.",
+          "properties": {
+            "autoLayout": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/AutoLayout"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "description": {
+              "type": "string"
+            },
+            "type": {
+              "const": "component",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "An instance of a component, with per-property overrides. Its content comes from the\ncomponent, so it has no children of its own.",
+          "properties": {
+            "component": {
+              "$ref": "#/$defs/Id"
+            },
+            "overrides": {
+              "items": {
+                "$ref": "#/$defs/Override"
+              },
+              "type": "array"
+            },
+            "type": {
+              "const": "instance",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "component"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "A sticky note for comments on the canvas.",
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "type": {
+              "const": "note",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "text"
+          ],
+          "type": "object"
+        }
+      ],
+      "properties": {
+        "bindings": {
+          "additionalProperties": {
+            "$ref": "#/$defs/Id"
+          },
+          "description": "Design-token bindings: property path (e.g. `fills/0/color`, `opacity`) → variable id.",
+          "type": "object"
+        },
+        "blend": {
+          "$ref": "#/$defs/BlendMode"
+        },
+        "children": {
+          "items": {
+            "$ref": "#/$defs/NodeTree"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "$ref": "#/$defs/Constraints"
+        },
+        "effects": {
+          "items": {
+            "$ref": "#/$defs/Effect"
+          },
+          "type": "array"
+        },
+        "fills": {
+          "items": {
+            "$ref": "#/$defs/Paint"
+          },
+          "type": "array"
+        },
+        "flipX": {
+          "type": "boolean"
+        },
+        "flipY": {
+          "type": "boolean"
+        },
+        "height": {
+          "default": 0.0,
+          "format": "double",
+          "type": "number"
+        },
+        "id": {
+          "$ref": "#/$defs/Id"
+        },
+        "layoutChild": {
+          "$ref": "#/$defs/LayoutChild"
+        },
+        "locked": {
+          "type": "boolean"
+        },
+        "maxHeight": {
+          "format": "double",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "maxWidth": {
+          "format": "double",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "minHeight": {
+          "format": "double",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "minWidth": {
+          "format": "double",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "modes": {
+          "additionalProperties": false,
+          "description": "Variable modes for this node and its content: collection id → mode id. Only pages,\nframes, components and instances take it; others inherit from their ancestors.",
+          "patternProperties": {
+            "^[0-7][0-9A-Za-z]{21}$": {
+              "$ref": "#/$defs/Id"
+            }
+          },
+          "type": "object"
+        },
+        "name": {
+          "type": "string"
+        },
+        "opacity": {
+          "format": "double",
+          "type": "number"
+        },
+        "radius": {
+          "$ref": "#/$defs/Radius"
+        },
+        "rotation": {
+          "description": "Degrees, clockwise, around the node's centre.",
+          "format": "double",
+          "type": "number"
+        },
+        "sizingH": {
+          "$ref": "#/$defs/Sizing"
+        },
+        "sizingV": {
+          "$ref": "#/$defs/Sizing"
+        },
+        "strokes": {
+          "items": {
+            "$ref": "#/$defs/Stroke"
+          },
+          "type": "array"
+        },
+        "visible": {
+          "type": "boolean"
+        },
+        "width": {
+          "default": 0.0,
+          "format": "double",
+          "type": "number"
+        },
+        "x": {
+          "format": "double",
+          "type": "number"
+        },
+        "y": {
+          "format": "double",
+          "type": "number"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "type": "object"
+    },
+    "Override": {
+      "description": "One property override on an instance. `target` is a path of ids from the instance down to\nthe overridden node: each step is a node inside the previous step's component (a nested\ninstance is stepped through by its own id), and `[]` is the instance itself.",
+      "oneOf": [
+        {
+          "properties": {
+            "prop": {
+              "const": "name",
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "prop",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "prop": {
+              "const": "kind",
+              "type": "string"
+            },
+            "value": {
+              "$ref": "#/$defs/NodeKind"
+            }
+          },
+          "required": [
+            "prop",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "prop": {
+              "const": "x",
+              "type": "string"
+            },
+            "value": {
+              "format": "double",
+              "type": "number"
+            }
+          },
+          "required": [
+            "prop",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "prop": {
+              "const": "y",
+              "type": "string"
+            },
+            "value": {
+              "format": "double",
+              "type": "number"
+            }
+          },
+          "required": [
+            "prop",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "prop": {
+              "const": "rotation",
+              "type": "string"
+            },
+            "value": {
+              "format": "double",
+              "type": "number"
+            }
+          },
+          "required": [
+            "prop",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "prop": {
+              "const": "flipX",
+              "type": "string"
+            },
+            "value": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "prop",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "prop": {
+              "const": "flipY",
+              "type": "string"
+            },
+            "value": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "prop",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "prop": {
+              "const": "width",
+              "type": "string"
+            },
+            "value": {
+              "format": "double",
+              "type": "number"
+            }
+          },
+          "required": [
+            "prop",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "prop": {
+              "const": "height",
+              "type": "string"
+            },
+            "value": {
+              "format": "double",
+              "type": "number"
+            }
+          },
+          "required": [
+            "prop",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "prop": {
+              "const": "sizingH",
+              "type": "string"
+            },
+            "value": {
+              "$ref": "#/$defs/Sizing"
+            }
+          },
+          "required": [
+            "prop",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "prop": {
+              "const": "sizingV",
+              "type": "string"
+            },
+            "value": {
+              "$ref": "#/$defs/Sizing"
+            }
+          },
+          "required": [
+            "prop",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "prop": {
+              "const": "minWidth",
+              "type": "string"
+            },
+            "value": {
+              "format": "double",
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "prop",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "prop": {
+              "const": "maxWidth",
+              "type": "string"
+            },
+            "value": {
+              "format": "double",
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "prop",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "prop": {
+              "const": "minHeight",
+              "type": "string"
+            },
+            "value": {
+              "format": "double",
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "prop",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "prop": {
+              "const": "maxHeight",
+              "type": "string"
+            },
+            "value": {
+              "format": "double",
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "prop",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "prop": {
+              "const": "constraints",
+              "type": "string"
+            },
+            "value": {
+              "$ref": "#/$defs/Constraints"
+            }
+          },
+          "required": [
+            "prop",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "prop": {
+              "const": "radius",
+              "type": "string"
+            },
+            "value": {
+              "$ref": "#/$defs/Radius"
+            }
+          },
+          "required": [
+            "prop",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "prop": {
+              "const": "fills",
+              "type": "string"
+            },
+            "value": {
+              "items": {
+                "$ref": "#/$defs/Paint"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "prop",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "prop": {
+              "const": "strokes",
+              "type": "string"
+            },
+            "value": {
+              "items": {
+                "$ref": "#/$defs/Stroke"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "prop",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "prop": {
+              "const": "effects",
+              "type": "string"
+            },
+            "value": {
+              "items": {
+                "$ref": "#/$defs/Effect"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "prop",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "prop": {
+              "const": "opacity",
+              "type": "string"
+            },
+            "value": {
+              "format": "double",
+              "type": "number"
+            }
+          },
+          "required": [
+            "prop",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "prop": {
+              "const": "blend",
+              "type": "string"
+            },
+            "value": {
+              "$ref": "#/$defs/BlendMode"
+            }
+          },
+          "required": [
+            "prop",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "prop": {
+              "const": "visible",
+              "type": "string"
+            },
+            "value": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "prop",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "prop": {
+              "const": "locked",
+              "type": "string"
+            },
+            "value": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "prop",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "prop": {
+              "const": "layoutChild",
+              "type": "string"
+            },
+            "value": {
+              "$ref": "#/$defs/LayoutChild"
+            }
+          },
+          "required": [
+            "prop",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "prop": {
+              "const": "bindings",
+              "type": "string"
+            },
+            "value": {
+              "additionalProperties": {
+                "$ref": "#/$defs/Id"
+              },
+              "type": "object"
+            }
+          },
+          "required": [
+            "prop",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "prop": {
+              "const": "modes",
+              "type": "string"
+            },
+            "value": {
+              "additionalProperties": false,
+              "patternProperties": {
+                "^[0-7][0-9A-Za-z]{21}$": {
+                  "$ref": "#/$defs/Id"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "required": [
+            "prop",
+            "value"
+          ],
+          "type": "object"
+        }
+      ],
+      "properties": {
+        "target": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Id"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "Paint": {
+      "description": "What a paint draws. Gradient points are in the node's unit square (0..1, 0..1).",
+      "oneOf": [
+        {
+          "properties": {
+            "color": {
+              "$ref": "#/$defs/Color"
+            },
+            "type": {
+              "const": "solid",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "color"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "end": {
+              "items": {
+                "format": "double",
+                "type": "number"
+              },
+              "maxItems": 2,
+              "minItems": 2,
+              "type": "array"
+            },
+            "start": {
+              "items": {
+                "format": "double",
+                "type": "number"
+              },
+              "maxItems": 2,
+              "minItems": 2,
+              "type": "array"
+            },
+            "stops": {
+              "items": {
+                "$ref": "#/$defs/GradientStop"
+              },
+              "type": "array"
+            },
+            "type": {
+              "const": "linearGradient",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "stops",
+            "start",
+            "end"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "center": {
+              "items": {
+                "format": "double",
+                "type": "number"
+              },
+              "maxItems": 2,
+              "minItems": 2,
+              "type": "array"
+            },
+            "radius": {
+              "description": "Radii along x and y, in the unit square.",
+              "items": {
+                "format": "double",
+                "type": "number"
+              },
+              "maxItems": 2,
+              "minItems": 2,
+              "type": "array"
+            },
+            "stops": {
+              "items": {
+                "$ref": "#/$defs/GradientStop"
+              },
+              "type": "array"
+            },
+            "type": {
+              "const": "radialGradient",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "stops",
+            "center",
+            "radius"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "angle": {
+              "default": 0.0,
+              "description": "Start angle in degrees.",
+              "format": "double",
+              "type": "number"
+            },
+            "center": {
+              "items": {
+                "format": "double",
+                "type": "number"
+              },
+              "maxItems": 2,
+              "minItems": 2,
+              "type": "array"
+            },
+            "stops": {
+              "items": {
+                "$ref": "#/$defs/GradientStop"
+              },
+              "type": "array"
+            },
+            "type": {
+              "const": "angularGradient",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "stops",
+            "center"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "asset": {
+              "$ref": "#/$defs/AssetId"
+            },
+            "fit": {
+              "$ref": "#/$defs/ImageFit"
+            },
+            "type": {
+              "const": "image",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "asset"
+          ],
+          "type": "object"
+        }
+      ],
+      "properties": {
+        "blend": {
+          "$ref": "#/$defs/BlendMode"
+        },
+        "opacity": {
+          "format": "double",
+          "type": "number"
+        },
+        "visible": {
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "PathData": {
+      "description": "One SVG-syntax path (`d` attribute), in the node's local coordinates.",
+      "properties": {
+        "d": {
+          "type": "string"
+        },
+        "fillRule": {
+          "$ref": "#/$defs/FillRule"
+        }
+      },
+      "required": [
+        "d"
+      ],
+      "type": "object"
+    },
+    "Radius": {
+      "anyOf": [
+        {
+          "format": "double",
+          "type": "number"
+        },
+        {
+          "items": {
+            "format": "double",
+            "type": "number"
+          },
+          "maxItems": 4,
+          "minItems": 4,
+          "type": "array"
+        }
+      ],
+      "description": "Corner radius: one number for all corners, or `[topLeft, topRight, bottomRight, bottomLeft]`."
+    },
+    "Shadow": {
+      "properties": {
+        "blur": {
+          "default": 0.0,
+          "format": "double",
+          "type": "number"
+        },
+        "color": {
+          "$ref": "#/$defs/Color"
+        },
+        "offset": {
+          "default": [
+            0.0,
+            0.0
+          ],
+          "items": {
+            "format": "double",
+            "type": "number"
+          },
+          "maxItems": 2,
+          "minItems": 2,
+          "type": "array"
+        },
+        "spread": {
+          "format": "double",
+          "type": "number"
+        },
+        "visible": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "color"
+      ],
+      "type": "object"
+    },
+    "Sizing": {
+      "enum": [
+        "fixed",
+        "hug",
+        "fill"
+      ],
+      "type": "string"
+    },
+    "Stroke": {
+      "properties": {
+        "align": {
+          "$ref": "#/$defs/StrokeAlign"
+        },
+        "cap": {
+          "$ref": "#/$defs/StrokeCap"
+        },
+        "dash": {
+          "description": "Dash pattern lengths; empty means solid.",
+          "items": {
+            "format": "double",
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "join": {
+          "$ref": "#/$defs/StrokeJoin"
+        },
+        "paint": {
+          "$ref": "#/$defs/Paint"
+        },
+        "weight": {
+          "format": "double",
+          "type": "number"
+        }
+      },
+      "required": [
+        "paint"
+      ],
+      "type": "object"
+    },
+    "StrokeAlign": {
+      "enum": [
+        "inside",
+        "center",
+        "outside"
+      ],
+      "type": "string"
+    },
+    "StrokeCap": {
+      "enum": [
+        "butt",
+        "round",
+        "square"
+      ],
+      "type": "string"
+    },
+    "StrokeJoin": {
+      "enum": [
+        "miter",
+        "round",
+        "bevel"
+      ],
+      "type": "string"
+    },
+    "TextAlign": {
+      "enum": [
+        "left",
+        "center",
+        "right",
+        "justify"
+      ],
+      "type": "string"
+    },
+    "TextAutoResize": {
+      "description": "How a text box sizes itself from its content.",
+      "oneOf": [
+        {
+          "const": "none",
+          "description": "Fixed box; text may overflow.",
+          "type": "string"
+        },
+        {
+          "const": "height",
+          "description": "Fixed width, height grows.",
+          "type": "string"
+        },
+        {
+          "const": "widthAndHeight",
+          "description": "Single line grows in both directions.",
+          "type": "string"
+        }
+      ]
+    },
+    "TextDecoration": {
+      "enum": [
+        "none",
+        "underline",
+        "strikethrough"
+      ],
+      "type": "string"
+    },
+    "TextSpan": {
+      "description": "A run of text with optional overrides of the node's base style.",
+      "properties": {
+        "color": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Color"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "decoration": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/TextDecoration"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "fontFamily": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "fontSize": {
+          "format": "double",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "fontWeight": {
+          "format": "uint16",
+          "maximum": 65535,
+          "minimum": 0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "italic": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "link": {
+          "description": "Hyperlink target.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "text": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "type": "object"
+    },
+    "TextStyle": {
+      "description": "Full text style (used as a text node's base style).",
+      "properties": {
+        "color": {
+          "$ref": "#/$defs/Color"
+        },
+        "decoration": {
+          "$ref": "#/$defs/TextDecoration"
+        },
+        "fontFamily": {
+          "type": "string"
+        },
+        "fontSize": {
+          "format": "double",
+          "type": "number"
+        },
+        "fontWeight": {
+          "format": "uint16",
+          "maximum": 65535,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "italic": {
+          "type": "boolean"
+        },
+        "letterSpacing": {
+          "format": "double",
+          "type": "number"
+        },
+        "lineHeight": {
+          "description": "Line height in px; `None` = font default.",
+          "format": "double",
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "fontFamily",
+        "fontSize",
+        "color"
+      ],
+      "type": "object"
+    },
+    "Track": {
+      "description": "A grid track size.",
+      "oneOf": [
+        {
+          "enum": [
+            "auto"
+          ],
+          "type": "string"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "fixed": {
+              "format": "double",
+              "type": "number"
+            }
+          },
+          "required": [
+            "fixed"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "Fraction of the remaining space.",
+          "properties": {
+            "fr": {
+              "format": "double",
+              "type": "number"
+            }
+          },
+          "required": [
+            "fr"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "Variable": {
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/Id"
+        },
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/$defs/VariableType"
+        },
+        "values": {
+          "additionalProperties": false,
+          "description": "Mode id → value. Modes without a value fall back to the collection's default mode.",
+          "patternProperties": {
+            "^[0-7][0-9A-Za-z]{21}$": {
+              "$ref": "#/$defs/VariableValue"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "type",
+        "values"
+      ],
+      "type": "object"
+    },
+    "VariableType": {
+      "enum": [
+        "color",
+        "number",
+        "string",
+        "boolean"
+      ],
+      "type": "string"
+    },
+    "VariableValue": {
+      "anyOf": [
+        {
+          "properties": {
+            "alias": {
+              "$ref": "#/$defs/Id"
+            }
+          },
+          "required": [
+            "alias"
+          ],
+          "type": "object"
+        },
+        {
+          "type": "boolean"
+        },
+        {
+          "format": "double",
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ],
+      "description": "A value for one mode: a literal, or `{\"alias\": \"<variable id>\"}`.\nColours are written as `#rrggbb[aa]` strings."
+    },
+    "VerticalAlign": {
+      "enum": [
+        "top",
+        "middle",
+        "bottom"
+      ],
+      "type": "string"
+    }
+  },
+  "$id": "https://example.invalid/ai-design-engine/document.v2.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "The top level of `document.json`.",
+  "properties": {
+    "assets": {
+      "additionalProperties": false,
+      "patternProperties": {
+        "^[0-9a-f]{64}$": {
+          "$ref": "#/$defs/AssetMeta"
+        }
+      },
+      "type": "object"
+    },
+    "formatVersion": {
+      "description": "Always written first so readers can check it cheaply.",
+      "format": "uint32",
+      "minimum": 0,
+      "type": "integer"
+    },
+    "generator": {
+      "default": "",
+      "type": "string"
+    },
+    "pages": {
+      "items": {
+        "$ref": "#/$defs/NodeTree"
+      },
+      "type": "array"
+    },
+    "variables": {
+      "items": {
+        "$ref": "#/$defs/Collection"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "formatVersion",
+    "pages"
+  ],
+  "title": "Gesso document, format version 2",
+  "type": "object"
+}

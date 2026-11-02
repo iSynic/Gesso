@@ -1,0 +1,68 @@
+{
+  "size": [
+    320,
+    100
+  ],
+  "nodes": [
+    {
+      "type": "text",
+      "x": 10,
+      "y": 10,
+      "spans": [
+        {
+          "text": "Inter only: Ünïcödé ñ ß € — “quotes”"
+        }
+      ],
+      "autoResize": "widthAndHeight",
+      "style": {
+        "fontFamily": "Inter",
+        "fontSize": 16,
+        "fontWeight": 400,
+        "italic": false,
+        "letterSpacing": 0,
+        "decoration": "none",
+        "color": "#000000"
+      }
+    },
+    {
+      "type": "text",
+      "x": 10,
+      "y": 40,
+      "spans": [
+        {
+          "text": "Arabic مرحبا (no font bundled)"
+        }
+      ],
+      "autoResize": "widthAndHeight",
+      "style": {
+        "fontFamily": "Inter",
+        "fontSize": 16,
+        "fontWeight": 400,
+        "italic": false,
+        "letterSpacing": 0,
+        "decoration": "none",
+        "color": "#000000"
+      }
+    },
+    {
+      "type": "text",
+      "x": 10,
+      "y": 70,
+      "spans": [
+        {
+          "text": "Emoji 🎨 (missing glyph)"
+        }
+      ],
+      "autoResize": "widthAndHeight",
+      "style": {
+        "fontFamily": "Inter",
+        "fontSize": 16,
+        "fontWeight": 400,
+        "italic": false,
+        "letterSpacing": 0,
+        "decoration": "none",
+        "color": "#000000"
+      }
+    }
+  ]
+}

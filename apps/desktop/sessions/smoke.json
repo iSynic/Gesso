@@ -1,0 +1,26 @@
+{
+  "document": "../../../target/bench-docs/100k.canvas",
+  "window": [1600, 1000],
+  "steps": [
+    {"page": "Page 1"},
+    {"fit": true},
+    {"screenshot": "../../../target/shots/01-fit.png"},
+    {"reveal": "Screen 1", "at": 0.5},
+    {"select": "Screen 1"},
+    {"screenshot": "../../../target/shots/02-selected.png"},
+    {"drag": {"node": "Screen 1", "by": [160, 90], "frames": 20}, "measure": "move"},
+    {"screenshot": "../../../target/shots/03-moved.png"},
+    {"select": "Card 1"},
+    {"drag": {"node": "Card 1", "by": [-260, 0], "frames": 20}, "measure": "reorder"},
+    {"screenshot": "../../../target/shots/04-reordered.png"},
+    {"select": "Card 0"},
+    {"panel": {"path": "width", "values": [300, 280, 260]}, "measure": "panel"},
+    {"fill": ["#ff4060", "#40a0ff"], "measure": "fill"},
+    {"layers": "expand"},
+    {"wait": 5},
+    {"screenshot": "../../../target/shots/05-edited.png"},
+    {"undoall": true},
+    {"wait": 3},
+    {"screenshot": "../../../target/shots/06-undone.png"}
+  ]
+}

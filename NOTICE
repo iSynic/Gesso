@@ -1,0 +1,14 @@
+Gesso
+Licensed under either of the Apache License, Version 2.0 or the MIT license, at your option.
+
+This product bundles the following third-party assets:
+
+Inter typeface, version 4.1 (crates/text/fonts/InterVariable.ttf, InterVariable-Italic.ttf)
+Copyright (c) 2016 The Inter Project Authors (https://github.com/rsms/inter)
+Licensed under the SIL Open Font License, Version 1.1; see crates/text/fonts/OFL.txt.
+
+vello_encoding 0.11.0 (third_party/vello_encoding), a modified copy of the crates.io release
+Copyright the Vello Authors. Licensed under Apache-2.0 OR MIT; see the license files in that folder.
+Modified: the gradient ramp cache size in src/ramp_cache.rs (see third_party/README.md).
+
+Third-party Rust crates are listed with their licenses in docs/licenses.md.

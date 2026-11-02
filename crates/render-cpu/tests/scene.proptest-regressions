@@ -1,0 +1,11 @@
+# Seeds for failure cases proptest has generated in the past. It is
+# automatically read and these particular cases re-run before any
+# novel cases are generated.
+#
+# It is recommended to check this file in to source control so that
+# everyone who runs the test benefits from these saved cases.
+cc 6434c31984925a4cfd309f1902e9166d0c1a89a5815f33b46150d56b9a16f96b # shrinks to edits = [(0, 0, 0, 0)], small_split = false
+cc b6ede3ed87af1ac69f1724c14f2b18509928b39b334e9a607d14530219052fc9 # shrinks to edits = [(138, 5, 23, 0)], small_split = false
+cc fd0b18a9a4dba2431043c93383e691b18acaedcba3ef3429aef68d98acecf7ee # shrinks to edits = [(167, 110, 0, 0), (26, 248, 22, 0)], small_split = true
+cc ef410c23334cec949c28063be6409813cc3593555c246ac15918a6181bdc1469 # shrinks to edits = [(126, 94, 0, 42593), (212, 24, 0, 13057), (16, 10, 0, 55455)], small_split = true
+cc a8f45abef153451dc43685347b78fad7afd9b33e4370481587189aad0af85c9b # shrinks to edits = [(52, 0, 0, 0), (94, 0, 0, 0), (190, 101, 0, 21882), (102, 60, 0, 42785)], small_split = false

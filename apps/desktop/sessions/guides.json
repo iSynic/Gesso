@@ -1,0 +1,14 @@
+{
+  "document": "../../../target/bench-docs/100k.canvas",
+  "window": [1600, 1000],
+  "steps": [
+    {"page": "Page 1"},
+    {"reveal": "Screen 2", "at": 0.3},
+    {"select": "Screen 1"},
+    {"wait": 3},
+    {"drag": {"node": "Screen 1", "by": [150, 4], "frames": 20, "shot": [19, "../../../target/shots/guides-move.png"]}},
+    {"select": "Card 0"},
+    {"drag": {"handle": "e", "by": [120, 0], "frames": 20, "shot": [19, "../../../target/shots/guides-resize.png"]}},
+    {"undoall": true}
+  ]
+}

@@ -1,0 +1,29 @@
+[package]
+name = "render-cpu"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+doc = { path = "../doc" }
+text = { path = "../text" }
+render = { path = "../render" }
+kurbo = "0.13.1"
+peniko = "0.6.1"
+vello_cpu = { version = "0.3", features = ["multithreading"] }
+image = { version = "0.25", default-features = false, features = ["png"] }
+rustc-hash = "2.1.3"
+
+[lints]
+workspace = true
+
+[dev-dependencies]
+doc = { path = "../doc", features = ["testing"] }
+format = { path = "../format" }
+layout = { path = "../layout" }
+proptest = "1.12.0"
+serde_json = "1.0.154"
+
+[lib]
+bench = false

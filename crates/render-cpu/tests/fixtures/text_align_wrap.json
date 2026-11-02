@@ -1,0 +1,145 @@
+{
+  "size": [
+    320,
+    280
+  ],
+  "nodes": [
+    {
+      "type": "rectangle",
+      "x": 10,
+      "y": 10,
+      "width": 145,
+      "height": 125,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#f4f4f4"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 10,
+      "y": 10,
+      "spans": [
+        {
+          "text": "Design tools lay text out in boxes. This paragraph wraps at its width and keeps going for several lines."
+        }
+      ],
+      "width": 145,
+      "style": {
+        "fontFamily": "Inter",
+        "fontSize": 13,
+        "fontWeight": 400,
+        "italic": false,
+        "letterSpacing": 0,
+        "decoration": "none",
+        "color": "#000000"
+      },
+      "align": "left"
+    },
+    {
+      "type": "rectangle",
+      "x": 165,
+      "y": 10,
+      "width": 145,
+      "height": 125,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#f4f4f4"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 165,
+      "y": 10,
+      "spans": [
+        {
+          "text": "Design tools lay text out in boxes. This paragraph wraps at its width and keeps going for several lines."
+        }
+      ],
+      "width": 145,
+      "style": {
+        "fontFamily": "Inter",
+        "fontSize": 13,
+        "fontWeight": 400,
+        "italic": false,
+        "letterSpacing": 0,
+        "decoration": "none",
+        "color": "#000000"
+      },
+      "align": "center"
+    },
+    {
+      "type": "rectangle",
+      "x": 10,
+      "y": 145,
+      "width": 145,
+      "height": 125,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#f4f4f4"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 10,
+      "y": 145,
+      "spans": [
+        {
+          "text": "Design tools lay text out in boxes. This paragraph wraps at its width and keeps going for several lines."
+        }
+      ],
+      "width": 145,
+      "style": {
+        "fontFamily": "Inter",
+        "fontSize": 13,
+        "fontWeight": 400,
+        "italic": false,
+        "letterSpacing": 0,
+        "decoration": "none",
+        "color": "#000000"
+      },
+      "align": "right"
+    },
+    {
+      "type": "rectangle",
+      "x": 165,
+      "y": 145,
+      "width": 145,
+      "height": 125,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#f4f4f4"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 165,
+      "y": 145,
+      "spans": [
+        {
+          "text": "Design tools lay text out in boxes. This paragraph wraps at its width and keeps going for several lines."
+        }
+      ],
+      "width": 145,
+      "style": {
+        "fontFamily": "Inter",
+        "fontSize": 13,
+        "fontWeight": 400,
+        "italic": false,
+        "letterSpacing": 0,
+        "decoration": "none",
+        "color": "#000000",
+        "lineHeight": 20
+      },
+      "align": "justify"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "size": [
+    320,
+    120
+  ],
+  "nodes": [
+    {
+      "type": "rectangle",
+      "x": 10,
+      "y": 10,
+      "width": 90,
+      "height": 100,
+      "fills": [
+        {
+          "type": "linearGradient",
+          "start": [
+            0,
+            0
+          ],
+          "end": [
+            1,
+            0
+          ],
+          "stops": [
+            {
+              "offset": 0,
+              "color": "#ff0000"
+            },
+            {
+              "offset": 1,
+              "color": "#0000ff"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rectangle",
+      "x": 115,
+      "y": 10,
+      "width": 90,
+      "height": 100,
+      "fills": [
+        {
+          "type": "linearGradient",
+          "start": [
+            0,
+            0
+          ],
+          "end": [
+            1,
+            1
+          ],
+          "stops": [
+            {
+              "offset": 0,
+              "color": "#ffcc00"
+            },
+            {
+              "offset": 0.5,
+              "color": "#00cc66"
+            },
+            {
+              "offset": 1,
+              "color": "#6600cc"
+            }
+          ]
+        }
+      ],
+      "radius": 16
+    },
+    {
+      "type": "rectangle",
+      "x": 220,
+      "y": 10,
+      "width": 90,
+      "height": 100,
+      "fills": [
+        {
+          "type": "solid",
+          "color": "#ffffff"
+        },
+        {
+          "type": "linearGradient",
+          "start": [
+            0.5,
+            0
+          ],
+          "end": [
+            0.5,
+            1
+          ],
+          "stops": [
+            {
+              "offset": 0,
+              "color": "#00000000"
+            },
+            {
+              "offset": 1,
+              "color": "#000000ff"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "background": "#e8e8e8"
+}

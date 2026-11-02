@@ -1,0 +1,44 @@
+[package]
+name = "desktop"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+description = "Gesso, the canvas app: winit + wgpu window, Vello canvas, egui panels."
+
+[[bin]]
+name = "gesso"
+path = "src/main.rs"
+bench = false
+
+[dependencies]
+doc = { path = "../../crates/doc" }
+text = { path = "../../crates/text" }
+format = { path = "../../crates/format" }
+render = { path = "../../crates/render" }
+render-vello = { path = "../../crates/render-vello" }
+editor = { path = "../../crates/editor" }
+export = { path = "../../crates/export" }
+script = { path = "../../crates/script" }
+agent = { path = "../../crates/agent" }
+kurbo = "0.13.1"
+vello = "0.11"
+egui = "0.37"
+egui-wgpu = "0.37"
+egui-winit = { version = "0.37", features = ["accesskit"] }
+winit = "0.30"
+pollster = "1.0.1"
+rfd = "0.17.2"
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.154"
+memory-stats = "1.2.0"
+image = { version = "0.25", default-features = false, features = ["png"] }
+
+[target.'cfg(windows)'.build-dependencies]
+winresource = { version = "0.1.34", default-features = false }
+
+[lints]
+workspace = true
+
+[dev-dependencies]
+doc = { path = "../../crates/doc", features = ["testing"] }
