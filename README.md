@@ -2,8 +2,7 @@
 
 # Gesso
 
-A fast, GPU-accelerated design canvas in Rust, built for people and AI agents to work on
-together.
+A fast, GPU-accelerated design canvas in Rust.
 
 Gesso is an early prototype. Expect rough edges, and keep backups of anything you care about.
 
