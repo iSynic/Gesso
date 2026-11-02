@@ -191,6 +191,9 @@ struct Item {
     world0: Affine,
     /// Placed by its parent's auto layout.
     flow: bool,
+    /// A path's shape at the start: resizing scales from this, so a drag through zero loses
+    /// nothing.
+    path0: Option<NodeKind>,
 }
 
 fn items(s: &Session, ids: &[NodeId]) -> Vec<Item> {
@@ -202,7 +205,7 @@ fn items(s: &Session, ids: &[NodeId]) -> Vec<Item> {
             let n = doc.get(id)?;
             let parent = select::parent_of(doc, id)?;
             let flow = is_flow_child(doc, id);
-            Some(Item { id, parent, parent_world: parent_world(index, doc, id), p0: Placement::of(n), world0: index.world(id)?, flow })
+            Some(Item { id, parent, parent_world: parent_world(index, doc, id), p0: Placement::of(n), path0: matches!(n.kind, NodeKind::Path { .. }).then(|| n.kind.clone()), world0: index.world(id)?, flow })
         })
         .collect()
 }
@@ -597,6 +600,10 @@ impl ResizeGesture {
                 }
                 if (new.h - it.p0.h).abs() > 1e-9 && n.props.sizing_v != Sizing::Fixed {
                     ups.push(PropValue::SizingV(Sizing::Fixed));
+                }
+                let ratio = |new: f64, old: f64| if old > 1e-9 { new.max(1e-3) / old } else { 1.0 };
+                if let Some(kind) = it.path0.as_ref().and_then(|k| k.scaled_path(ratio(new.w, it.p0.w), ratio(new.h, it.p0.h))) {
+                    ups.push(PropValue::Kind(kind));
                 }
                 write(tx, it.id, ups)?;
             }

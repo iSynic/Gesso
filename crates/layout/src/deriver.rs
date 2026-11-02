@@ -50,7 +50,12 @@ impl Sink for Tx<'_> {
     }
     fn write(&mut self, w: &Write) -> Result<bool, Error> {
         if !self.set_virtual(w.id, w.prop()) {
+            let old = Tx::doc(self).get(w.id).map(|n| (n.props.width, n.props.height));
             self.apply(Op::Update { id: w.id, value: w.prop() })?;
+            // Layout resized a path: its shape follows the box.
+            if let Some(kind) = old.and_then(|o| Tx::doc(self).get(w.id)?.resized_path(o)) {
+                self.apply(Op::Update { id: w.id, value: PropValue::Kind(kind) })?;
+            }
         }
         Ok(true)
     }

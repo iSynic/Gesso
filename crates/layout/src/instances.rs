@@ -241,7 +241,11 @@ impl Builder<'_> {
         }
         if let Some((old, new)) = resized.filter(|(o, n)| o != n) {
             let p = &mut n.props;
+            let size = (p.width, p.height);
             [p.x, p.y, p.width, p.height] = constrain(p.constraints, [p.x, p.y, p.width, p.height], old, new);
+            if let Some(kind) = n.resized_path(size) {
+                n.kind = kind;
+            }
         }
         // Overrides addressed to this node, and those passing through it into a nested
         // instance (their path minus this step). A nested instance's look is its content

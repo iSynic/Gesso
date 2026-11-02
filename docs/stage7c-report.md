@@ -236,9 +236,8 @@ on the instance, which still re-plans.
   The candidate window should sit at the caret.
 - **Narrator.** The AccessKit tree is built and tested as data, but I haven't listened to it.
   Worth trying: Ctrl+Win+Enter, click the canvas, then Tab through layers.
-- **Resizing a path doesn't scale its `d` data.** This gap predates 7c (resize changes only
-  the box), but it is more visible now that paths can be drawn. It is the obvious next fix for
-  paths.
+- **Resizing a path didn't scale its `d` data.** Fixed after this report: canvas handles, the
+  W and H fields, layout and instance content now scale the shape with the box.
 - **The plan's out-of-scope list is unchanged:**
   - variant sets and instance swap;
   - lossy WebP;

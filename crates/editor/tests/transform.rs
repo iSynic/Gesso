@@ -118,6 +118,65 @@ fn equal_spacing_snaps_and_marks_the_gaps() {
     assert!(fb.measures.iter().any(|m| (m.value - 60.0).abs() < 1e-9));
 }
 
+fn path_d(s: &Session, name: &str) -> String {
+    match &s.doc().get(id(s, name)).unwrap().kind {
+        doc::NodeKind::Path { paths } => paths[0].d.clone(),
+        k => panic!("not a path: {k:?}"),
+    }
+}
+
+fn path_node(x: f64, y: f64) -> Value {
+    json!({"type": "path", "name": "p", "x": x, "y": y, "width": 100, "height": 50,
+           "paths": [{"d": "M0 0 L100 0 L100 50 L0 50 Z"}], "fills": red()})
+}
+
+#[test]
+fn resizing_a_path_scales_its_shape() {
+    let mut s = session(json!([path_node(100.0, 100.0)]));
+    s.snap_to_objects = false;
+    s.snap_to_pixels = false;
+    let before = path_d(&s, "p");
+    s.select(vec![id(&s, "p")]);
+    let mut g = ResizeGesture::begin(&s, Handle::SE).unwrap();
+    g.update(&mut s, Point::new(300.0, 200.0), Mods::default()).unwrap();
+    assert_eq!(path_d(&s, "p"), "M0 0L200 0L200 100L0 100Z");
+    // Through zero and out again: the shape comes from the start of the drag.
+    g.update(&mut s, Point::new(100.0, 150.0), Mods::default()).unwrap();
+    g.update(&mut s, Point::new(150.0, 125.0), Mods::default()).unwrap();
+    assert_eq!(path_d(&s, "p"), "M0 0L50 0L50 25L0 25Z");
+    s.undo().unwrap();
+    assert_eq!(path_d(&s, "p"), before);
+    assert_eq!(props(&s, "p").width, 100.0);
+}
+
+#[test]
+fn panel_width_scales_a_path_but_never_to_zero() {
+    let mut s = session(json!([path_node(0.0, 0.0)]));
+    let ids = vec![id(&s, "p")];
+    editor::inspect::write(&mut s, &ids, editor::inspect::Applies::All, "width", json!(300), None).unwrap();
+    assert_eq!(path_d(&s, "p"), "M0 0L300 0L300 50L0 50Z");
+    editor::inspect::write(&mut s, &ids, editor::inspect::Applies::All, "width", json!(0), None).unwrap();
+    assert_eq!(path_d(&s, "p"), "M0 0L300 0L300 50L0 50Z");
+}
+
+#[test]
+fn a_path_scales_with_its_frame_constraints() {
+    let mut s = session(json!([{"type": "frame", "name": "f", "x": 0, "y": 0, "width": 200, "height": 200, "children": [
+        {"type": "path", "name": "p", "x": 0, "y": 0, "width": 100, "height": 50, "constraints": {"h": "scale", "v": "scale"},
+         "paths": [{"d": "M0 0 L100 50"}], "fills": red()}]}]));
+    let f = id(&s, "f");
+    s.transact(TxMeta::user("grow"), |tx| {
+        tx.update(f, doc::PropValue::Width(400.0))?;
+        tx.update(f, doc::PropValue::Height(100.0))
+    })
+    .unwrap();
+    let p = props(&s, "p");
+    assert_eq!((p.width, p.height), (200.0, 25.0));
+    assert_eq!(path_d(&s, "p"), "M0 0L200 25");
+    s.undo().unwrap();
+    assert_eq!(path_d(&s, "p"), "M0 0 L100 50");
+}
+
 #[test]
 fn resize_corner_aspect_centre_and_flip() {
     let mut s = session(json!([{"type": "rectangle", "name": "r", "x": 100, "y": 100, "width": 100, "height": 50, "fills": red()}]));

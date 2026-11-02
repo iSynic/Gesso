@@ -334,8 +334,9 @@ impl Scene {
                     self.replan = true;
                     self.dirty_node(*id);
                 }
-                // A text is a leaf whatever its content, so typing leaves the plan as it is.
-                PropKey::Kind if doc.get(*id).is_some_and(|n| matches!(n.kind, NodeKind::Text { .. })) => self.dirty_node(*id),
+                // Texts and paths are leaves whatever their content, so typing or resizing
+                // a path leaves the plan as it is.
+                PropKey::Kind if doc.get(*id).is_some_and(|n| matches!(n.kind, NodeKind::Text { .. } | NodeKind::Path { .. })) => self.dirty_node(*id),
                 PropKey::Visible | PropKey::Kind => {
                     // Showing or hiding can change a subtree's size or a split decision.
                     self.replan = true;

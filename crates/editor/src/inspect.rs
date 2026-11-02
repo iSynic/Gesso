@@ -334,7 +334,11 @@ pub fn write(s: &mut Session, ids: &[NodeId], applies_to: Applies, path: &str, v
     }
     s.transact(meta, |tx| {
         for (id, p) in &patches {
+            let old = tx.doc().get(*id).map(|n| (n.props.width, n.props.height));
             tx.update_json(*id, p)?;
+            if let Some(kind) = old.and_then(|o| tx.doc().get(*id)?.resized_path(o)) {
+                tx.update(*id, doc::PropValue::Kind(kind))?;
+            }
         }
         Ok(())
     })

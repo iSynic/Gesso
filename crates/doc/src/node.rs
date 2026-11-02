@@ -92,7 +92,58 @@ pub enum NodeKind {
     Note { text: String },
 }
 
+/// One number of path data, on the 1/1000 grid.
+fn push_coord(d: &mut String, v: f64) {
+    if !d.is_empty() && !d.ends_with(|c: char| c.is_ascii_alphabetic()) {
+        d.push(' ');
+    }
+    d.push_str(&((v * 1000.0).round() / 1000.0).to_string());
+}
+
+/// SVG path data scaled by `(kx, ky)` about the origin. Data that doesn't parse is kept.
+fn scale_d(d: &str, kx: f64, ky: f64) -> String {
+    let Ok(mut b) = kurbo::BezPath::from_svg(d) else { return d.to_string() };
+    b.apply_affine(kurbo::Affine::scale_non_uniform(kx, ky));
+    let mut out = String::new();
+    for el in b.elements() {
+        let (cmd, points): (char, &[kurbo::Point]) = match el {
+            kurbo::PathEl::MoveTo(p) => ('M', std::slice::from_ref(p)),
+            kurbo::PathEl::LineTo(p) => ('L', std::slice::from_ref(p)),
+            kurbo::PathEl::QuadTo(a, p) => {
+                out.push('Q');
+                push_coord(&mut out, a.x);
+                push_coord(&mut out, a.y);
+                ('\0', std::slice::from_ref(p))
+            }
+            kurbo::PathEl::CurveTo(a, c, p) => {
+                out.push('C');
+                for q in [a, c] {
+                    push_coord(&mut out, q.x);
+                    push_coord(&mut out, q.y);
+                }
+                ('\0', std::slice::from_ref(p))
+            }
+            kurbo::PathEl::ClosePath => ('Z', &[]),
+        };
+        if cmd != '\0' {
+            out.push(cmd);
+        }
+        for p in points {
+            push_coord(&mut out, p.x);
+            push_coord(&mut out, p.y);
+        }
+    }
+    out
+}
+
 impl NodeKind {
+    /// A path scaled about its box's origin; `None` for anything else. Resizing a path scales
+    /// its shape this way, so data with a margin inside its box keeps that margin in proportion.
+    pub fn scaled_path(&self, kx: f64, ky: f64) -> Option<NodeKind> {
+        let NodeKind::Path { paths } = self else { return None };
+        Some(NodeKind::Path { paths: paths.iter().map(|p| PathData { d: scale_d(&p.d, kx, ky), fill_rule: p.fill_rule }).collect() })
+    }
+
     pub fn type_name(&self) -> &'static str {
         match self {
             NodeKind::Page { .. } => "page",

@@ -59,7 +59,9 @@ Notes:
 - `ellipse` `arc`: angles in degrees, 0° at 3 o'clock, positive `sweep` clockwise; so a donut
   segment starting at the top has `start: -90`.
 - `path`: `paths[].d` is SVG path data in the node's own coordinates (0,0 is its top-left).
-  `width`/`height` are its box and don't scale the path, so size the box to the data.
+  `width`/`height` are its box. Setting them in a script doesn't scale the path, so size the
+  box to the data, and write new `paths` to reshape it. People resizing a path in the app, and
+  layout resizing one (constraints, auto layout), do scale its data with the box.
 - Text `letterSpacing` and `lineHeight` are in pixels. Text has no padding: wrap it in an
   auto-layout frame to pad or align it.
 - `effects`: `dropShadow` and `innerShadow` (`color`, `offset` [x, y], `blur`, `spread`),

@@ -121,3 +121,46 @@ fn dragging_inside_an_instance_overrides_position() {
     assert_eq!(s.doc().get(real(&s, "Dot")).unwrap().props.x, 10.0, "component unchanged");
     s.doc().check_invariants().unwrap();
 }
+
+fn path_d(s: &Session, id: NodeId) -> String {
+    match &s.doc().get(id).unwrap().kind {
+        NodeKind::Path { paths } => paths[0].d.clone(),
+        k => panic!("not a path: {k:?}"),
+    }
+}
+
+#[test]
+fn resizing_a_path_inside_an_instance_is_an_override() {
+    let mut s = session(json!([
+        {"id": "0Cm00000000000000000C1", "type": "component", "name": "Btn", "width": 200, "height": 100, "children": [
+            {"type": "path", "name": "Tick", "x": 10, "y": 10, "width": 40, "height": 40, "paths": [{"d": "M0 0 L40 40"}], "strokes": [{"paint": {"type": "solid", "color": "#000000"}, "weight": 1}]}]},
+        {"type": "instance", "name": "Use", "component": "0Cm00000000000000000C1", "x": 300, "y": 300, "width": 200, "height": 100},
+    ]));
+    s.snap_to_objects = false;
+    s.snap_to_pixels = false;
+    let inst = real(&s, "Use");
+    s.select(vec![inst]);
+    let tick = s.double_click(Point::new(330.0, 330.0)).unwrap();
+    assert!(s.doc().get(tick).unwrap().virt.is_some());
+    let mut g = editor::transform::ResizeGesture::begin(&s, editor::transform::Handle::SE).unwrap();
+    g.update(&mut s, Point::new(390.0, 350.0), editor::transform::Mods::default()).unwrap();
+    assert_eq!(path_d(&s, tick), "M0 0L80 40");
+    assert_eq!(path_d(&s, real(&s, "Tick")), "M0 0 L40 40", "component unchanged");
+    s.undo().unwrap();
+    assert_eq!(path_d(&s, tick), "M0 0 L40 40");
+    s.doc().check_invariants().unwrap();
+}
+
+#[test]
+fn a_path_filling_an_instance_scales_with_it() {
+    let s = session(json!([
+        {"id": "0Cm00000000000000000C1", "type": "component", "name": "Btn", "width": 100, "height": 40, "autoLayout": {"gap": 0}, "children": [
+            {"type": "path", "name": "Wave", "width": 100, "height": 40, "sizingH": "fill", "paths": [{"d": "M0 0 L100 40"}], "strokes": [{"paint": {"type": "solid", "color": "#000000"}, "weight": 1}]}]},
+        {"type": "instance", "name": "Use", "component": "0Cm00000000000000000C1", "y": 100, "width": 300, "height": 40},
+    ]));
+    let wave = s.doc().iter().find(|(_, n)| n.name == "Wave" && n.virt.is_some()).map(|(_, n)| n.id).unwrap();
+    assert_eq!(s.doc().get(wave).unwrap().props.width, 300.0);
+    assert_eq!(path_d(&s, wave), "M0 0L300 40");
+    assert_eq!(path_d(&s, real(&s, "Wave")), "M0 0 L100 40", "component unchanged");
+    s.doc().check_invariants().unwrap();
+}

@@ -44,6 +44,15 @@ pub struct Virtual {
 }
 
 impl Node {
+    /// The kind a path needs now that its box has changed from `old` (width, height); `None`
+    /// if nothing has to change. A zero size on either side leaves the shape alone, because
+    /// scaling to or from zero can't be undone by a later resize.
+    pub fn resized_path(&self, old: (f64, f64)) -> Option<NodeKind> {
+        let ratio = |new: f64, old: f64| if new > 1e-9 && old > 1e-9 { new / old } else { 1.0 };
+        let (kx, ky) = (ratio(self.props.width, old.0), ratio(self.props.height, old.1));
+        (kx != 1.0 || ky != 1.0).then(|| self.kind.scaled_path(kx, ky)).flatten()
+    }
+
     /// Sets one property without validation, for derived copies (instance content). A `Kind`
     /// of another type is ignored, as an op would reject it.
     pub fn set(&mut self, value: PropValue) {
@@ -513,7 +522,11 @@ impl Document {
         let n = self.nodes.get_mut(key)?;
         n.virt?;
         let prop = value.key();
+        let old = (n.props.width, n.props.height);
         n.set(value);
+        if let Some(kind) = n.resized_path(old) {
+            n.kind = kind;
+        }
         Some(Change::Updated(id, prop))
     }
 
