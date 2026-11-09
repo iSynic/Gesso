@@ -780,6 +780,11 @@ impl WgpuEngine {
         self.downloads.get(&buf.id)
     }
 
+    /// Local patch (Gesso): takes ownership of a download buffer, to map it without blocking.
+    pub fn take_download(&mut self, buf: BufferProxy) -> Option<Buffer> {
+        self.downloads.remove(&buf.id)
+    }
+
     pub fn free_download(&mut self, buf: BufferProxy) {
         self.downloads.remove(&buf.id);
     }

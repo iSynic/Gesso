@@ -7,9 +7,6 @@ use crate::recording::{BufferProxy, ImageFormat, ImageProxy, Recording, Resource
 use crate::shaders::FullShaders;
 use crate::{AaConfig, RenderParams};
 
-#[cfg(feature = "wgpu")]
-use crate::Scene;
-
 use vello_encoding::{Encoding, Resolver, WorkgroupSize, make_mask_lut, make_mask_lut_16};
 
 #[derive(Clone, Copy, Debug)]
@@ -47,6 +44,9 @@ pub(crate) struct Persistent {
     /// The packing buffer, taken back by `reclaim` after the recording has run. Upstream
     /// allocates a fresh multi-megabyte buffer every frame.
     pub packed: Vec<u8>,
+    /// Local patch (Gesso): the sizes of the buffers the GPU allocates into, grown by the
+    /// renderer when a frame overflows them. Upstream fixes them.
+    pub bump: vello_encoding::BumpSizes,
 }
 
 impl Persistent {
@@ -108,36 +108,8 @@ impl CapturedBuffers {
     }
 }
 
-#[cfg(feature = "wgpu")]
-pub(crate) fn render_full(
-    scene: &Scene,
-    resolver: &mut Resolver,
-    shaders: &FullShaders,
-    persistent: &mut Persistent,
-    params: &RenderParams,
-) -> (Recording, ResourceProxy) {
-    render_encoding_full(scene.encoding(), resolver, shaders, persistent, params)
-}
-
-#[cfg(feature = "wgpu")]
-/// Create a single recording with both coarse and fine render stages.
-///
-/// This function is not recommended when the scene can be complex, as it does not
-/// implement robust dynamic memory.
-pub(crate) fn render_encoding_full(
-    encoding: &Encoding,
-    resolver: &mut Resolver,
-    shaders: &FullShaders,
-    persistent: &mut Persistent,
-    params: &RenderParams,
-) -> (Recording, ResourceProxy) {
-    let mut render = Render::new();
-    let mut recording =
-        render.render_encoding_coarse_with(encoding, resolver, shaders, persistent, params, false);
-    let out_image = render.out_image();
-    render.record_fine(shaders, &mut recording);
-    (recording, out_image.into())
-}
+// Local patch (Gesso): `render_full` and `render_encoding_full` are gone; `render_to_texture`
+// records both stages itself, with robust dynamic memory.
 
 impl Default for Render {
     fn default() -> Self {
@@ -280,8 +252,13 @@ impl Render {
         for image in images.images {
             recording.write_image(image_atlas, image.1, image.2, image.0.clone());
         }
-        let cpu_config =
-            RenderConfig::new(&layout, params.width, params.height, &params.base_color);
+        let cpu_config = RenderConfig::with_sizes(
+            &layout,
+            params.width,
+            params.height,
+            &params.base_color,
+            &persistent.bump,
+        );
         // HACK: The coarse workgroup counts is the number of active bins.
         if (cpu_config.workgroup_counts.coarse.0
             * cpu_config.workgroup_counts.coarse.1

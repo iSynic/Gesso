@@ -165,7 +165,14 @@ impl RenderContext {
                 .await
                 .ok()?;
         let features = adapter.features();
-        let limits = Limits::default();
+        // Local patch (Gesso): allow storage buffers as large as the adapter does, so the
+        // renderer's dynamically grown buffers aren't capped at the 128 MiB default.
+        let supported = adapter.limits();
+        let limits = Limits {
+            max_storage_buffer_binding_size: supported.max_storage_buffer_binding_size,
+            max_buffer_size: supported.max_buffer_size,
+            ..Limits::default()
+        };
         let maybe_features = wgpu::Features::CLEAR_TEXTURE | wgpu::Features::PIPELINE_CACHE;
         #[cfg(feature = "wgpu-profiler")]
         let maybe_features = maybe_features | wgpu_profiler::GpuProfiler::ALL_WGPU_TIMER_FEATURES;

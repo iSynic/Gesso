@@ -236,10 +236,20 @@ impl ApplicationHandler<UserEvent> for Shell {
     fn about_to_wait(&mut self, el: &ActiveEventLoop) {
         let now = Instant::now();
         let mut wake = None;
+        if let Some(gfx) = &mut self.gfx {
+            // A frame that ran out of the renderer's working memory drew incomplete; the
+            // renderer has grown it, so draw again. Its check arrives a frame or so later.
+            if gfx.vello.poll_memory() {
+                gfx.window.request_redraw();
+            } else if gfx.vello.memory_pending() {
+                wake = Some(now + Duration::from_millis(4));
+            }
+        }
         if let Some(a) = &mut self.app.autosave {
             a.tick(&mut self.app.session, now);
             if self.app.session.is_dirty() {
-                wake = Some(now + Duration::from_millis(500));
+                let t = now + Duration::from_millis(500);
+                wake = Some(wake.map_or(t, |w: Instant| w.min(t)));
             }
         }
         if self.app.quit {

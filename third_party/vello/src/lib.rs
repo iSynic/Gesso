@@ -334,6 +334,12 @@ pub struct Renderer {
     resolver: Resolver,
     persistent: render::Persistent,
     shaders: FullShaders,
+    /// Local patch (Gesso): whether frames read their bump counters back (not on the CPU path).
+    robust: bool,
+    /// Local patch (Gesso): bump counter readbacks in flight, oldest first.
+    bump_checks: std::collections::VecDeque<BumpCheck>,
+    /// Local patch (Gesso): a frame overflowed and the buffers have grown since the last frame.
+    memory_grew: bool,
     #[cfg(feature = "debug_layers")]
     debug: debug::DebugRenderer,
     #[cfg(feature = "wgpu-profiler")]
@@ -421,6 +427,74 @@ impl Default for RendererOptions {
     }
 }
 
+/// Local patch (Gesso): one frame's bump counters being copied back to the CPU, and the buffer
+/// sizes that frame used.
+#[cfg(feature = "wgpu")]
+struct BumpCheck {
+    buffer: wgpu::Buffer,
+    /// 0 while mapping, 1 mapped, 2 failed.
+    state: std::sync::Arc<std::sync::atomic::AtomicU8>,
+    sizes: vello_encoding::BumpSizes,
+}
+
+/// Local patch (Gesso): the buffer sizes to use after a frame that ran with `used` and reported
+/// `bump`. Buffers that overflowed grow to a power of two with a quarter to spare, capped by the
+/// device's limits. A failure with no counter over its size (a later stage never ran) doubles
+/// every buffer.
+#[cfg(feature = "wgpu")]
+fn grow_bump_sizes(
+    current: &vello_encoding::BumpSizes,
+    used: &vello_encoding::BumpSizes,
+    bump: &BumpAllocators,
+    limits: &wgpu::Limits,
+) -> vello_encoding::BumpSizes {
+    use vello_encoding::{LineSoup, PathSegment, SegmentCount, Tile};
+    let max_bytes = u64::from(limits.max_storage_buffer_binding_size).min(limits.max_buffer_size);
+    let cap = |elem: usize| (max_bytes / elem as u64).min(u64::from(u32::MAX)) as u32;
+    let over = [
+        (bump.binning, used.binning),
+        (bump.tile, used.tiles),
+        (bump.lines, used.lines),
+        (bump.seg_counts, used.seg_counts),
+        (bump.segments, used.segments),
+        (bump.blend, used.blend),
+        (bump.ptcl, used.ptcl),
+    ]
+    .iter()
+    .any(|(n, size)| n > size);
+    let all = bump.failed != 0 && !over;
+    let grow = |cur: u32, need: u32, size: u32, elem: usize| -> u32 {
+        let want = if all {
+            u64::from(size) * 2
+        } else if need > size {
+            (u64::from(need) + u64::from(need) / 4).next_power_of_two()
+        } else {
+            return cur;
+        };
+        cur.max(want.min(u64::from(cap(elem))) as u32)
+    };
+    vello_encoding::BumpSizes {
+        // The binning output shares its buffer with the per-draw info, which is small.
+        binning: grow(current.binning, bump.binning, used.binning, 4),
+        tiles: grow(current.tiles, bump.tile, used.tiles, size_of::<Tile>()),
+        lines: grow(current.lines, bump.lines, used.lines, size_of::<LineSoup>()),
+        seg_counts: grow(
+            current.seg_counts,
+            bump.seg_counts,
+            used.seg_counts,
+            size_of::<SegmentCount>(),
+        ),
+        segments: grow(
+            current.segments,
+            bump.segments,
+            used.segments,
+            size_of::<PathSegment>(),
+        ),
+        blend: grow(current.blend, bump.blend, used.blend, 4),
+        ptcl: grow(current.ptcl, bump.ptcl, used.ptcl, 4),
+    }
+}
+
 #[cfg(feature = "wgpu")]
 struct RenderResult {
     bump: Option<BumpAllocators>,
@@ -444,12 +518,16 @@ impl Renderer {
         #[cfg(feature = "debug_layers")]
         let debug = debug::DebugRenderer::new(device, wgpu::TextureFormat::Rgba8Unorm, &mut engine);
 
+        let robust = !options.use_cpu;
         Ok(Self {
             options,
             engine,
             resolver: Resolver::new(),
             persistent: render::Persistent::default(),
             shaders,
+            robust,
+            bump_checks: Default::default(),
+            memory_grew: false,
             #[cfg(feature = "debug_layers")]
             debug,
             #[cfg(feature = "wgpu-profiler")]
@@ -481,17 +559,24 @@ impl Renderer {
         texture: &TextureView,
         params: &RenderParams,
     ) -> Result<()> {
-        let (mut recording, target) = render::render_full(
-            scene,
+        // Local patch (Gesso): robust dynamic memory. Each frame copies its bump counters back
+        // without waiting; a frame that overflowed grows the buffers for the frames after it,
+        // and `poll_memory` tells the caller to redraw. Upstream renders a blank frame instead.
+        self.collect_bump_checks(device);
+        self.memory_grew = false;
+        let mut render = Render::new();
+        let mut recording = render.render_encoding_coarse_with(
+            scene.encoding(),
             &mut self.resolver,
             &self.shaders,
             &mut self.persistent,
             params,
+            self.robust,
         );
-        let external_resources = [ExternalResource::Image(
-            *target.as_image().unwrap(),
-            texture,
-        )];
+        let target = render.out_image();
+        let bump_buf = render.bump_buf();
+        render.record_fine(&self.shaders, &mut recording);
+        let external_resources = [ExternalResource::Image(target, texture)];
         self.engine.run_recording(
             device,
             queue,
@@ -502,6 +587,25 @@ impl Renderer {
             &mut self.profiler,
         )?;
         self.persistent.reclaim(&mut recording);
+        if let Some(buffer) = self.engine.take_download(bump_buf) {
+            let state = std::sync::Arc::new(std::sync::atomic::AtomicU8::new(0));
+            let s = state.clone();
+            buffer.slice(..).map_async(wgpu::MapMode::Read, move |r| {
+                s.store(
+                    if r.is_ok() { 1 } else { 2 },
+                    std::sync::atomic::Ordering::Release,
+                );
+            });
+            self.bump_checks.push_back(BumpCheck {
+                buffer,
+                state,
+                sizes: self.persistent.bump,
+            });
+            // Readbacks nobody polls for are dropped rather than piling up.
+            while self.bump_checks.len() > 16 {
+                self.bump_checks.pop_front();
+            }
+        }
         // N.B. This is horrible; this integration of wgpu-profiler really needs some work...
         #[cfg(feature = "wgpu-profiler")]
         {
@@ -515,6 +619,58 @@ impl Renderer {
         }
 
         Ok(())
+    }
+
+    /// Local patch (Gesso): checks, without blocking, the bump counters of frames already
+    /// submitted. Returns true when one of them overflowed its buffers, which have grown since:
+    /// that frame drew incomplete and the caller should render again.
+    pub fn poll_memory(&mut self, device: &Device) -> bool {
+        if !self.bump_checks.is_empty() {
+            let _ = device.poll(wgpu::PollType::Poll);
+        }
+        self.collect_bump_checks(device);
+        std::mem::take(&mut self.memory_grew)
+    }
+
+    /// Local patch (Gesso): whether frames' bump counters are still on their way back, so the
+    /// caller should call [`poll_memory`](Self::poll_memory) again soon.
+    pub fn memory_pending(&self) -> bool {
+        !self.bump_checks.is_empty()
+    }
+
+    /// Local patch (Gesso): reads the readbacks that have arrived, growing the buffers for any
+    /// frame that overflowed them.
+    fn collect_bump_checks(&mut self, device: &Device) {
+        use std::sync::atomic::Ordering;
+        while let Some(check) = self.bump_checks.front() {
+            match check.state.load(Ordering::Acquire) {
+                0 => break,
+                1 => {
+                    let bump: Option<BumpAllocators> =
+                        check.buffer.slice(..).get_mapped_range().ok().map(|data| {
+                            bytemuck::pod_read_unaligned(&data[..size_of::<BumpAllocators>()])
+                        });
+                    check.buffer.unmap();
+                    let Some(bump) = bump else {
+                        self.bump_checks.pop_front();
+                        continue;
+                    };
+                    let grown = grow_bump_sizes(
+                        &self.persistent.bump,
+                        &check.sizes,
+                        &bump,
+                        &device.limits(),
+                    );
+                    if grown != self.persistent.bump {
+                        log::debug!("vello buffers grown after an overflow: {bump:?} -> {grown:?}");
+                        self.persistent.bump = grown;
+                        self.memory_grew = true;
+                    }
+                }
+                _ => {}
+            }
+            self.bump_checks.pop_front();
+        }
     }
 
     /// Overwrite `image` with `texture`.
@@ -620,7 +776,11 @@ impl Renderer {
             return Err(error.into());
         }
         self.engine = engine;
-        self.persistent = render::Persistent::default();
+        let bump = self.persistent.bump;
+        self.persistent = render::Persistent {
+            bump,
+            ..Default::default()
+        };
         self.shaders = shaders;
         #[cfg(feature = "debug_layers")]
         {

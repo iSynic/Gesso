@@ -36,6 +36,38 @@ pub struct BumpAllocators {
     pub lines: u32,
 }
 
+// Local patch (Gesso): the sizes of the buffers the GPU allocates into while rendering, which
+// upstream fixes. A renderer grows them when the bump counters report an overflow.
+/// Element counts of the dynamically allocated buffers.
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub struct BumpSizes {
+    /// `u32`s of binning output (after the per-draw info at the front of the buffer).
+    pub binning: u32,
+    pub tiles: u32,
+    pub lines: u32,
+    pub seg_counts: u32,
+    pub segments: u32,
+    /// `u32`s of blend spill.
+    pub blend: u32,
+    /// `u32`s of per-tile command lists.
+    pub ptcl: u32,
+}
+
+impl Default for BumpSizes {
+    /// The sizes upstream hand-picked for its test scenes.
+    fn default() -> Self {
+        Self {
+            binning: 1 << 18,
+            tiles: 1 << 21,
+            lines: 1 << 21,
+            seg_counts: 1 << 21,
+            segments: 1 << 21,
+            blend: 1 << 20,
+            ptcl: 1 << 23,
+        }
+    }
+}
+
 #[derive(Default)]
 pub struct BumpAllocatorMemory {
     pub total: u32,
@@ -166,6 +198,17 @@ pub struct RenderConfig {
 
 impl RenderConfig {
     pub fn new(layout: &Layout, width: u32, height: u32, base_color: &peniko::Color) -> Self {
+        Self::with_sizes(layout, width, height, base_color, &BumpSizes::default())
+    }
+
+    /// As [`new`](Self::new), with the dynamically allocated buffers sized by `bump`.
+    pub fn with_sizes(
+        layout: &Layout,
+        width: u32,
+        height: u32,
+        base_color: &peniko::Color,
+        bump: &BumpSizes,
+    ) -> Self {
         let new_width = width.next_multiple_of(TILE_WIDTH);
         let new_height = height.next_multiple_of(TILE_HEIGHT);
         let width_in_tiles = new_width / TILE_WIDTH;
@@ -173,7 +216,7 @@ impl RenderConfig {
         let n_path_tags = layout.path_tags_size();
         let workgroup_counts =
             WorkgroupCounts::new(layout, width_in_tiles, height_in_tiles, n_path_tags);
-        let buffer_sizes = BufferSizes::new(layout, &workgroup_counts);
+        let buffer_sizes = BufferSizes::with_sizes(layout, &workgroup_counts, bump);
         Self {
             gpu: ConfigUniform {
                 width_in_tiles,
@@ -361,6 +404,11 @@ pub struct BufferSizes {
 
 impl BufferSizes {
     pub fn new(layout: &Layout, workgroups: &WorkgroupCounts) -> Self {
+        Self::with_sizes(layout, workgroups, &BumpSizes::default())
+    }
+
+    /// As [`new`](Self::new), with the dynamically allocated buffers sized by `bump`.
+    pub fn with_sizes(layout: &Layout, workgroups: &WorkgroupCounts, bump: &BumpSizes) -> Self {
         let n_paths = layout.n_paths;
         let n_draw_objects = layout.n_draw_objects;
         let n_clips = layout.n_clips;
@@ -398,14 +446,16 @@ impl BufferSizes {
         // The following buffer sizes have been hand picked to accommodate the vello test scenes as
         // well as paris-30k. These should instead get derived from the scene layout using
         // reasonable heuristics.
-        let bin_data = BufferSize::new(1 << 18);
-        let tiles = BufferSize::new(1 << 21);
-        let lines = BufferSize::new(1 << 21);
-        let seg_counts = BufferSize::new(1 << 21);
-        let segments = BufferSize::new(1 << 21);
-        // 16 * 16 (1 << 8) is one blend spill, so this allows for 4096 spills.
-        let blend_spill = BufferSize::new(1 << 20);
-        let ptcl = BufferSize::new(1 << 23);
+        // Local patch (Gesso): sized by the caller, which grows them on overflow. The binning
+        // output follows the per-draw info in the same buffer.
+        let bin_data = BufferSize::new(layout.bin_data_start + bump.binning);
+        let tiles = BufferSize::new(bump.tiles);
+        let lines = BufferSize::new(bump.lines);
+        let seg_counts = BufferSize::new(bump.seg_counts);
+        let segments = BufferSize::new(bump.segments);
+        // 16 * 16 (1 << 8) is one blend spill.
+        let blend_spill = BufferSize::new(bump.blend);
+        let ptcl = BufferSize::new(bump.ptcl);
         Self {
             path_reduced,
             path_reduced2,

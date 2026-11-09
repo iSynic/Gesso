@@ -70,6 +70,49 @@ fn gpu_matches_cpu() {
     assert!(failures.is_empty(), "GPU/CPU parity failures:\n{}", failures.join("\n"));
 }
 
+/// A frame that needs more of Vello's working memory than it starts with draws incomplete; the
+/// renderer notices from the frame's counters, grows its buffers, and the next frame is whole.
+#[test]
+fn a_frame_that_overflows_vellos_buffers_is_redrawn_whole() {
+    if !gpu_tests() {
+        return;
+    }
+    // 400 translucent rectangles over a 2048-pixel square: about 5.5 million tiles, more than
+    // the 2 million Vello's tile buffer starts with.
+    let nodes: Vec<_> = (0..400)
+        .map(|i| {
+            let c = format!("#{:02x}{:02x}80", (i * 37) % 256, (i * 91) % 256);
+            serde_json::json!({"type": "rectangle", "x": i % 160, "y": i % 160, "width": 1880, "height": 1880,
+                "fills": [{"type": "solid", "color": c, "opacity": 0.02}]})
+        })
+        .collect();
+    let f = from_json("overflow", &serde_json::json!({"size": [2048, 2048], "nodes": nodes}));
+    let mut r = VelloRenderer::headless().unwrap();
+    let mut sc = scene(&f);
+    let fr = frame(&f, &mut sc);
+    let mut t = r.target(fr.width, fr.height);
+    r.render(&fr, &mut t).unwrap();
+    r.wait().unwrap();
+    assert!(r.poll_memory(), "the first frame should have overflowed");
+    // Vello's stages run out one after another (tiles, then command lists), so settling can
+    // take a few frames.
+    let mut frames = 1;
+    let gpu = loop {
+        r.render(&fr, &mut t).unwrap();
+        let gpu = r.read(&t).unwrap();
+        frames += 1;
+        if !r.poll_memory() {
+            break gpu;
+        }
+        assert!(frames < 6, "the buffers never grew enough");
+    };
+    let d = diff(&gpu, &render_frame(&fr, 4), OFF);
+    let share = d.over as f64 / (f.width * f.height) as f64;
+    // 400 stacked translucent layers round a little differently on each renderer (a mean of
+    // about 5/255), so only a missing or wrong area counts here.
+    assert!(share <= MAX_OFF_SHARE, "mean {:.3}, {:.3} % off", d.mean, 100.0 * share);
+}
+
 #[test]
 fn cached_runs_render_the_same_pixels() {
     if !gpu_tests() {

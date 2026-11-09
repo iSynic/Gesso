@@ -64,6 +64,11 @@ pub fn golden_dir() -> PathBuf {
 pub fn load(name: &str) -> Fixture {
     let path = fixtures_dir().join(format!("{name}.json"));
     let v: Value = serde_json::from_slice(&std::fs::read(&path).unwrap()).unwrap_or_else(|e| panic!("{name}.json: {e}"));
+    from_json(name, &v)
+}
+
+/// A fixture from its JSON, as [`load`] reads it from a file.
+pub fn from_json(name: &str, v: &Value) -> Fixture {
     let size = v["size"].as_array().unwrap();
     let (w, h) = (size[0].as_f64().unwrap(), size[1].as_f64().unwrap());
     let scale = v.get("scale").and_then(Value::as_f64).unwrap_or(1.0);

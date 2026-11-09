@@ -120,7 +120,12 @@ impl VelloRenderer {
         let (device, queue) = pollster::block_on(adapter.request_device(&wgpu::DeviceDescriptor {
             label: Some("render-vello"),
             required_features: adapter.features() & (wgpu::Features::CLEAR_TEXTURE | wgpu::Features::PIPELINE_CACHE),
-            required_limits: wgpu::Limits::default(),
+            // Vello grows its working buffers on complex frames; allow what the adapter does.
+            required_limits: wgpu::Limits {
+                max_storage_buffer_binding_size: adapter.limits().max_storage_buffer_binding_size,
+                max_buffer_size: adapter.limits().max_buffer_size,
+                ..wgpu::Limits::default()
+            },
             ..Default::default()
         }))
         .map_err(gpu_err)?;
@@ -161,6 +166,19 @@ impl VelloRenderer {
     /// Blocks until the GPU has finished the work submitted so far.
     pub fn wait(&self) -> Result<(), RenderError> {
         self.device.poll(wgpu::PollType::wait_indefinitely()).map(|_| ()).map_err(gpu_err)
+    }
+
+    /// Checks, without blocking, whether a frame already submitted ran out of Vello's working
+    /// memory. Vello has grown its buffers since, and that frame drew incomplete, so render again
+    /// when this returns true.
+    pub fn poll_memory(&mut self) -> bool {
+        self.vello.poll_memory(&self.device)
+    }
+
+    /// Whether frames' memory checks are still on their way back from the GPU: call
+    /// [`poll_memory`](Self::poll_memory) again soon.
+    pub fn memory_pending(&self) -> bool {
+        self.vello.memory_pending()
     }
 
     /// Straight-alpha RGBA8 pixels of a target (waits for the GPU).
