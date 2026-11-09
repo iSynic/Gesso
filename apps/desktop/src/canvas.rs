@@ -25,11 +25,14 @@ pub struct CanvasState {
     pub space: bool,
     /// The layers exposed to assistive technology last frame, by accessibility node.
     a11y: Vec<(egui::accesskit::NodeId, NodeId)>,
+    /// A scrollbar thumb being dragged: the axis (0 x, 1 y), the scrolled extent along it
+    /// (frozen for the drag, so the thumb stays under the pointer) and where it was grabbed.
+    scroll: Option<(usize, (f64, f64), f32)>,
 }
 
 impl Default for CanvasState {
     fn default() -> Self {
-        CanvasState { rect: Rect::NOTHING, last_press: None, clicks: 0, labels: Vec::new(), space: false, a11y: Vec::new() }
+        CanvasState { rect: Rect::NOTHING, last_press: None, clicks: 0, labels: Vec::new(), space: false, a11y: Vec::new(), scroll: None }
     }
 }
 
@@ -39,6 +42,8 @@ pub enum Request {
     Copy,
     Cut,
     Paste(String),
+    /// Paste what the clipboard holds (a menu's Paste, which has no paste event of its own).
+    PasteFromClipboard,
     /// A bitmap from the clipboard.
     PasteImage(std::sync::Arc<egui::ColorImage>),
 }
@@ -173,9 +178,11 @@ pub fn input(ui: &mut egui::Ui, st: &mut CanvasState, s: &mut Session, ctl: &mut
                 }
                 egui::Event::MouseWheel { unit, delta, modifiers: m, .. } if over => {
                     stamp();
+                    // A wheel notch is one line: 100 px, as browsers scroll it, so a notch pans
+                    // as far as in web design tools and Ctrl zooms about 26 % per notch.
                     let k = match unit {
                         egui::MouseWheelUnit::Point => 1.0,
-                        egui::MouseWheelUnit::Line => 40.0,
+                        egui::MouseWheelUnit::Line => 100.0,
                         egui::MouseWheelUnit::Page => rect.height(),
                     };
                     let d = kurbo::Vec2::new(f64::from(delta.x * k), f64::from(delta.y * k));
@@ -273,6 +280,9 @@ pub fn input(ui: &mut egui::Ui, st: &mut CanvasState, s: &mut Session, ctl: &mut
         }
     }
     accessibility(ui, st, s, ctl, &resp);
+    if !ctl.busy() && !ctl.editing() {
+        resp.context_menu(|ui| context_menu(ui, s, &mut out));
+    }
     if over || ctl.busy() {
         let text_hover = ctl.text.as_ref().is_some_and(|_| ui.input(|i| i.pointer.hover_pos()).is_some_and(|p| rect.contains(p)));
         let c = if st.space && !ctl.busy() { Cursor::Grab } else if text_hover && !ctl.busy() { text_cursor(ui, rect, s, ctl) } else { ctl.cursor };
@@ -351,6 +361,140 @@ pub fn keyboard_free(ctx: &egui::Context) -> bool {
 }
 
 /// The canvas widget's id (its keyboard focus and accessibility node).
+/// The right-click menu: the selection's commands, or the canvas's when nothing is selected.
+fn context_menu(ui: &mut egui::Ui, s: &Session, out: &mut Vec<Request>) {
+    ui.set_min_width(220.0);
+    let doc = s.doc();
+    let sel = s.selection();
+    let has = !sel.is_empty();
+    let instance = sel.iter().any(|id| doc.get(*id).is_some_and(|n| matches!(n.kind, NodeKind::Instance { .. })));
+    let inside = sel.iter().any(|id| doc.get(*id).is_some_and(|n| n.virt.is_some()));
+    let mut item = |ui: &mut egui::Ui, label: &str, key: &str, on: bool, r: Request| {
+        if ui.add_enabled(on, egui::Button::new(label).shortcut_text(key)).clicked() {
+            out.push(r);
+            ui.close();
+        }
+    };
+    let cmd = Request::Command;
+    if !has {
+        item(ui, "Paste", "Ctrl+V", true, Request::PasteFromClipboard);
+        item(ui, "Select all", "Ctrl+A", true, cmd(Command::SelectAll));
+        ui.separator();
+        item(ui, "Zoom to fit", "Shift+1", true, cmd(Command::ZoomToFit));
+        item(ui, "Zoom to 100%", "Ctrl+0", true, cmd(Command::ZoomTo100));
+        return;
+    }
+    item(ui, "Copy", "Ctrl+C", true, Request::Copy);
+    item(ui, "Cut", "Ctrl+X", !inside, Request::Cut);
+    item(ui, "Paste", "Ctrl+V", true, Request::PasteFromClipboard);
+    item(ui, "Duplicate", "Ctrl+D", !inside, cmd(Command::Duplicate));
+    item(ui, "Delete", "Del", !inside, cmd(Command::Delete));
+    ui.separator();
+    item(ui, "Bring to front", "Ctrl+Shift+]", !inside, cmd(Command::BringToFront));
+    item(ui, "Bring forward", "Ctrl+]", !inside, cmd(Command::BringForward));
+    item(ui, "Send backward", "Ctrl+[", !inside, cmd(Command::SendBackward));
+    item(ui, "Send to back", "Ctrl+Shift+[", !inside, cmd(Command::SendToBack));
+    ui.separator();
+    item(ui, "Group", "Ctrl+G", !inside, cmd(Command::Group));
+    item(ui, "Ungroup", "Ctrl+Shift+G", !inside, cmd(Command::Ungroup));
+    item(ui, "Create component", "Ctrl+Alt+K", !inside, cmd(Command::CreateComponent));
+    if instance || inside {
+        item(ui, "Go to main component", "", instance, cmd(Command::GoToMainComponent));
+        item(ui, "Detach instance", "Ctrl+Alt+B", instance && !inside, cmd(Command::DetachInstance));
+        item(ui, "Reset overrides", "", true, cmd(Command::ResetOverrides));
+    }
+    ui.separator();
+    item(ui, "Copy as PNG", "Ctrl+Shift+C", true, cmd(Command::CopyAsPng));
+    item(ui, "Copy as SVG", "", true, cmd(Command::CopyAsSvg));
+    ui.separator();
+    item(ui, "Zoom to selection", "Shift+2", true, cmd(Command::ZoomToSelection));
+}
+
+/// Scrollbars along the canvas's right and bottom edges, over the page's content plus the view.
+/// Drag a thumb to scroll, or click the track to page. Hidden on an axis whose content is all
+/// in view.
+pub fn scrollbars(ui: &egui::Ui, st: &mut CanvasState, s: &mut Session) {
+    let rect = st.rect;
+    let Some(content) = s.scene.index.page_bounds(s.page()) else {
+        st.scroll = None;
+        return;
+    };
+    let view = s.view();
+    let painter = ui.painter_at(rect);
+    for axis in 0..2 {
+        let pick = |r: kurbo::Rect| if axis == 0 { (r.x0, r.x1) } else { (r.y0, r.y1) };
+        let (v0, v1) = pick(view);
+        let frozen = st.scroll.filter(|d| d.0 == axis).map(|d| d.1);
+        let (c0, c1) = frozen.unwrap_or_else(|| {
+            let (c0, c1) = pick(content);
+            (c0.min(v0), c1.max(v1))
+        });
+        let (span, vis) = (c1 - c0, v1 - v0);
+        if frozen.is_none() && vis >= span - 0.5 {
+            continue;
+        }
+        let track = if axis == 0 {
+            Rect::from_min_max(Pos2::new(rect.left() + 4.0, rect.bottom() - 11.0), Pos2::new(rect.right() - 15.0, rect.bottom() - 2.0))
+        } else {
+            Rect::from_min_max(Pos2::new(rect.right() - 11.0, rect.top() + 4.0), Pos2::new(rect.right() - 2.0, rect.bottom() - 15.0))
+        };
+        let len = track.size()[axis];
+        if len < 40.0 {
+            continue;
+        }
+        let thumb_len = (len * (vis / span) as f32).clamp(24.0, len);
+        let free = (len - thumb_len).max(1.0);
+        let t = if span > vis { ((v0 - c0) / (span - vis)).clamp(0.0, 1.0) as f32 } else { 0.0 };
+        let start = track.min[axis] + t * free;
+        let mut thumb = track;
+        thumb.min[axis] = start;
+        thumb.max[axis] = start + thumb_len;
+        let resp = ui.interact(track, canvas_id().with(("scrollbar", axis)), Sense::click_and_drag());
+        let pointer = resp.interact_pointer_pos();
+        if resp.drag_started()
+            && let Some(p) = pointer
+        {
+            let grab = if thumb.contains(p) { p[axis] - start } else { thumb_len / 2.0 };
+            st.scroll = Some((axis, (c0, c1), grab));
+        }
+        let mut set = |v0: f64| {
+            if axis == 0 {
+                s.camera.origin.x = v0;
+            } else {
+                s.camera.origin.y = v0;
+            }
+        };
+        if resp.dragged()
+            && let (Some((_, _, grab)), Some(p)) = (st.scroll, pointer)
+        {
+            let f = f64::from(((p[axis] - grab - track.min[axis]) / free).clamp(0.0, 1.0));
+            set(c0 + f * (span - vis).max(0.0));
+        } else if resp.clicked()
+            && let Some(p) = pointer
+            && !thumb.contains(p)
+        {
+            // Page towards the click.
+            let dir = if p[axis] < start { -1.0 } else { 1.0 };
+            set(v0 + dir * vis * 0.9);
+        }
+        if resp.drag_stopped() {
+            st.scroll = None;
+        }
+        let hot = resp.hovered() || resp.dragged();
+        if hot {
+            painter.rect_filled(track, 4.5, Color32::from_rgba_unmultiplied(0, 0, 0, 18));
+        }
+        let mut bar = thumb;
+        if !hot {
+            // A thin bar until the pointer comes near.
+            let c = bar.center()[1 - axis];
+            bar.min[1 - axis] = c - 2.5;
+            bar.max[1 - axis] = c + 2.5;
+        }
+        painter.rect_filled(bar, 4.0, Color32::from_rgba_unmultiplied(70, 70, 80, if hot { 170 } else { 110 }));
+    }
+}
+
 pub fn canvas_id() -> egui::Id {
     egui::Id::NULL.with("canvas")
 }

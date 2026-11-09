@@ -87,6 +87,11 @@ impl Shell {
             gfx.egui.set_zoom_factor(scale);
             self.app.session.set_view_scale(f64::from(scale));
         }
+        if std::mem::take(&mut self.app.paste_request)
+            && let Some(text) = gfx.egui_state.clipboard_text()
+        {
+            gfx.egui_state.egui_input_mut().events.push(egui::Event::Paste(text));
+        }
         let raw = gfx.egui_state.take_egui_input(&gfx.window);
         let ctx = gfx.egui.clone();
         let tex = gfx.canvas_tex;
@@ -142,7 +147,7 @@ impl ApplicationHandler<UserEvent> for Shell {
         let attrs = Window::default_attributes()
             .with_title(self.app.title())
             .with_inner_size(winit::dpi::LogicalSize::new(size[0], size[1]))
-            .with_min_inner_size(winit::dpi::LogicalSize::new(640.0, 400.0))
+            .with_min_inner_size(winit::dpi::LogicalSize::new(720.0, 480.0))
             .with_window_icon(icon(include_bytes!("../assets/icon/gesso-32.png")))
             .with_visible(false);
         #[cfg(windows)]
@@ -208,7 +213,9 @@ impl ApplicationHandler<UserEvent> for Shell {
             }
             WindowEvent::Resized(size) => {
                 gfx.resize(size.width, size.height);
-                gfx.window.request_redraw();
+                // Draw at the new size now: while Windows runs its resize loop, a frame left
+                // for later shows the old one stretched or the window's edge uncovered.
+                self.redraw();
             }
             WindowEvent::RedrawRequested => self.redraw(),
             _ => {

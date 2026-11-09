@@ -150,10 +150,11 @@ fn scope_drilling_climbing_and_see_through_frames() {
             ]},
         ]},
     ]));
-    // The top-level frame is see-through: a click picks its child; its empty area picks it.
+    // The top-level frame is see-through: a click picks its child; its empty area picks nothing
+    // (a drag there is a marquee), since the frame has content.
     assert_eq!(click(&mut s, 20.0, 20.0).as_deref(), Some("g"));
     assert_eq!(s.scope(), None);
-    assert_eq!(click(&mut s, 300.0, 300.0).as_deref(), Some("board"));
+    assert_eq!(click(&mut s, 300.0, 300.0), None);
     click(&mut s, 20.0, 20.0);
     // Double-click enters the group.
     let d = s.double_click(Point::new(20.0, 20.0));
@@ -162,7 +163,7 @@ fn scope_drilling_climbing_and_see_through_frames() {
     // Inside the scope, siblings are one click away.
     assert_eq!(click(&mut s, 150.0, 20.0).as_deref(), Some("r2"));
     // Clicking outside the scope goes back to page level.
-    assert_eq!(click(&mut s, 300.0, 300.0).as_deref(), Some("board"));
+    assert_eq!(click(&mut s, 300.0, 300.0), None);
     assert_eq!(s.scope(), None);
     // Esc climbs: r1 → g → board → nothing.
     s.select(vec![id(&s, "r1")]);
@@ -277,4 +278,12 @@ fn interface_scale_leaves_the_canvas_alone() {
     // Fitting a small page stops at 100 % as seen by the user.
     s.zoom_to_fit();
     assert!((s.zoom() - 1.0).abs() < 1e-9);
+}
+
+#[test]
+fn an_empty_top_level_frame_is_picked_anywhere() {
+    let mut s = session(json!([
+        {"type": "frame", "name": "blank", "x": 0, "y": 0, "width": 400, "height": 400, "fills": [{"type": "solid", "color": "#ffffff"}]},
+    ]));
+    assert_eq!(click(&mut s, 300.0, 300.0).as_deref(), Some("blank"));
 }

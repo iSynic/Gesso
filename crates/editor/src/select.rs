@@ -2,7 +2,9 @@
 //!
 //! - A click picks the topmost node under the pointer, then climbs to the child of the current
 //!   container (the scope, or the page). Top-level frames are see-through: at page level their
-//!   children are picked directly, and the frame itself only through its empty area.
+//!   children are picked directly. A top-level frame with content is picked by its name label;
+//!   its empty area selects nothing (a drag there is a marquee), as in web design tools. An
+//!   empty top-level frame is picked anywhere.
 //! - Ctrl-click (`deep`) picks the topmost node itself.
 //! - Double-click drills one level into a selected container. Instances can be entered: their
 //!   content (virtual nodes) is selectable, though edits to it become overrides. The content's
@@ -177,10 +179,17 @@ pub fn climb(doc: &Document, hit: NodeId, scope: Option<NodeId>) -> Option<NodeI
         // The child of the scope on the way to the hit.
         return if i == 0 { Some(s) } else { Some(c[i - 1]) };
     }
-    // Page level: top-level frames are see-through.
+    // Page level: top-level frames are see-through. Their empty area selects nothing when they
+    // have content, so a drag there draws a marquee over their children; such a frame is
+    // selected by its name label (or a marquee from outside it).
     let top = *c.last()?;
-    if c.len() >= 2 && is_top_level_frame(doc, top) {
-        return Some(c[c.len() - 2]);
+    if is_top_level_frame(doc, top) {
+        if c.len() >= 2 {
+            return Some(c[c.len() - 2]);
+        }
+        if doc.get(top).is_some_and(|n| !n.children.is_empty()) {
+            return None;
+        }
     }
     Some(top)
 }

@@ -403,3 +403,42 @@ fn pressing_inside_a_selected_frame_drags_the_frame() {
     c.pointer_up(&mut s, at(80.0, 90.0)).unwrap();
     assert_eq!(s.selection(), &[card]);
 }
+
+#[test]
+fn a_frames_empty_area_marquees_unless_the_frame_is_selected() {
+    let mut s = session(json!([
+        {"type": "frame", "name": "Screen", "x": 0, "y": 0, "width": 400, "height": 300, "fills": red(), "children": [
+            {"type": "rectangle", "name": "Card", "x": 20, "y": 20, "width": 100, "height": 80, "fills": red()}
+        ]}
+    ]));
+    let mut c = Controller::default();
+    let screen = id(&s, "Screen");
+    // Not selected: a drag from its empty area draws a marquee over its children.
+    drag(&mut c, &mut s, &[at(200.0, 200.0), at(150.0, 150.0), at(100.0, 90.0)]);
+    assert_eq!(s.selection(), &[id(&s, "Card")]);
+    assert_eq!(props(&s, screen).x, 0.0);
+    // Selected (by its label, or the layers panel): the same drag moves it.
+    s.select(vec![screen]);
+    drag(&mut c, &mut s, &[at(200.0, 200.0), at(210.0, 210.0), at(230.0, 240.0)]);
+    assert_eq!(s.selection(), &[screen]);
+    assert_eq!((props(&s, screen).x, props(&s, screen).y), (30.0, 40.0));
+}
+
+#[test]
+fn right_click_selects_what_is_under_the_pointer() {
+    let mut s = session(json!([
+        {"type": "rectangle", "name": "a", "x": 0, "y": 0, "width": 50, "height": 50, "fills": red()},
+        {"type": "rectangle", "name": "b", "x": 100, "y": 0, "width": 50, "height": 50, "fills": red()},
+    ]));
+    let mut c = Controller::default();
+    let right = |p: Pointer| Pointer { button: editor::Button::Secondary, ..p };
+    c.pointer_down(&mut s, right(at(10.0, 10.0)), 1).unwrap();
+    assert_eq!(s.selection(), &[id(&s, "a")]);
+    // Inside a selection it keeps the selection.
+    s.select(vec![id(&s, "a"), id(&s, "b")]);
+    c.pointer_down(&mut s, right(at(110.0, 10.0)), 1).unwrap();
+    assert_eq!(s.selection().len(), 2);
+    // On empty canvas it clears it.
+    c.pointer_down(&mut s, right(at(500.0, 500.0)), 1).unwrap();
+    assert!(s.selection().is_empty());
+}

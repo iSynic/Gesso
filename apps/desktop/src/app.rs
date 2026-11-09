@@ -61,6 +61,8 @@ pub struct App {
     /// The zoom popup's percentage field, and a script's request to open the popup.
     zoom_text: String,
     pub zoom_menu_request: bool,
+    /// A menu asked to paste: the shell reads the clipboard into the next frame's input.
+    pub paste_request: bool,
     pub status: String,
     pub layers: LayersUi,
     pub props: PropsUi,
@@ -70,6 +72,13 @@ pub struct App {
     pub on_input: Option<Instant>,
     /// Fit the page into the view once the canvas has a size.
     pub fit_pending: bool,
+    /// The side panels' widths as the user left them (layers, properties). A narrow window
+    /// shows them narrower for now; they come back when there's room again.
+    panel_widths: [f32; 2],
+    /// The side panels' rects last frame, to see a drag on their edges.
+    panel_rects: [egui::Rect; 2],
+    /// The panel whose edge is being dragged (0 layers, 1 properties).
+    panel_drag: Option<usize>,
     pub quit: bool,
     /// Last egui pass, ms.
     pub egui_ms: f64,
@@ -83,6 +92,25 @@ pub struct App {
     /// arrived (scripted sessions measure the frame that shows it).
     pub agent_count: u64,
     pub agent_edit: Option<Instant>,
+}
+
+/// The canvas keeps at least this width (points) when the window narrows; the side panels give
+/// way first, down to their minimum widths.
+const MIN_CANVAS: f32 = 280.0;
+const PANEL_MIN: [f32; 2] = [160.0, 220.0];
+const PANEL_MAX: [f32; 2] = [480.0, 520.0];
+
+/// The side panels' widths for a window `total` points wide: as `want`, or both narrowed in
+/// proportion to their slack so the canvas keeps [`MIN_CANVAS`].
+fn fit_panels(want: [f32; 2], total: f32) -> [f32; 2] {
+    let room = (total - MIN_CANVAS).max(PANEL_MIN[0] + PANEL_MIN[1]);
+    let excess = want[0] + want[1] - room;
+    if excess <= 0.0 {
+        return want;
+    }
+    let slack = [want[0] - PANEL_MIN[0], want[1] - PANEL_MIN[1]];
+    let k = (excess / (slack[0] + slack[1]).max(1e-3)).min(1.0);
+    [want[0] - slack[0] * k, want[1] - slack[1] * k]
 }
 
 /// The interface scales on offer, multiplying the display's own scale.
@@ -148,6 +176,7 @@ impl App {
             settings,
             zoom_text: String::new(),
             zoom_menu_request: false,
+            paste_request: false,
             status: String::new(),
             layers: LayersUi::default(),
             props: PropsUi::default(),
@@ -155,6 +184,9 @@ impl App {
             left_tab: LeftTab::default(),
             on_input: None,
             fit_pending: true,
+            panel_widths: [240.0, 280.0],
+            panel_rects: [egui::Rect::NOTHING; 2],
+            panel_drag: None,
             quit: false,
             egui_ms: 0.0,
             frame_ms: 0.0,
@@ -573,7 +605,36 @@ impl App {
         let mut cmds: Vec<Command> = Vec::new();
         self.menu_bar(root, &mut cmds);
         egui::Panel::bottom("status").show(root, |ui| self.status_bar(ui));
-        egui::Panel::left("layers").resizable(true).default_size(240.0).size_range(160.0..=480.0).show(root, |ui| {
+        // The side panels hold the widths the user gave them. While an edge is dragged egui
+        // sizes the panel; otherwise it gets its width, narrowed if the window is tight.
+        let total = root.available_rect_before_wrap().width();
+        let (down, origin) = root.ctx().input(|i| (i.pointer.primary_down(), i.pointer.press_origin()));
+        if !down {
+            self.panel_drag = None;
+        } else if self.panel_drag.is_none()
+            && let Some(o) = origin
+            && root.ctx().input(|i| i.pointer.primary_pressed())
+        {
+            let [l, r] = self.panel_rects;
+            self.panel_drag = if (o.x - l.right()).abs() <= 6.0 && l.y_range().contains(o.y) {
+                Some(0)
+            } else if (o.x - r.left()).abs() <= 6.0 && r.y_range().contains(o.y) {
+                Some(1)
+            } else {
+                None
+            };
+        }
+        let fitted = fit_panels(self.panel_widths, total);
+        let panel = |p: egui::Panel, i: usize, drag: Option<usize>| {
+            if drag == Some(i) {
+                let other = fitted[1 - i];
+                p.size_range(PANEL_MIN[i]..=PANEL_MAX[i].min(total - other - MIN_CANVAS).max(PANEL_MIN[i]))
+            } else {
+                p.exact_size(fitted[i])
+            }
+        };
+        let drag = self.panel_drag;
+        let left = panel(egui::Panel::left("layers").resizable(true), 0, drag).show(root, |ui| {
             ui.horizontal(|ui| {
                 for (t, label) in [(LeftTab::Layers, "Layers"), (LeftTab::Assets, "Assets"), (LeftTab::Variables, "Variables")] {
                     ui.selectable_value(&mut self.left_tab, t, label);
@@ -586,12 +647,16 @@ impl App {
                 LeftTab::Variables => self.variables.show(ui, &mut self.session),
             }
         });
-        egui::Panel::right("properties").resizable(true).default_size(280.0).size_range(220.0..=520.0).show(root, |ui| {
+        let right = panel(egui::Panel::right("properties").resizable(true), 1, drag).show(root, |ui| {
             self.props.show(ui, &mut self.session, &mut self.ctl, &mut self.on_input);
             if std::mem::take(&mut self.props.export.requested) {
                 cmds.push(Command::Export);
             }
         });
+        self.panel_rects = [left.response.rect, right.response.rect];
+        if let Some(i) = drag {
+            self.panel_widths[i] = self.panel_rects[i].width();
+        }
         egui::CentralPanel::no_frame().show(root, |ui| {
             let rect = ui.available_rect_before_wrap();
             self.canvas.rect = rect;
@@ -608,9 +673,11 @@ impl App {
                     Request::Cut => self.copy(ui.ctx(), true),
                     Request::Paste(t) => self.paste(&t),
                     Request::PasteImage(img) => self.paste_image(&img),
+                    Request::PasteFromClipboard => self.paste_request = true,
                 }
             }
             canvas::paint(ui, &mut self.canvas, &mut self.session, &self.ctl, tex);
+            canvas::scrollbars(ui, &mut self.canvas, &mut self.session);
         });
         self.zoom_control(root.ctx(), &mut cmds);
         let (dropped, pointer) = root.ctx().input(|i| (i.raw.dropped_files.clone(), i.pointer.hover_pos()));
@@ -768,7 +835,8 @@ impl App {
 
     /// The zoom buttons floating in the canvas's bottom-right corner.
     fn zoom_control(&mut self, ctx: &egui::Context, cmds: &mut Vec<Command>) {
-        let corner = self.canvas.rect.right_bottom() - egui::vec2(12.0, 12.0);
+        // Above the horizontal scrollbar and left of the vertical one.
+        let corner = self.canvas.rect.right_bottom() - egui::vec2(18.0, 18.0);
         let zoom = self.session.zoom();
         egui::Area::new(egui::Id::NULL.with("zoom control")).order(egui::Order::Middle).pivot(egui::Align2::RIGHT_BOTTOM).fixed_pos(corner).show(ctx, |ui| {
             egui::Frame::popup(ui.style()).inner_margin(4.0).show(ui, |ui| {

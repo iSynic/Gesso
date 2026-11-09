@@ -197,6 +197,18 @@ impl Controller {
             self.cursor = Cursor::Grabbing;
             return Ok(());
         }
+        if p.button == Button::Secondary {
+            // A right-click selects what's under the pointer for the context menu, unless that
+            // is already selected (or inside the selection), which keeps a multi-selection.
+            if self.text.is_none() && self.path.is_none() && self.pen.is_none() && self.tool == Tool::Move {
+                let picked = s.pick(world, p.mods.ctrl);
+                let keep = picked.is_some_and(|id| s.selection().contains(&id) || within_selection(s, id));
+                if !keep {
+                    s.click(world, ClickMods { toggle: false, deep: p.mods.ctrl });
+                }
+            }
+            return Ok(());
+        }
         if p.button != Button::Primary {
             return Ok(());
         }
@@ -295,7 +307,8 @@ impl Controller {
                 toggled_off = !s.selection().contains(&id);
                 !toggled_off
             }
-            None if in_box && s.selection().len() > 1 && !p.mods.shift => true,
+            // Empty space inside the selection's box drags it (a selected frame by its body).
+            None if in_box && !p.mods.shift => true,
             None => false,
         };
         self.state = State::Pressed { at: p.screen, world, on_selection, picked, toggled_off };
